@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Betnix Hub — Actividad Diaria</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #0d1117; color: #e6edf3; min-height: 100vh; }
+  header { background: #161b22; border-bottom: 1px solid #30363d; padding: 16px 24px; display: flex; align-items: center; gap: 12px; }
+  .logo { width: 32px; height: 32px; background: linear-gradient(135deg, #f5a623, #e8530a); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+  header h1 { font-size: 18px; font-weight: 600; color: #f0f6fc; }
+  header .subtitle { font-size: 13px; color: #8b949e; margin-left: auto; }
+  .container { max-width: 900px; margin: 0 auto; padding: 28px 24px; }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 14px; margin-bottom: 28px; }
+  .stat { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 16px 20px; }
+  .stat .label { font-size: 12px; color: #8b949e; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 6px; }
+  .stat .value { font-size: 28px; font-weight: 700; color: #f0f6fc; }
+  .stat .sub { font-size: 11px; color: #8b949e; margin-top: 2px; }
+  .section-title { font-size: 14px; font-weight: 600; color: #8b949e; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 12px; }
+  .card { background: #161b22; border: 1px solid #30363d; border-radius: 10px; overflow: hidden; margin-bottom: 24px; }
+  .card-empty { padding: 40px; text-align: center; color: #8b949e; font-size: 14px; }
+  table { width: 100%; border-collapse: collapse; }
+  th { background: #0d1117; padding: 10px 16px; text-align: left; font-size: 11px; font-weight: 600; color: #8b949e; text-transform: uppercase; letter-spacing: .5px; border-bottom: 1px solid #30363d; }
+  td { padding: 12px 16px; font-size: 13px; border-bottom: 1px solid #21262d; vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: #1c2128; }
+  .handle { color: #58a6ff; font-weight: 500; white-space: nowrap; }
+  .nombre { color: #c9d1d9; }
+  .fecha { color: #8b949e; font-size: 12px; white-space: nowrap; }
+  .msg { color: #e6edf3; max-width: 380px; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 11px; font-weight: 500; }
+  .badge-new { background: #1f4e2a; color: #3fb950; }
+  .badge-old { background: #1c2128; color: #8b949e; }
+  .updated { font-size: 12px; color: #8b949e; text-align: right; margin-top: 16px; }
+  .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #3fb950; margin-right: 6px; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">🎯</div>
+  <h1>Betnix Hub</h1>
+  <div class="subtitle" id="last-update">Cargando...</div>
+</header>
+<div class="container">
+  <div class="stats">
+    <div class="stat">
+      <div class="label">Chats activos hoy</div>
+      <div class="value" id="stat-chats">—</div>
+      <div class="sub">con movimiento</div>
+    </div>
+    <div class="stat">
+      <div class="label">Respondidos</div>
+      <div class="value" id="stat-resp">—</div>
+      <div class="sub">auto-reply enviado</div>
+    </div>
+    <div class="stat">
+      <div class="label">Contactos Excel</div>
+      <div class="value" id="stat-excel">—</div>
+      <div class="sub">en seguimiento</div>
+    </div>
+    <div class="stat">
+      <div class="label">Última corrida</div>
+      <div class="value" id="stat-hora" style="font-size:20px">—</div>
+      <div class="sub" id="stat-fecha">—</div>
+    </div>
+  </div>
+
+  <div class="section-title">Mensajes recibidos hoy</div>
+  <div class="card" id="tabla-card">
+    <div class="card-empty" id="tabla-empty">Sin datos aún. La tabla se actualiza cada mañana a las 8 AM.</div>
+    <table id="tabla" style="display:none">
+      <thead>
+        <tr>
+          <th>Handle</th>
+          <th>Nombre</th>
+          <th>Hora</th>
+          <th>Último mensaje</th>
+          <th>Estado</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+  <div class="updated" id="footer"></div>
+</div>
+
+<script>
+async function load() {
+  try {
+    const r = await fetch('resumen.json?t=' + Date.now());
+    if (!r.ok) throw new Error('no data');
+    const d = await r.json();
+
+    document.getElementById('stat-chats').textContent = d.chats_activos ?? '0';
+    document.getElementById('stat-resp').textContent  = d.respondidos ?? '0';
+    document.getElementById('stat-excel').textContent = d.contactos_excel ?? '—';
+
+    const ts = d.timestamp ? new Date(d.timestamp) : null;
+    if (ts) {
+      document.getElementById('stat-hora').textContent  = ts.toLocaleTimeString('es-AR', {hour:'2-digit',minute:'2-digit'});
+      document.getElementById('stat-fecha').textContent = ts.toLocaleDateString('es-AR', {weekday:'short',day:'numeric',month:'short'});
+      document.getElementById('last-update').textContent = '⬤ Actualizado ' + ts.toLocaleString('es-AR');
+    }
+
+    const rows = d.resumen || [];
+    if (rows.length > 0) {
+      document.getElementById('tabla-empty').style.display = 'none';
+      document.getElementById('tabla').style.display = 'table';
+      const tbody = document.getElementById('tbody');
+      tbody.innerHTML = rows.map(r => `
+        <tr>
+          <td class="handle">${r.handle}</td>
+          <td class="nombre">${r.nombre || '—'}</td>
+          <td class="fecha">${r.fecha}</td>
+          <td class="msg">${escape_html(r.mensaje)}</td>
+          <td><span class="badge badge-new">Nuevo</span></td>
+        </tr>
+      `).join('');
+    }
+
+    document.getElementById('footer').textContent = 'Datos del ' + (d.fecha || '—');
+  } catch(e) {
+    document.getElementById('last-update').textContent = 'Sin datos todavía';
+  }
+}
+
+function escape_html(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+load();
+</script>
+</body>
+</html>

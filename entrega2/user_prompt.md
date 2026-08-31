@@ -1,34 +1,37 @@
-# User Prompt — Plantilla de invocación
+# User Prompt — Automatización de Telegram para gestión de afiliados
 
-El usuario envía este mensaje al agente para disparar una evaluación:
-
----
+## Iteración 1 — Pedido inicial
 
 ```
-Evaluá la siguiente propuesta de negocio:
+Tengo un Excel con ~211 contactos de Telegram (afiliados de una plataforma de 
+apuestas). Quiero que todas las mañanas un script:
 
----
-[PROPUESTA]
+1. Lea los @handles del Excel (columna B, solo filas donde columna C = "Telegram")
+2. Revise si alguno me mandó mensaje en las últimas 24 horas
+3. Si me mandó, que le responda automáticamente "Gracias, ya te respondo 🙌"
+4. Que me deje un resumen en consola de quién escribió y qué dijo
 
-Nombre: FreshRoute
-Rubro: Logística y alimentación
-
-Problema: En Argentina, el 35% de los alimentos frescos se pierde entre el productor y el consumidor por falta de cadena de frío eficiente (dato: FAO 2024). Los productores chicos no pueden costear refrigeración propia.
-
-Propuesta de valor: Conectamos productores rurales con camiones refrigerados compartidos mediante una app. A diferencia de los intermediarios tradicionales, cobramos por km usado, no por carga fija, lo que reduce el costo un 40% para lotes pequeños (validado con 3 pilotos en Mendoza, 2025).
-
-Modelo de negocio: Comisión del 8% sobre cada flete coordinado. Precio promedio por envío: $45 USD. Meta año 1: 500 envíos/mes → ARR estimado de USD 26.000.
-
-Equipo: Martina Suárez (10 años en logística, ex-DHL), Pablo Rivas (CTO, 5 años en desarrollo de apps de movilidad). Buscamos USD 150k para escalar a 3 provincias.
----
+El Excel está en: ~/Documents/Betnix Partners/Betnix_Outreach_2026.xlsx
 ```
 
----
+## Iteración 2 — Pedido de mejora (refinamiento)
 
-## Variantes del user prompt
+```
+El script funciona bien. Ahora quiero agregar dos cosas:
 
-Para las salidas de prueba se usó esta misma propuesta con tres variaciones:
+1. Que actualice el Excel con "Último contacto" (fecha) y "Último mensaje" 
+   (texto) cada vez que detecte un mensaje nuevo de un afiliado.
 
-- **Salida 1** (iteración 1 del agente): propuesta completa, sin variaciones
-- **Salida 2** (iteración 2 del agente): misma propuesta — muestra el impacto de la mejora del system prompt
-- **Salida 3** (caso control — propuesta incompleta): solo los campos D1 y D2 presentes, D3 y D4 ausentes
+2. Que al terminar, suba un archivo resumen JSON a un repo de GitHub Pages 
+   para que yo pueda ver la actividad del día desde cualquier lado, 
+   sin exponer credenciales de Telegram.
+
+El repo es: gisasti0-lang/betnix-hub
+El archivo a actualizar: resumen.json
+```
+
+## Notas sobre los prompts
+
+- **Iteración 1** es un pedido directo y funcional. El agente devuelve un script básico con Telethon.
+- **Iteración 2** refina el pedido agregando dos outputs adicionales (Excel + GitHub). Demuestra cómo el prompt evoluciona a medida que se valida el primer resultado.
+- En ningún momento se incluyen credenciales en el prompt. El agente las pide como variables de configuración en el código.

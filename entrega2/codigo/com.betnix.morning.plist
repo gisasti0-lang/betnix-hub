@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+ "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.betnix.morning</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/Users/fernandoisasti/betnix-tg-morning/run_morning.sh</string>
+  </array>
+
+  <!-- 08:00 todos los días. A diferencia de cron, si la Mac está dormida
+       launchd dispara el trabajo apenas despierta en vez de saltearlo. -->
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Hour</key><integer>8</integer>
+    <key>Minute</key><integer>0</integer>
+  </dict>
+
+  <key>RunAtLoad</key>
+  <false/>
+
+  <key>StandardOutPath</key>
+  <string>/Users/fernandoisasti/betnix-tg-morning/launchd.out.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/fernandoisasti/betnix-tg-morning/launchd.err.log</string>
+
+  <key>WorkingDirectory</key>
+  <string>/Users/fernandoisasti/betnix-tg-morning</string>
+
+  <key>ProcessType</key>
+  <string>Background</string>
+</dict>
+</plist>

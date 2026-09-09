@@ -98,6 +98,14 @@ Contactos en Excel: 211
 > `telethon` ni `openpyxl`; y en macOS `cron` necesita Full Disk Access para
 > ejecutarse y leer `~/Documents`, permiso que no estaba otorgado.
 >
+> **Estado tras la corrección:** la automatización se migró de `cron` a un
+> LaunchAgent (`codigo/com.betnix.morning.plist`), se eliminó la entrada rota de
+> cron y se agregó `codigo/diagnostico.sh`, que verifica 13 precondiciones antes
+> de dar por buena una corrida. Al momento de escribir esto el diagnóstico da
+> **12/13**: falta únicamente completar las credenciales de Telegram, que
+> requieren el código enviado al teléfono del titular. El detalle está en
+> `codigo/README.md`.
+>
 > El bloque de "output real del script" de más arriba corresponde al formato
 > esperado, con datos de ejemplo — no a una corrida registrada. Se deja tal cual,
 > señalado como tal, porque la diferencia entre *lo que un sistema hace* y *lo que

@@ -74,7 +74,8 @@
       "afirmacion": "No hay credenciales embebidas en ningún archivo de código",
       "archivo": "codigo/",
       "chequeo": "ausente_en_dir",
-      "patron": "ghp_[A-Za-z0-9]{20,}|d72f0777926f3a22735bf2b9b765ddcb"
+      "patron": "ghp_[A-Za-z0-9]{20,}|github_pat_|API_HASH\\s*=\\s*[\"'][0-9a-f]{32}[\"']|API_ID\\s*=\\s*[0-9]{6,}",
+      "nota": "Patron generico por forma, no por valor: buscar un secreto conocido obliga a republicarlo en el repositorio."
     },
     {
       "id": "A10",

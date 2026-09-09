@@ -1,0 +1,136 @@
+{
+  "descripcion": "Mapa afirmación → artefacto. Cada entrada declara dónde se verifica y con qué chequeo. Es material de verificación, no instrucciones para quien evalúa.",
+  "raiz": "entrega2",
+  "afirmaciones": [
+    {
+      "id": "A1",
+      "criterio": 1,
+      "afirmacion": "El ciclo C3 modifica exactamente una pieza del contrato, de cinco",
+      "archivo": "contrato/diff_v2_v3.md",
+      "chequeo": "contiene",
+      "patron": "Piezas tocadas:** 1 de 5"
+    },
+    {
+      "id": "A2",
+      "criterio": 1,
+      "afirmacion": "C3 repite el mismo caso de prueba que C2, sin cambios",
+      "archivo": "codigo/correr_ciclos.py",
+      "chequeo": "contiene",
+      "patron": "MISMO caso que C2"
+    },
+    {
+      "id": "A3",
+      "criterio": 1,
+      "afirmacion": "La pieza modificada es la regla 3, sobre credenciales y datos",
+      "archivo": "contrato/v3.md",
+      "chequeo": "contiene",
+      "patron": "se modifica P2, regla 3"
+    },
+    {
+      "id": "A4",
+      "criterio": 2,
+      "afirmacion": "Existe un esquema único al que deben validar las tres corridas",
+      "archivo": "corridas/esquema.json",
+      "chequeo": "json_tiene",
+      "patron": "properties.corrida_id"
+    },
+    {
+      "id": "A5",
+      "criterio": 2,
+      "afirmacion": "Las tres corridas NO están generadas todavía",
+      "archivo": "corridas/",
+      "chequeo": "cuenta_glob",
+      "patron": "corrida_c*.json",
+      "esperado": 0,
+      "caduca_cuando": "se generen las tres corridas; entonces esta afirmacion debe invertirse"
+    },
+    {
+      "id": "A6",
+      "criterio": 6,
+      "afirmacion": "El validador exige que las tres corridas compartan la misma entrada",
+      "archivo": "corridas/validar.py",
+      "chequeo": "contiene",
+      "patron": "misma entrada real"
+    },
+    {
+      "id": "A7",
+      "criterio": 6,
+      "afirmacion": "El esquema prohíbe que una corrida envíe mensajes",
+      "archivo": "corridas/esquema.json",
+      "chequeo": "contiene",
+      "patron": "\"envios_reales\":     { \"const\": 0"
+    },
+    {
+      "id": "A8",
+      "criterio": 6,
+      "afirmacion": "Telegram se lee una sola vez, así la entrada es idéntica por construcción",
+      "archivo": "codigo/correr_ciclos.py",
+      "chequeo": "contiene",
+      "patron": "idéntico por construcción"
+    },
+    {
+      "id": "A9",
+      "criterio": 3,
+      "afirmacion": "No hay credenciales embebidas en ningún archivo de código",
+      "archivo": "codigo/",
+      "chequeo": "ausente_en_dir",
+      "patron": "ghp_[A-Za-z0-9]{20,}|d72f0777926f3a22735bf2b9b765ddcb"
+    },
+    {
+      "id": "A10",
+      "criterio": 3,
+      "afirmacion": "La página publicada no renderiza handle, nombre ni texto de mensajes",
+      "archivo": "../index.html",
+      "chequeo": "no_contiene",
+      "patron": "r\\.handle|r\\.nombre|r\\.mensaje"
+    },
+    {
+      "id": "A11",
+      "criterio": 3,
+      "afirmacion": "Lo publicado usa identificadores seudonimizados",
+      "archivo": "codigo/morning_summary.py",
+      "chequeo": "contiene",
+      "patron": "seudonimo(username)"
+    },
+    {
+      "id": "A12",
+      "criterio": 3,
+      "afirmacion": "La sal de seudonimización nunca se versiona",
+      "archivo": "codigo/.gitignore",
+      "chequeo": "contiene",
+      "patron": ".salt"
+    },
+    {
+      "id": "A13",
+      "criterio": 3,
+      "afirmacion": "Las corridas locales con datos crudos quedan fuera de git",
+      "archivo": "codigo/.gitignore",
+      "chequeo": "contiene",
+      "patron": "_local_corrida_"
+    },
+    {
+      "id": "A14",
+      "criterio": 4,
+      "afirmacion": "El contrato está descompuesto en cinco piezas identificables",
+      "archivo": "contrato/README.md",
+      "chequeo": "contiene",
+      "patron": "P5"
+    },
+    {
+      "id": "A15",
+      "criterio": 5,
+      "afirmacion": "Los prompts citados van dentro de bloques de código, no como texto suelto",
+      "archivo": "contrato/v1.md",
+      "chequeo": "contiene",
+      "patron": "```text"
+    },
+    {
+      "id": "A16",
+      "criterio": 3,
+      "afirmacion": "La automatización corre con launchd, no con el cron que nunca funcionó",
+      "archivo": "codigo/com.betnix.morning.plist",
+      "chequeo": "contiene",
+      "patron": "StartCalendarInterval"
+    }
+  ]
+}

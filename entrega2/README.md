@@ -7,6 +7,32 @@
 
 ---
 
+## Cómo verificar esta entrega
+
+Toda afirmación central de este documento mapea a un archivo que la sostiene, y
+esa correspondencia se comprueba con un comando:
+
+```bash
+python3 entrega2/evaluacion/verificar.py
+```
+
+16 afirmaciones, cada una con su archivo y su chequeo declarados en
+[`evaluacion/trazabilidad.json`](evaluacion/trazabilidad.json). Incluye
+afirmaciones desfavorables: una de ellas verifica que **las tres corridas que
+pidió la devolución todavía no existen**.
+
+La entrega se autoevalúa en **70 sobre 100** contra una rúbrica reconstruida —no
+la oficial, que no tenemos—. El faltante son esas corridas, que valen 25 puntos.
+Está desarrollado en [`evaluacion/`](evaluacion/).
+
+| Verificador | Qué comprueba |
+|---|---|
+| `evaluacion/verificar.py` | Que cada afirmación tenga artefacto |
+| `corridas/validar.py` | Que las corridas validen y el experimento esté aislado |
+| `codigo/diagnostico.sh` | Las 13 precondiciones de la automatización |
+
+---
+
 ## La pieza: automatización matutina de Telegram para gestión de afiliados
 
 El agente de IA fue instruido para diseñar e implementar un sistema que:
@@ -176,3 +202,4 @@ alcanza: hay que auditar qué es lo que las reglas efectivamente garantizan.
 | `corridas/validar.py` | Valida esquema **y** aislamiento del experimento |
 | `corridas/README.md` | Protocolo de las corridas y estado actual |
 | `codigo/` | Código de producción, sin credenciales, con seudonimización |
+| `evaluacion/` | Rúbrica reconstruida, autoevaluación y trazabilidad verificable |

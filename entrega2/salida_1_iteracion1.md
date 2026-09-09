@@ -97,8 +97,16 @@ python3 /Users/.../betnix-tg-morning/morning_summary.py
 > inicio del archivo*). Esas credenciales quedaron publicadas en este repositorio.
 >
 > Aca se reemplazaron por lecturas del entorno, pero **el borrado no las
-> desexpone**: siguen accesibles en el historial de git. Se consideran
-> comprometidas y fueron rotadas.
+> desexpone**: siguen accesibles en el historial de git.
+>
+> El `api_hash` de Telegram **no se puede regenerar**: a diferencia de un token
+> de bot, no hay autogestion para revocarlo. La unica via es borrar la
+> aplicacion en my.telegram.org y crear otra. Es la diferencia practica entre un
+> secreto rotable y uno que no lo es — y es la razon por la que la regla 3 del
+> contrato v1 era peligrosa: no todos los secretos admiten remediacion.
+>
+> Mitigacion aplicada: las credenciales salieron del codigo, el PAT de GitHub
+> (ese si revocable) se dio de baja, y la app de Telegram se considera quemada.
 >
 > Este incidente es el punto de partida del ciclo C3 — ver
 > [contrato/diff_v2_v3.md](../contrato/diff_v2_v3.md).

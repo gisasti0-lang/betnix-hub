@@ -49,3 +49,11 @@ La de las credenciales sí fue real.
 
 El ciclo C3 no corrige el código: corrige **la regla que generó el código**. Esa
 es la diferencia entre parchear una salida y arreglar un contrato.
+
+Un agravante que la regla original no contemplaba: **no todos los secretos se
+pueden rotar.** El PAT de GitHub se revoca en dos clicks. El `api_hash` de
+Telegram no tiene autogestión de revocación — la única salida es descartar la
+aplicación entera. Una regla que dice "poné las credenciales al inicio del
+archivo" trata a todos los secretos como si fueran igual de recuperables, y no
+lo son. La regla de v3 evita el problema en origen: si el secreto nunca entra al
+código, no importa si es rotable o no.

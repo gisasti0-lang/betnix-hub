@@ -26,8 +26,8 @@ import openpyxl
 from telethon import TelegramClient
 from telethon.tl.types import User
 
-API_ID   = 32468859
-API_HASH = "d72f0777926f3a22735bf2b9b765ddcb"
+API_ID   = os.environ["BETNIX_TG_API_ID"]      # [redactado]
+API_HASH = os.environ["BETNIX_TG_API_HASH"]    # [redactado]
 SESSION  = str(Path(__file__).parent / "betnix_session")
 EXCEL    = "/Users/.../Betnix_Outreach_2026.xlsx"
 LOG_PATH = str(Path(__file__).parent / "morning_log.json")
@@ -87,3 +87,18 @@ python3 /Users/.../betnix-tg-morning/morning_summary.py
 - No actualiza el Excel con la fecha del último mensaje
 - No publica nada en la web → el resumen solo vive en consola
 - Si la computadora está apagada a las 8 AM, no corre (no hay cron configurado)
+
+
+---
+
+> **Nota de correccion (09/09/2026).** La version original de esta salida traia
+> el `API_ID` y el `API_HASH` de Telegram como constantes literales, siguiendo la
+> regla 3 del contrato v1 (*las credenciales van en variables de configuracion al
+> inicio del archivo*). Esas credenciales quedaron publicadas en este repositorio.
+>
+> Aca se reemplazaron por lecturas del entorno, pero **el borrado no las
+> desexpone**: siguen accesibles en el historial de git. Se consideran
+> comprometidas y fueron rotadas.
+>
+> Este incidente es el punto de partida del ciclo C3 — ver
+> [contrato/diff_v2_v3.md](../contrato/diff_v2_v3.md).

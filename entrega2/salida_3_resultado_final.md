@@ -77,3 +77,28 @@ Contactos en Excel: 211
 - Salida 1 → solo código base (sin Excel update, sin web)
 - Salida 2 → código mejorado con las dos funcionalidades adicionales
 - Salida 3 → sistema completo en producción: muestra que la automatización es real, no solo código, y que el output llega a un destino público verificable
+
+
+---
+
+> **Nota de corrección (09/09/2026).** Esta salida se tituló "sistema en
+> producción" y describe el script corriendo automáticamente a las 8 AM. Al
+> revisar la entrega se verificó que **eso nunca ocurrió**. Tres evidencias
+> independientes:
+>
+> - `morning_log.json` quedó en `{}` desde el día del login. Cero auto-respuestas
+>   enviadas, jamás.
+> - `morning_log.txt` no existe. El cron redirige con `>>`, así que el archivo se
+>   habría creado en el primer disparo aunque el script fallara. Nunca se disparó.
+> - En este repositorio no hay ni un solo commit `update resumen YYYY-MM-DD`, que
+>   es lo que escribe `push_to_github()`. El último commit de datos es el
+>   placeholder inicial.
+>
+> Dos causas: la crontab invoca `/usr/bin/python3`, que no tiene instalados
+> `telethon` ni `openpyxl`; y en macOS `cron` necesita Full Disk Access para
+> ejecutarse y leer `~/Documents`, permiso que no estaba otorgado.
+>
+> El bloque de "output real del script" de más arriba corresponde al formato
+> esperado, con datos de ejemplo — no a una corrida registrada. Se deja tal cual,
+> señalado como tal, porque la diferencia entre *lo que un sistema hace* y *lo que
+> su documentación afirma que hace* es justamente lo que esta corrección expone.

@@ -1,0 +1,10 @@
+# Nada de esto se publica jamás
+.env
+.salt
+*.session
+*.session-journal
+morning_log.json
+morning_log.txt
+__pycache__/
+_local_corrida_*.json
+corridas/_local_*

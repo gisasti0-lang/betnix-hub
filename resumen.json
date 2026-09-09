@@ -1,8 +1,10 @@
 {
+  "esquema": "betnix-hub/resumen@2",
   "fecha": "—",
   "timestamp": null,
+  "contactos_excel": null,
   "chats_activos": 0,
   "respondidos": 0,
-  "contactos_excel": null,
-  "resumen": []
+  "por_categoria": {},
+  "actividad": []
 }

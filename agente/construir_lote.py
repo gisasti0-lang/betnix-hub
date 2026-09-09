@@ -28,7 +28,7 @@ EXCEL = str(Path.home() / "Documents" / "Betnix Partners" / "Betnix_Outreach_202
 API_ID = os.environ.get("BETNIX_TG_API_ID")
 API_HASH = os.environ.get("BETNIX_TG_API_HASH")
 
-HORAS = 24
+HORAS_POR_DEFECTO = 24
 
 
 def handles_y_estado() -> dict[str, str]:
@@ -48,14 +48,14 @@ def handles_y_estado() -> dict[str, str]:
     return fuera
 
 
-async def main(destino: Path) -> int:
+async def main(destino: Path, horas: int) -> int:
     if not API_ID or not API_HASH:
         sys.exit("✗ Falta BETNIX_TG_API_ID / BETNIX_TG_API_HASH en el entorno.")
 
     contactos = handles_y_estado()
-    print(f"Contactos Telegram en el Excel: {len(contactos)}")
+    print(f"Contactos Telegram alcanzables: {len(contactos)}  ·  ventana: {horas} h")
 
-    corte = datetime.now(timezone.utc) - timedelta(hours=HORAS)
+    corte = datetime.now(timezone.utc) - timedelta(hours=horas)
     client = TelegramClient(SESION, int(API_ID), API_HASH)
     await client.connect()
     if not await client.is_user_authorized():
@@ -95,12 +95,14 @@ async def main(destino: Path) -> int:
     print(f"Mensajes en el lote: {len(mensajes)}")
     print(f"Escrito: {destino}")
     if not mensajes:
-        print("⚠  Lote vacío: nadie escribió en las últimas 24 h.")
+        print(f"⚠  Lote vacío: nadie escribió en las últimas {horas} h.")
     return 0
 
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--salida", required=True)
+    ap.add_argument("--horas", type=int, default=HORAS_POR_DEFECTO,
+                    help="ventana hacia atrás; 24 en producción")
     a = ap.parse_args()
-    sys.exit(asyncio.run(main(Path(a.salida))))
+    sys.exit(asyncio.run(main(Path(a.salida), a.horas)))

@@ -15,7 +15,12 @@ import re
 import secrets
 from pathlib import Path
 
-SALT_PATH = Path(__file__).parent / ".salt"
+# Sal canónica, única para todo el sistema. Si cada componente generara la suya,
+# el mismo afiliado tendría un seudónimo distinto en el hub y en las corridas, y
+# la serie histórica dejaría de ser comparable.
+SALT_PATH = Path(
+    os.environ.get("BETNIX_SALT_PATH", Path.home() / "betnix-tg-morning" / ".salt")
+)
 
 
 def _get_salt() -> bytes:

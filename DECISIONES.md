@@ -31,7 +31,7 @@ repositorio. El diff exacto está en `entrega2/contrato/diff_v2_v3.md`.
 |---|---|
 | `AUTO_REPLY = "Gracias, ya te respondo 🙌"` enviado automáticamente a todo el que escribiera | El agente redacta un borrador contextual por mensaje; **ninguno se envía sin aprobación** |
 
-Razón: un texto idéntico para los 211 afiliados no responde nada, y enviarlo
+Razón: un texto idéntico para los 196 afiliados no responde nada, y enviarlo
 automáticamente desde una sesión de usuario es el patrón que dispara detección de
 automatización.
 

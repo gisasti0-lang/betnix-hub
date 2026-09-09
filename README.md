@@ -10,7 +10,7 @@ Hub en producción: https://gisasti0-lang.github.io/betnix-hub/
 ## Qué construimos
 
 Un agente que cada mañana lee los mensajes que le llegaron por Telegram a un
-Affiliate Manager de ~211 afiliados, los clasifica por intención y urgencia, y
+Affiliate Manager de 196 afiliados alcanzables, los clasifica por intención y urgencia, y
 redacta un borrador de respuesta para cada uno. **No envía nada:** deja los
 borradores para que la persona los apruebe, edite o descarte uno por uno.
 
@@ -24,6 +24,31 @@ El sistema completo tiene tres capas:
 
 Corre solo a las 08:00 mediante un LaunchAgent, y se detiene antes de cualquier
 efecto externo.
+
+### Sobre el número de afiliados
+
+La planilla tiene **288 filas con datos**: 211 marcadas con canal Telegram y 77
+con Email. De las 211, **196 tienen un @handle válido** y son las únicas
+alcanzables por el sistema. Las entregas anteriores decían «~211 afiliados»:
+era el conteo de filas, no de contactos direccionables.
+
+### Sobre el volumen real
+
+Medido sobre la cuenta el 9/9/2026, contando mensajes entrantes de contactos de
+la planilla:
+
+| Ventana | Mensajes |
+|---|---:|
+| 24 horas | 0 |
+| 7 días | 0 |
+| 30 días | 1 |
+| 90 días | 6 |
+
+**El sistema está dimensionado para un volumen que hoy no existe.** Se documenta
+porque cambia lo que es honesto afirmar: el agente resuelve bien un problema que
+en este momento se presenta seis veces cada tres meses. La automatización sigue
+teniendo sentido —el costo es de centavos y el pico de actividad es
+impredecible— pero llamarlo «gestión diaria de 211 afiliados» sería falso.
 
 ## Cómo se lo pedimos
 

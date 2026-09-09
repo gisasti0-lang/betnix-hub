@@ -1,4 +1,4 @@
-# Betnix Hub — Agente de triage de mensajes de afiliados
+# Betnix Hub — Agente de seguimiento de prospección
 
 **Trabajo Final — Programación de y con Agentes de IA · MBA UCEMA 2026 2T**
 **Integrante:** Gonzalo Isasti
@@ -18,8 +18,8 @@ El sistema completo tiene tres capas:
 
 | Capa | Qué hace | Dónde |
 |---|---|---|
-| **Lectura** | Lee Telegram y el Excel de afiliados; seudonimiza cada handle antes de que salga de la máquina | `agente/construir_lote.py` |
-| **Agente** | Clasifica y redacta, con salida JSON validada contra esquema | `agente/triage.py` |
+| **Lectura** | Lee la planilla, selecciona por criterio determinista y seudonimiza razón social y contacto | `agente/construir_lote.py` |
+| **Agente** | Decide y redacta, con salida JSON validada contra esquema | `agente/seguimiento.py` |
 | **Publicación** | Publica agregados sin datos personales en una página pública | `entrega2/codigo/morning_summary.py`, `index.html` |
 
 Corre solo a las 08:00 mediante un LaunchAgent, y se detiene antes de cualquier
@@ -31,6 +31,22 @@ La planilla tiene **288 filas con datos**: 211 marcadas con canal Telegram y 77
 con Email. De las 211, **196 tienen un @handle válido** y son las únicas
 alcanzables por el sistema. Las entregas anteriores decían «~211 afiliados»:
 era el conteo de filas, no de contactos direccionables.
+
+### Por qué el sistema apunta a la prospección y no a los mensajes entrantes
+
+La planilla **no es una cartera de afiliados, es un pipeline de prospección en
+frío.** De 288 contactos, solo unos 21 son socios reales —15 «already working» y
+6 «Launching»—; el resto fue contactado y en su mayoría nunca respondió.
+
+| Estado | Contactos |
+|---|---:|
+| Contacted | 129 |
+| Sin respuesta | 56 |
+| Not relevant | 34 |
+| already working | 15 |
+| Not replying | 11 |
+| REBOTÓ | 10 |
+| Launching | 6 |
 
 ### Sobre el volumen real
 
@@ -44,11 +60,14 @@ la planilla:
 | 30 días | 1 |
 | 90 días | 6 |
 
-**El sistema está dimensionado para un volumen que hoy no existe.** Se documenta
-porque cambia lo que es honesto afirmar: el agente resuelve bien un problema que
-en este momento se presenta seis veces cada tres meses. La automatización sigue
-teniendo sentido —el costo es de centavos y el pico de actividad es
-impredecible— pero llamarlo «gestión diaria de 211 afiliados» sería falso.
+Ese número no dice que los afiliados estén callados: dice que **la mayoría de esa
+lista nunca fue afiliada**. Son prospectos que no contestaron.
+
+Por eso el sistema apunta al trabajo saliente —a quién le corresponde seguimiento
+hoy— y no al entrante. Una versión anterior de este trabajo construyó un agente
+de triage de mensajes recibidos; sobre esta base de datos, ese agente habría
+tenido seis casos en noventa días. El cambio está documentado en
+[`DECISIONES.md`](DECISIONES.md).
 
 ## Cómo se lo pedimos
 
@@ -109,17 +128,18 @@ de GitHub se revoca en dos clicks; el `api_hash` de Telegram no se revoca nunca.
 
 ## Cómo volver a correrlo
 
-Requiere Python 3.14, `anthropic`, `telethon`, `openpyxl`, una `ANTHROPIC_API_KEY`
-y credenciales de Telegram en el entorno (`entrega2/codigo/.env.example`).
+Requiere Python 3.14, `anthropic`, `openpyxl` y una `ANTHROPIC_API_KEY` en el
+entorno (`entrega2/codigo/.env.example`). El agente **no** necesita credenciales
+de Telegram: esas las usa solo el componente legado del hub.
 
 ```bash
 python3 agente/construir_lote.py --salida corridas/$(date +%F)/entrada.json
-python3 agente/triage.py --entrada corridas/$(date +%F)/entrada.json
+python3 agente/seguimiento.py --entrada corridas/$(date +%F)/entrada.json
 ```
 
-El primer comando lee Telegram y escribe el lote seudonimizado. El segundo llama
+El primer comando lee la planilla y escribe el lote seudonimizado. El segundo llama
 al modelo y escribe `salida.json` y `meta.json` con tokens y costo medidos.
 Ninguno envía mensajes.
 
-Modelo: `claude-opus-5`, constante `MODELO` en `agente/triage.py`. La comparación
+Modelo: `claude-opus-5`, constante `MODELO` en `agente/seguimiento.py`. La comparación
 contra alternativas está en [`ANALISIS_ECONOMICO.md`](ANALISIS_ECONOMICO.md) §4.

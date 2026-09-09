@@ -1,12 +1,12 @@
 """
-Agente de triage de mensajes de afiliados — Betnix.
+Agente de seguimiento de prospección — Betnix.
 
-Lee un lote de mensajes entrantes seudonimizados, los clasifica y redacta un
-borrador de respuesta por cada uno. NO envía nada: escribe la salida a disco y
-termina. El envío depende de la aprobación humana, que ocurre fuera de este
-proceso (ver GOBIERNO.md, nivel de autonomía L2).
+Lee un lote de prospectos seudonimizados del pipeline, decide a cuáles
+corresponde seguimiento y redacta el mensaje. NO envía nada: escribe la salida a
+disco y termina. El envío depende de la aprobación humana, que ocurre fuera de
+este proceso (ver GOBIERNO.md, nivel de autonomía L2).
 
-    python3 agente/triage.py --entrada corridas/2026-09-09/entrada.json
+    python3 agente/seguimiento.py --entrada corridas/2026-09-09/entrada.json
 """
 
 import argparse
@@ -35,26 +35,24 @@ TARIFAS = {
     "claude-haiku-4-5": {"entrada": 1.00, "salida": 5.00},
 }
 
-Categoria = Literal["pago", "deal", "soporte", "alta", "saludo",
-                    "manipulacion", "sin_contenido", "otro"]
-
-
 class Resultado(BaseModel):
-    id: str = Field(description="Seudónimo del afiliado, formato AF-xxxxxxxx")
-    categoria: Categoria
-    urgencia: Literal["alta", "media", "baja"]
+    id: str = Field(description="Seudónimo del prospecto, formato PR-xxxxxxxx")
+    corresponde: bool = Field(description="si le toca seguimiento hoy")
+    prioridad: Literal["alta", "media", "baja", "ninguna"]
+    motivo: str = Field(description="clave del criterio aplicado, pocas palabras")
     requiere_decision: bool = Field(
-        description="true si el mensaje toca dinero, tarifas o plazos")
-    borrador: str = Field(description="Hasta 400 caracteres, o cadena vacía")
-    nota_triage: str = Field(description="Por qué se clasificó así, una línea")
+        description="true si toca dinero, tarifas o negociación pendiente")
+    mensaje: str = Field(description="Hasta 500 caracteres, o cadena vacía")
+    nota: str = Field(description="Observación del agente, una línea")
 
 
 class Resumen(BaseModel):
+    corresponden: int
     requieren_decision: int
-    por_categoria: dict[str, int]
+    por_prioridad: dict[str, int]
 
 
-class SalidaTriage(BaseModel):
+class SalidaSeguimiento(BaseModel):
     fecha_lote: str
     procesados: int
     resultados: list[Resultado]
@@ -83,8 +81,8 @@ def main() -> int:
         sys.exit(f"✗ No existe {ruta_entrada}")
     lote = json.loads(ruta_entrada.read_text())
 
-    if not lote.get("mensajes"):
-        sys.exit("✗ El lote no tiene mensajes.")
+    if not lote.get("prospectos"):
+        sys.exit("✗ El lote no tiene prospectos.")
 
     client = anthropic.Anthropic()
     inicio = datetime.now()
@@ -95,7 +93,7 @@ def main() -> int:
             max_tokens=MAX_TOKENS,
             system=cargar_system_prompt(),
             messages=[{"role": "user", "content": json.dumps(lote, ensure_ascii=False)}],
-            output_format=SalidaTriage,
+            output_format=SalidaSeguimiento,
         )
     except anthropic.RateLimitError as e:
         sys.exit(f"✗ Límite de tasa alcanzado: {e}")
@@ -104,7 +102,7 @@ def main() -> int:
     except anthropic.APIConnectionError as e:
         sys.exit(f"✗ No se pudo conectar: {e}")
 
-    salida: SalidaTriage = respuesta.parsed_output
+    salida: SalidaSeguimiento = respuesta.parsed_output
     uso = respuesta.usage
     tarifa = TARIFAS[MODELO]
     costo = (uso.input_tokens / 1e6 * tarifa["entrada"]
@@ -122,19 +120,20 @@ def main() -> int:
         "tarifa_usd_por_millon": tarifa,
         "costo_usd": round(costo, 6),
         "duracion_seg": round((datetime.now() - inicio).total_seconds(), 1),
-        "mensajes_en_lote": len(lote["mensajes"]),
+        "prospectos_en_lote": len(lote["prospectos"]),
         "enviados": 0,
-        "nota": "Ninguna respuesta fue enviada. El envío requiere aprobación humana.",
+        "nota": "Ningún mensaje fue enviado. El envío requiere aprobación humana.",
     }
     (destino.parent / "meta.json").write_text(
         json.dumps(meta, ensure_ascii=False, indent=2))
 
     print(f"\n  Procesados:          {salida.procesados}")
+    print(f"  Corresponde seguir:  {salida.resumen.corresponden}")
     print(f"  Requieren decisión:  {salida.resumen.requieren_decision}")
     print(f"  Tokens E/S:          {uso.input_tokens} / {uso.output_tokens}")
     print(f"  Costo de la corrida: USD {costo:.6f}")
     print(f"  Salida:              {destino}")
-    print(f"\n  ⏸  Nada fue enviado. Revisá los borradores antes de aprobar.\n")
+    print(f"\n  ⏸  Nada fue enviado. Revisá los mensajes antes de aprobar.\n")
     return 0
 
 

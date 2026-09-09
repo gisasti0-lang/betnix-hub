@@ -35,6 +35,31 @@ Razón: un texto idéntico para los 196 afiliados no responde nada, y enviarlo
 automáticamente desde una sesión de usuario es el patrón que dispara detección de
 automatización.
 
+### El objetivo del agente — de entrante a saliente
+
+| Estado anterior | Estado posterior |
+|---|---|
+| Agente de **triage de mensajes recibidos**: leía Telegram, clasificaba lo entrante y redactaba respuestas | Agente de **seguimiento de prospección**: lee el pipeline, decide a quién le toca seguimiento y redacta el mensaje |
+
+La razón del cambio no fue una preferencia de diseño. Fue una pregunta —«¿qué son
+los afiliados?»— que obligó a mirar la planilla en vez de asumir qué contenía.
+
+Lo que apareció: el archivo se llama `Outreach` y es literal. **No es una cartera
+de afiliados, es un pipeline de prospección en frío.** De 288 contactos, unos 21
+son socios reales; 129 figuran «Contacted», 56 «Sin respuesta», 34 «Not
+relevant». La medición de mensajes entrantes lo confirmó: 0 en 24 horas, 0 en 7
+días, 1 en 30 días, 6 en 90.
+
+El agente de triage estaba bien construido y resolvía el problema equivocado: seis
+casos en noventa días. El trabajo real del Affiliate Manager sobre esta base es
+saliente — a quién le corresponde insistir, quién quedó en verde sin cerrarse.
+
+Como efecto secundario, el cambio disolvió un conflicto que no tenía buena
+salida: el agente anterior consumía el texto de mensajes privados de terceros, y
+la corrección de la Entrega 2 prohibía publicarlos. El insumo actual son
+atributos de negocio de la planilla, sin razón social ni contacto. **Las corridas
+pasaron a ser publicables sin redacción.**
+
 ## Fallas
 
 ### 1 · El cron nunca se ejecutó — dos semanas
@@ -107,6 +132,26 @@ Telegram es enumerable; un hash sin sal se revierte por fuerza bruta en minutos.
 Con HMAC y una sal local de 32 bytes que no se versiona, el seudónimo no es
 reversible desde el repositorio público.
 
+### Reorientar el agente en vez de conservar el que ya estaba hecho
+
+**Descartado: dejar el agente de triage de entrantes.** Era la opción barata —ya
+estaba construido, documentado y con su análisis económico— y probablemente no
+habría costado nota: la rúbrica mide si el sistema está bien hecho, no si el
+problema era el más urgente.
+
+Motivo del descarte: un sistema que se ejecuta todos los días para atender seis
+casos cada noventa no se va a usar, y el trabajo terminaba siendo un ejercicio.
+El costo del cambio fue reescribir contrato, constructor, agente y los cuatro
+documentos de gobierno y economía.
+
+### Seleccionar en código y redactar en el modelo
+
+**Descartado: que el agente decida también a quién incluir en el lote.** Motivo:
+la selección tiene que ser reproducible para que la corrida lo sea. Quién entra
+al lote lo decide un criterio determinista —estado elegible, posibilidad de
+cierre distinta de rojo, orden por probabilidad, tope de 25—; qué se le dice a
+cada uno lo decide el modelo. La frontera está en `agente/construir_lote.py`.
+
 ### Opus 5 como configuración de entrega, con Haiku pendiente de prueba
 
 **Alternativa nombrada: `claude-haiku-4-5`**, cinco veces más barata. No está
@@ -137,13 +182,23 @@ Se resignó a pedido de la corrección de la Entrega 2. El hub perdió capacidad
 diagnóstico —ya no se ve quién escribió qué— y esa información quedó únicamente
 en el Excel local.
 
-### Se achicó la ventana de contexto por mensaje
+### Se achicó el lote diario de 217 a 25
 
-**Intención original:** pasarle al agente el hilo completo de conversación con
-cada afiliado.
-**Qué quedó:** el último mensaje entrante más un contador de cuántos mandó en la
-ventana.
+**Intención original:** procesar todos los prospectos elegibles en cada corrida.
+**Qué quedó:** un tope de 25, ordenados por posibilidad de cierre.
 
-Motivo: el hilo completo multiplica los tokens de entrada por cada afiliado y
-mete texto histórico de terceros en el prompt. El contador cubre la señal que
-importaba —insistencia— a costo fijo.
+Dos motivos, y el segundo importa más. El primero es técnico: 217 prospectos no
+entran en el `max_tokens` de salida. El segundo es de negocio: nadie hace 217
+seguimientos en un día, y un sistema que propone barrer la lista entera invita a
+quemar contactos en masa. A 25 por día, los 217 se recorren en nueve días.
+
+### Se resignó el hilo de conversación como contexto
+
+**Intención original:** darle al agente el historial de intercambios con cada
+prospecto.
+**Qué quedó:** estado, posibilidad de cierre, campaña de origen y el comentario
+libre del Affiliate Manager.
+
+Motivo: el historial vive en Telegram y traerlo mete texto de terceros en el
+prompt, que es exactamente lo que la corrección de la Entrega 2 pedía evitar. El
+campo `comentario` cubre la señal que importaba a costo de un campo.

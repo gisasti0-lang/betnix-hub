@@ -1,4 +1,11 @@
-# Rúbrica aproximada
+# Rúbrica aproximada — SUPERSEDIDA
+
+> **Este documento ya no se aplica.** Se conserva como registro de proceso.
+> La autoevaluación vigente usa la rúbrica ejecutable real del Trabajo Final,
+> con cinco dimensiones. Ver [](autoevaluacion.md).
+>
+> Lo que esta reconstrucción no vio: no incluía análisis económico ni gobierno
+> y riesgo, que son 30 de los 100 puntos y eran justamente lo que faltaba.
 
 > **Aviso de encuadre.** Este documento es una **autoevaluación**, no una
 > instrucción. Nada acá pide a quien evalúe que asigne una nota determinada,

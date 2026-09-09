@@ -1,80 +1,76 @@
 # Autoevaluación
 
 > **Aviso de encuadre.** Documento de verificación, no de instrucción. No pide a
-> quien evalúe que acepte este puntaje: pide que lo controle. Cada fila cita la
-> ruta donde se verifica, y una fila sin ruta se puntúa en cero aunque el texto
-> afirme lo contrario.
+> quien evalúe que acepte este puntaje: pide que lo controle.
 
-Criterios y pesos en [`rubrica_aproximada.md`](rubrica_aproximada.md), con la
-advertencia de que son una reconstrucción y no la rúbrica oficial.
+## Qué rúbrica se aplica
+
+Este documento **ya no usa** la rúbrica reconstruida de
+[`rubrica_aproximada.md`](rubrica_aproximada.md), que se conserva solo como
+registro de proceso. Se aplica la **rúbrica ejecutable del Trabajo Final**, con
+sus cinco dimensiones, sus anclas discretas y su aritmética de conteo por
+componentes.
+
+La diferencia entre los dos puntajes —70/100 con la rúbrica inferida, 77,50 con
+la real— es en sí misma un dato: la rúbrica reconstruida no medía análisis
+económico ni gobierno, que son 30 de los 100 puntos y eran exactamente lo que
+faltaba.
 
 ## Resultado
 
-| # | Criterio | Peso | Obtenido | Dónde se verifica |
-|---|---|---|---|---|
-| 1 | Ciclo aislado | 20 | **20** | `contrato/v3.md`, `contrato/diff_v2_v3.md` |
-| 2 | Corridas comparables | 20 | **0** | — *no existe el artefacto* |
-| 3 | Credenciales y datos personales | 20 | **15** | `index.html`, `codigo/`, `salida_1_iteracion1.md` |
-| 4 | Técnicas de prompt engineering | 15 | **15** | `README.md`, `contrato/`, `system_prompt.md` |
-| 5 | Trazabilidad | 10 | **10** | este documento + `trazabilidad.json` |
-| 6 | Reproducibilidad | 10 | **5** | `codigo/correr_ciclos.py`, `corridas/validar.py` |
-| 7 | Proceso documentado | 5 | **5** | historia de commits |
-| | **Total** | **100** | **70** | |
+Conteo por componentes: verificado 1, parcial 0,5, no verificado 0. Se suma y se
+trunca hacia abajo.
 
-## El cero, sin atenuantes
+| Dim | Componentes | Suma | Nivel | Puntos |
+|---|---|---:|---|---:|
+| **D1 · Sistema completo** | contrato ✅ · herramienta 🟡 · output estructurado ❌ · supervisión ✅ | 2,5 → 2 | N2 | **15,00** |
+| **D2 · Proceso documentado** | iteraciones ✅ · fallas ✅ · decisiones ✅ · alcance ✅ | 4 | N4 | **25,00** |
+| **D3 · Formato y reproducibilidad** | estructura ✅ · cantidad de corridas ❌ · reconstruibilidad ❌ · instrucciones ✅ | 2 | N2 | **7,50** |
+| **D4 · Análisis económico** | consumo ✅ · costo ✅ · proyección ✅ · modelo ✅ | 4 | N4 | **15,00** |
+| **D5 · Gobierno y riesgo** | perímetro ✅ · riesgos ✅ · nivel L ✅ · responsable ✅ | 4 | N4 | **15,00** |
+| | | | **Total** | **77,50** |
 
-El criterio 2 vale 20 puntos y esta entrega saca **0**.
+## Los tres componentes que faltan, y son el mismo
 
-La devolución pidió *"guardá tres corridas reales"*. `corridas/` contiene el
-esquema, el validador y el generador, pero **cero archivos de corrida**. Bajo la
-regla dura eso es el nivel más bajo, sin crédito parcial por tener la
-infraestructura lista. Tener el instrumento no es tener la medición.
+D1 · **Output estructurado** exige «dos o más corridas que satisfacen el formato
+declarado». D3 · **Cantidad de corridas** exige al menos tres. D3 ·
+**Reconstruibilidad** exige entrada, salida y fecha por corrida.
 
-Arrastra además el criterio 6 a la mitad: el aislamiento del experimento está
-diseñado para ser verificable —`validar.py` compara `hash_entrada` y
-`hash_prompt` entre las tres corridas— pero **nunca se ejecutó sobre datos
-reales**, así que lo que hay es una garantía de diseño, no una demostración.
+Los tres se resuelven con el mismo acto: generar las corridas. Y ninguno admite
+sustituto — el formato declarado no verifica contra sí mismo, verifica contra
+ejecuciones reales.
 
-Entre los dos criterios, las corridas faltantes valen **25 de los 100 puntos**.
+D1 · **Herramienta real** queda parcial por la misma causa: la invocación existe y
+está configurada, pero falta «al menos un artefacto de salida cruda coherente con
+esa invocación».
 
-El motivo del faltante está documentado en
-[`../corridas/README.md`](../corridas/README.md): generar las corridas requiere
-credenciales de Telegram que sólo puede obtener el titular de la cuenta, porque
-el login pide un código enviado al teléfono. No se incluyeron corridas simuladas:
-una corrida inventada invalidaría la comparación entera y convertiría los otros
-75 puntos en material sospechoso.
+**Con las tres corridas, D1 pasa a N4 (30) y D3 a N4 (15): el total llega a 100.**
+Las corridas valen 22,50 puntos.
 
-## Por qué el criterio 3 no llega a 20
+El motivo del faltante está en [`../../corridas/README.md`](../../corridas/README.md):
+el login de Telegram pide un código enviado al teléfono del titular y no se puede
+automatizar. No se incluyen corridas simuladas — el análisis económico toma sus
+tokens de `meta.json`, así que una corrida inventada contaminaría D4 además de D3.
 
-Lo verificable está hecho: cero credenciales en el código, cero campos
-personales en lo publicado, y el alcance de la exposición documentado sin
-maquillar —incluyendo que fue **potencial y no consumada** para los datos de
-terceros, porque el cron nunca corrió.
+## Advertencia sobre este puntaje
 
-Lo que falta no es documentación sino un hecho: el `api_hash` de Telegram sigue
-accesible en el historial de git y **no se puede rotar**. La única mitigación
-disponible —descartar la aplicación en my.telegram.org— todavía no se ejecutó.
-Mientras esa exposición residual siga viva, el criterio no está completo.
+Es la aplicación que hace el propio trabajo de una rúbrica ajena. Un corrector
+puede leer distinto al menos dos componentes:
 
-## Qué cambiaría el puntaje
+- **D4 · Consumo medido.** La rúbrica admite «estimación con base de cálculo
+  explícita», y acá la base está declarada (caracteres medidos sobre los archivos
+  y ratio caracteres/token enunciado). Un corrector estricto puede exigir medición
+  real de corrida, y entonces D4 baja a N3 (11,25).
+- **D4 · Elección de modelo.** La comparación contra alternativas existe y el
+  criterio de contraste está definido de antemano, pero la prueba está pendiente.
+  Puede leerse como parcial.
 
-| Acción | Criterios | Puntos |
-|---|---|---|
-| Generar y commitear las tres corridas | 2 y 6 | **+25** |
-| Descartar la app de Telegram comprometida | 3 | **+5** |
+En el escenario más severo de ambas lecturas, D4 cae a N2 y el total queda en
+70,00. Se declara acá para que el rango sea visible y no una sorpresa.
 
-Con ambas, 100. Sin la primera, ninguna otra mejora compensa: es el único
-pedido explícito de la devolución que no tiene artefacto.
-
-## Nota sobre esta autoevaluación
-
-Un documento que se puntúa a sí mismo tiene un sesgo obvio, y la forma de
-controlarlo es que las filas bajas sean verificables tan fácil como las altas.
-El cero del criterio 2 se comprueba con:
+## Cómo controlarlo
 
 ```bash
-ls entrega2/corridas/corrida_*.json    # no devuelve nada
+python3 entrega2/evaluacion/verificar.py   # 16 afirmaciones contra artefactos
+ls corridas/*/salida.json                  # hoy no devuelve nada: ese es el faltante
 ```
-
-Si ese comando alguna vez devuelve tres archivos, este documento quedó
-desactualizado y hay que rehacer el puntaje.

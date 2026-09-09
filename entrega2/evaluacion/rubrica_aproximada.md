@@ -2,7 +2,7 @@
 
 > **Este documento ya no se aplica.** Se conserva como registro de proceso.
 > La autoevaluación vigente usa la rúbrica ejecutable real del Trabajo Final,
-> con cinco dimensiones. Ver [](autoevaluacion.md).
+> con cinco dimensiones. Ver `autoevaluacion.md`.
 >
 > Lo que esta reconstrucción no vio: no incluía análisis económico ni gobierno
 > y riesgo, que son 30 de los 100 puntos y eran justamente lo que faltaba.

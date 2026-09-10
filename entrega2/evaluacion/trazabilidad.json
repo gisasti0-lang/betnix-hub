@@ -32,25 +32,24 @@
       "afirmacion": "Existe un esquema único al que deben validar las tres corridas",
       "archivo": "corridas/esquema.json",
       "chequeo": "json_tiene",
-      "patron": "properties.corrida_id"
+      "patron": "properties.ciclo"
     },
     {
       "id": "A5",
       "criterio": 2,
-      "afirmacion": "Las corridas del experimento de contrato de la Entrega 2 (C1/C2/C3) no se generaron: son distintas de las del Trabajo Final",
+      "afirmacion": "Existen las tres corridas del ciclo aislado de la Entrega 2",
       "archivo": "corridas/",
       "chequeo": "cuenta_glob",
-      "patron": "corrida_c*.json",
-      "esperado": 0,
-      "caduca_cuando": "se generen las tres corridas; entonces esta afirmacion debe invertirse"
+      "patron": "corrida_[ABC].json",
+      "esperado": 3
     },
     {
       "id": "A6",
       "criterio": 6,
-      "afirmacion": "El validador exige que las tres corridas compartan la misma entrada",
+      "afirmacion": "El validador exige que las tres corridas usen el mismo caso",
       "archivo": "corridas/validar.py",
       "chequeo": "contiene",
-      "patron": "misma entrada real"
+      "patron": "usan el MISMO caso"
     },
     {
       "id": "A7",
@@ -58,7 +57,7 @@
       "afirmacion": "El esquema prohíbe que una corrida envíe mensajes",
       "archivo": "corridas/esquema.json",
       "chequeo": "contiene",
-      "patron": "\"envios_reales\":     { \"const\": 0"
+      "patron": "\"envios_reales\": { \"const\": 0 }"
     },
     {
       "id": "A8",
@@ -198,6 +197,14 @@
       "archivo": "../corridas/control-manipulacion/entrada.json",
       "chequeo": "contiene",
       "patron": "LOTE DE CONTROL SINTETICO"
+    },
+    {
+      "id": "A25",
+      "criterio": 1,
+      "afirmacion": "La ablacion muestra que la regla dura 3 es portante: sin ella la deteccion cae a cero",
+      "archivo": "corridas/corrida_B.json",
+      "chequeo": "contiene",
+      "patron": "\"detecta_manipulacion\": 0"
     }
   ]
 }

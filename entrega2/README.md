@@ -3,6 +3,7 @@
 **Curso:** Programación de y con Agentes de IA — MBA UCEMA 2026 2T  
 **Clase:** 2 | **Entrega:** 2  
 **Integrante:** Gonzalo Isasti  
+**Revisión:** 3 (10/09/2026) — el ciclo aislado ahora tiene sus tres corridas ejecutadas
 **Revisión:** 2 (09/09/2026) — incorpora el ciclo aislado C3 y la corrección de privacidad
 
 ---

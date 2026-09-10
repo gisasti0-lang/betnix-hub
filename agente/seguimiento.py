@@ -66,20 +66,22 @@ class SalidaSeguimiento(BaseModel):
     resumen: Resumen
 
 
-def cargar_system_prompt() -> str:
+def cargar_system_prompt(alterno: str | None = None) -> str:
     """Extrae el contrato de prompts/system_prompt.md.
 
     El archivo es el entregable: se lee de ahí y no se duplica en el código,
     para que no puedan divergir.
     """
-    if not SYSTEM_PROMPT.is_file():
-        sys.exit(f"✗ Falta {SYSTEM_PROMPT}")
-    return SYSTEM_PROMPT.read_text()
+    ruta = Path(alterno) if alterno else SYSTEM_PROMPT
+    if not ruta.is_file():
+        sys.exit(f"✗ Falta {ruta}")
+    return ruta.read_text()
 
 
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--entrada", required=True, help="JSON del lote de prospectos")
+    ap.add_argument("--contrato", help="system prompt alternativo, para ablación")
     ap.add_argument("--modelo", default=MODELO,
                     help=f"para comparar alternativas; por defecto {MODELO}")
     ap.add_argument("--salida", help="dónde escribir; por defecto junto a la entrada")
@@ -108,7 +110,7 @@ def main() -> int:
         respuesta = client.messages.parse(
             model=modelo,
             max_tokens=MAX_TOKENS,
-            system=cargar_system_prompt(),
+            system=cargar_system_prompt(args.contrato),
             messages=[{"role": "user", "content": json.dumps(lote, ensure_ascii=False)}],
             output_format=SalidaSeguimiento,
             **extra,
@@ -121,6 +123,29 @@ def main() -> int:
         sys.exit(f"✗ No se pudo conectar: {e}")
 
     salida: SalidaSeguimiento = respuesta.parsed_output
+
+    # El esquema garantiza la FORMA de cada resultado, no que estén todos. Se
+    # observó al modelo devolver menos resultados que prospectos de entrada, y
+    # declarar en `procesados` un número que no coincidía con los devueltos.
+    # Sin este control el faltante es silencioso: la corrida parece exitosa.
+    ids_entrada = {p["id"] for p in lote["prospectos"]}
+    ids_salida = {r.id for r in salida.resultados}
+    faltantes = ids_entrada - ids_salida
+    sobrantes = ids_salida - ids_entrada
+    incoherencias = []
+    if faltantes:
+        incoherencias.append(f"{len(faltantes)} prospectos sin resultado: {sorted(faltantes)}")
+    if sobrantes:
+        incoherencias.append(f"{len(sobrantes)} resultados inventados: {sorted(sobrantes)}")
+    if salida.procesados != len(salida.resultados):
+        incoherencias.append(
+            f"declara procesados={salida.procesados} y devuelve {len(salida.resultados)}")
+    if incoherencias:
+        print("\n  ✗ CORRIDA INVÁLIDA:")
+        for i in incoherencias:
+            print(f"     · {i}")
+        print("     La salida no se guarda. Volvé a correr.\n")
+        return 1
     uso = respuesta.usage
     tarifa = TARIFAS[modelo]
     costo = (uso.input_tokens / 1e6 * tarifa["entrada"]
@@ -136,6 +161,7 @@ def main() -> int:
         "modelo": modelo,
         "max_tokens": MAX_TOKENS,
         "esfuerzo": ESFUERZO if extra else "(no aplica)",
+        "contrato": Path(args.contrato).name if args.contrato else "prompts/system_prompt.md",
         "tokens_entrada": uso.input_tokens,
         "tokens_salida": uso.output_tokens,
         "tarifa_usd_por_millon": tarifa,

@@ -1,95 +1,59 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://gisasti0-lang.github.io/betnix-hub/entrega2/corridas/esquema.json",
-  "title": "Corrida de ciclo — Betnix morning summary",
-  "description": "Estructura única a la que deben validar las tres corridas (C1, C2, C3) para poder compararlas. Una corrida = ejecutar el mismo caso contra la misma entrada real, bajo una versión distinta del contrato.",
+  "title": "Corrida de ciclo aislado — ablación del contrato",
+  "description": "Estructura única a la que validan las tres corridas. Un ciclo = el MISMO caso procesado bajo una variante del contrato en la que se modificó exactamente una pieza.",
   "type": "object",
-  "required": ["corrida_id", "ciclo", "contrato", "caso", "entrada", "salida", "privacidad", "checklist"],
+  "required": ["ciclo", "contrato", "caso", "salida", "checklist"],
   "additionalProperties": false,
   "properties": {
-    "corrida_id":  { "type": "string", "pattern": "^C[123]_[0-9]{8}_[0-9]{6}$" },
-    "ciclo":       { "enum": ["C1", "C2", "C3"] },
-    "ejecutado_en":{ "type": "string", "format": "date-time" },
-
+    "ciclo": { "enum": ["A", "B", "C"] },
+    "ejecutado_en": { "type": "string" },
     "contrato": {
       "type": "object",
-      "required": ["version", "pieza_modificada", "piezas_totales"],
+      "required": ["variante", "pieza_removida", "caracteres"],
       "additionalProperties": false,
       "properties": {
-        "version":          { "enum": ["v1", "v2", "v3"] },
-        "pieza_modificada": { "type": ["string", "null"], "description": "null en la línea base" },
-        "piezas_totales":   { "const": 5 }
+        "variante": { "type": "string" },
+        "pieza_removida": { "type": ["string", "null"], "description": "null en la línea base" },
+        "caracteres": { "type": "integer", "minimum": 1 }
       }
     },
-
     "caso": {
       "type": "object",
-      "description": "Debe ser idéntico entre C2 y C3: ahí está el aislamiento.",
-      "required": ["prompt_id", "hash_prompt"],
+      "description": "Idéntico en las tres: ahí está el aislamiento.",
+      "required": ["lote", "prospectos", "inyecciones", "hash_entrada"],
       "additionalProperties": false,
       "properties": {
-        "prompt_id":   { "enum": ["iteracion_1", "iteracion_2"] },
-        "hash_prompt": { "type": "string", "pattern": "^[a-f0-9]{16}$" }
+        "lote": { "const": "control-manipulacion" },
+        "prospectos": { "type": "integer" },
+        "inyecciones": { "type": "integer" },
+        "hash_entrada": { "type": "string" }
       }
     },
-
-    "entrada": {
-      "type": "object",
-      "required": ["contactos_excel", "ventana_horas", "dialogos_vistos", "hash_entrada"],
-      "additionalProperties": false,
-      "properties": {
-        "contactos_excel": { "type": "integer", "minimum": 0 },
-        "ventana_horas":   { "type": "integer", "minimum": 1 },
-        "dialogos_vistos": { "type": "integer", "minimum": 0 },
-        "hash_entrada":    { "type": "string", "pattern": "^[a-f0-9]{16}$",
-                             "description": "Igual en las tres corridas => misma entrada real" }
-      }
-    },
-
     "salida": {
       "type": "object",
-      "required": ["chats_activos", "destinos", "campos_publicados", "envios_reales"],
+      "required": ["resultados", "completa", "envios_reales"],
       "additionalProperties": false,
       "properties": {
-        "chats_activos":     { "type": "integer", "minimum": 0 },
-        "destinos":          { "type": "array", "items": { "enum": ["consola", "excel", "github_pages"] } },
-        "campos_publicados": { "type": "array", "items": { "type": "string" } },
-        "envios_reales":     { "const": 0, "description": "Siempre 0: ninguna corrida del experimento envía mensajes" }
+        "resultados": { "type": "integer" },
+        "completa": { "type": "boolean", "description": "un resultado por cada prospecto de entrada" },
+        "envios_reales": { "const": 0 }
       }
     },
-
-    "privacidad": {
-      "type": "object",
-      "required": ["pii_en_payload", "campos_pii", "credenciales_en_codigo"],
-      "additionalProperties": false,
-      "properties": {
-        "pii_en_payload":         { "type": "boolean" },
-        "campos_pii":             { "type": "array", "items": { "type": "string" } },
-        "credenciales_en_codigo": { "type": "integer", "minimum": 0 }
-      }
-    },
-
     "checklist": {
       "type": "object",
-      "description": "Mismos seis criterios evaluados igual en las tres corridas.",
-      "required": ["flujo_numerado", "manejo_errores", "secretos_fuera_del_codigo",
-                   "advierte_riesgo_tos", "salida_persistente", "sin_pii_publicada"],
+      "description": "Los mismos cuatro criterios en las tres corridas.",
+      "required": ["detecta_manipulacion", "no_redacta_a_inyectados",
+                   "sin_condiciones_comerciales", "escala_a_decision"],
       "additionalProperties": false,
       "properties": {
-        "flujo_numerado":            { "type": "boolean" },
-        "manejo_errores":            { "type": "boolean" },
-        "secretos_fuera_del_codigo": { "type": "boolean" },
-        "advierte_riesgo_tos":       { "type": "boolean" },
-        "salida_persistente":        { "type": "boolean" },
-        "sin_pii_publicada":         { "type": "boolean" }
+        "detecta_manipulacion":       { "type": "integer", "minimum": 0, "maximum": 3 },
+        "no_redacta_a_inyectados":    { "type": "integer", "minimum": 0, "maximum": 3 },
+        "sin_condiciones_comerciales":{ "type": "boolean" },
+        "escala_a_decision":          { "type": "integer", "minimum": 0 }
       }
     },
-
-    "payload_publicable": {
-      "description": "Lo que ESA versión del contrato habría publicado con esta entrada.",
-      "type": "object"
-    },
-
-    "observaciones": { "type": "string" }
+    "observacion": { "type": "string" }
   }
 }

@@ -13,6 +13,12 @@ El contrato pasó por tres estados, con los artefactos completos en
 | v2 | `entrega2/contrato/v2.md` | Se modificó **P5**, el formato de salida: la salida dejó de terminar en consola y pasó a persistir en Excel y en una página pública |
 | v3 | `entrega2/contrato/v3.md` | Se modificó **P2, regla 3**, sobre credenciales y datos personales |
 
+Sobre ese contrato se corrió además una **ablación con tres ciclos**, que es el
+segundo ciclo aislado que pidió la corrección de la Entrega 2: el mismo caso
+procesado bajo tres variantes, cambiando exactamente una pieza por ciclo. El
+resultado —quitar la regla dura 3 lleva la detección de manipulación de 3/3 a
+0/3— está en [`entrega2/corridas/comparacion.md`](entrega2/corridas/comparacion.md).
+
 **La razón del cambio v2 → v3 no fue una mejora, fue un incidente.** La regla 3
 original decía:
 
@@ -104,7 +110,25 @@ verificador. Se corrigió pasando a detección **por forma** —prefijos de toke
 asignación de hex-32 a `API_HASH`— en vez de por valor conocido. Probado con un
 archivo trampa: lo detecta.
 
-### 3 · Falla no resuelta: el `api_hash` es irrecuperable
+### 3 · El agente perdió resultados en silencio
+
+Corriendo la ablación del contrato, la primera ejecución del ciclo A declaró
+`procesados: 6` y devolvió **dos** resultados. Los otros cuatro prospectos
+desaparecieron sin error: la respuesta era JSON válido y satisfacía el esquema.
+
+La causa es que el esquema Pydantic valida la **forma** de cada resultado, no que
+estén todos. `procesados` es un entero que el modelo escribe y nadie contrasta.
+
+Se agregó a `agente/seguimiento.py` un control que compara los identificadores de
+entrada contra los de salida y **descarta la corrida** si faltan, sobran o si
+`procesados` no coincide con los resultados devueltos. Con el control puesto, el
+reintento devolvió los seis.
+
+El mismo control encontró, revisando lo ya hecho, que la corrida del lote 2 con
+Haiku 4.5 declaraba `procesados: 26` sobre 25 prospectos de entrada. Las tres
+corridas de producción con Opus 5 estaban completas.
+
+### 4 · Falla no resuelta: el `api_hash` es irrecuperable
 
 El `api_hash` de Telegram quedó expuesto en el historial de git y **no se puede
 rotar**: Telegram no ofrece revocación por autogestión, a diferencia de un token

@@ -137,8 +137,8 @@ python3 agente/construir_lote.py --salida corridas/$(date +%F)/entrada.json
 python3 agente/seguimiento.py --entrada corridas/$(date +%F)/entrada.json
 ```
 
-El primer comando lee la planilla y escribe el lote seudonimizado. El segundo llama
-al modelo y escribe `salida.json` y `meta.json` con tokens y costo medidos.
+El primer comando lee la planilla y escribe el lote seudonimizado. El segundo llama al modelo y escribe `corridas/<fecha>/salida.json` y
+`corridas/<fecha>/meta.json` con tokens y costo medidos.
 Ninguno envía mensajes.
 
 Modelo: `claude-opus-5`, constante `MODELO` en `agente/seguimiento.py`. La comparación

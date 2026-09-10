@@ -7,7 +7,7 @@ un permiso no declarado se asume otorgado, y no debería.
 
 | Sistema | Acceso | Permiso concedido |
 |---|---|---|
-| `Betnix_Outreach_2026.xlsx` | openpyxl, disco local | **Solo lectura.** Es el insumo del agente de seguimiento |
+| `Betnix_Outreach_2026.xlsx` ([especificación](corridas/INSUMO.md)) | openpyxl, disco local | **Solo lectura.** Insumo externo no versionado: contiene datos de contactos reales |
 | API de Anthropic | HTTPS | Envío del lote seudonimizado; recepción del JSON de seguimiento |
 | Telegram (cuenta del Affiliate Manager) | Telethon, sesión MTProto | **Solo lectura.** Únicamente el componente legado del hub; el agente de seguimiento no toca Telegram |
 | Repositorio `betnix-hub` | API REST de GitHub | Escritura de `resumen.json`, exclusivamente |

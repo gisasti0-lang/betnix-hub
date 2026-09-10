@@ -166,6 +166,22 @@
       "chequeo": "cuenta_glob",
       "patron": "*/entrada.json",
       "esperado": 3
+    },
+    {
+      "id": "A21",
+      "criterio": 1,
+      "afirmacion": "El insumo externo no versionado esta especificado y su ausencia declarada (R6-bis C3 y C5)",
+      "archivo": "../corridas/INSUMO.md",
+      "chequeo": "contiene",
+      "patron": "no se versiona"
+    },
+    {
+      "id": "A22",
+      "criterio": 1,
+      "afirmacion": "Existe artefacto derivado que acredita el consumo del insumo (R6-bis C2)",
+      "archivo": "../corridas/inventario_insumo.json",
+      "chequeo": "json_tiene",
+      "patron": "filas_con_datos"
     }
   ]
 }

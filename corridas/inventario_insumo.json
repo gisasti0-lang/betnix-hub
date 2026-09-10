@@ -1,0 +1,33 @@
+{
+  "generado_por": "agente/construir_lote.py (mismo lector que las corridas)",
+  "archivo": "Betnix_Outreach_2026.xlsx",
+  "hoja": "Betnix Outreach",
+  "filas_con_datos": 288,
+  "columnas": 10,
+  "encabezados": [
+    "Empresa / Partner",
+    "Contacto (Email / TG)",
+    "Canal",
+    "Semana",
+    "GEO",
+    "Tipo de Tráfico",
+    "Estado",
+    "Posibilidad de Cierre",
+    "Comentario",
+    "Notas / Detalle"
+  ],
+  "por_canal": {
+    "Telegram": 211,
+    "Email": 77
+  },
+  "por_estado": {
+    "Contacted": 129,
+    "Sin respuesta": 56,
+    "Not relevant": 34,
+    "already working": 15,
+    "Not replying": 11,
+    "REBOTÓ": 10,
+    "No se pudo cerrar": 6,
+    "Launching": 6
+  }
+}

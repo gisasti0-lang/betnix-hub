@@ -1,12 +1,17 @@
 # Corridas
 
-Cada corrida es una carpeta `YYYY-MM-DD/` con tres archivos:
+Cada corrida es una carpeta cuyo nombre combina la fecha y el número de lote del
+día. Las tres de esta entrega son `2026-09-10-1`, `2026-09-10-2` y `2026-09-10-3`,
+y cada una contiene exactamente tres archivos:
 
-| Archivo | Contenido |
+| Ruta (ejemplo de la primera corrida) | Contenido |
 |---|---|
-| `entrada.json` | El lote que recibió el agente, seudonimizado |
-| `salida.json` | El JSON que devolvió, **sin edición cosmética** |
-| `meta.json` | Fecha, modelo, tokens de entrada y salida medidos, costo, y `enviados: 0` |
+| [`2026-09-10-1/entrada.json`](2026-09-10-1/entrada.json) | El lote que recibió el agente, seudonimizado |
+| [`2026-09-10-1/salida.json`](2026-09-10-1/salida.json) | El JSON que devolvió, **sin edición cosmética** |
+| [`2026-09-10-1/meta.json`](2026-09-10-1/meta.json) | Fecha, modelo, tokens medidos por la API, costo y `enviados: 0` |
+
+La fecha vive dentro de cada `meta.json`, además del nombre de la carpeta.
+
 
 La fecha vive en `meta.json`, además del nombre de la carpeta.
 
@@ -49,3 +54,9 @@ El lote publicado no contiene razón social, @handle ni email: solo seudónimo y
 atributos de negocio. Por eso estas corridas **sí son publicables**, a diferencia
 de las del agente de triage anterior, cuyo insumo era el texto de mensajes
 privados.
+
+
+## El insumo
+
+La planilla de origen no se versiona. Su especificación completa y el artefacto
+que acredita su consumo están en [`INSUMO.md`](INSUMO.md).

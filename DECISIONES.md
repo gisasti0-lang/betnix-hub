@@ -67,9 +67,12 @@ pasaron a ser publicables sin redacción.**
 La entrega original documentaba un cron job a las 08:00 y se describía «en
 producción». No corrió **ni una vez**. Evidencia:
 
-- `morning_log.json` quedó en `{}` desde el día del login: cero respuestas enviadas.
-- `morning_log.txt` no existía, pese a que la crontab redirigía con `>>` — el
-  archivo se habría creado en el primer disparo aunque el script fallara.
+- El log de estado del script, en la máquina local, quedó en `{}` desde el día del
+  login: cero respuestas enviadas. No se versiona porque es un producto de
+  ejecución con datos de contactos.
+- El log de salida de la crontab no llegó a existir, pese a que la entrada
+  redirigía con `>>` — el archivo se habría creado en el primer disparo aunque el
+  script fallara. Su inexistencia **es** la evidencia: el cron nunca se disparó.
 - Ningún commit `update resumen YYYY-MM-DD` en este repositorio.
 
 Primera causa, error textual al invocar el intérprete de la crontab:
@@ -85,8 +88,8 @@ dependencias. Segunda causa: en macOS `cron` necesita Full Disk Access para leer
 `~/Documents`, y sin ese permiso **no arranca ni deja log**. Por eso el fallo
 pasó desapercibido.
 
-Qué se hizo: migración a un LaunchAgent (`codigo/com.betnix.morning.plist`) y
-`codigo/diagnostico.sh`, que verifica 13 precondiciones antes de dar por buena
+Qué se hizo: migración a un LaunchAgent (`entrega2/codigo/com.betnix.morning.plist`) y
+`entrega2/codigo/diagnostico.sh`, que verifica 13 precondiciones antes de dar por buena
 una corrida. Un fallo silencioso es peor que uno ruidoso.
 
 ### 2 · El chequeo de secretos republicaba el secreto
@@ -121,7 +124,7 @@ está dormida a la hora programada saltea el turno. launchd dispara al despertar
 **Descartado: usar el modelo para categorizar lo que se publica.** Motivo:
 `resumen.json` es público y debe ser reproducible byte a byte para poder auditar
 que no filtra datos. Un clasificador determinista por expresiones regulares
-(`codigo/anonimizar.py`) da la misma categoría para el mismo texto siempre. El
+(`entrega2/codigo/anonimizar.py`) da la misma categoría para el mismo texto siempre. El
 modelo se usa donde aporta —triage y redacción—, no donde introduce variabilidad
 en un artefacto público.
 

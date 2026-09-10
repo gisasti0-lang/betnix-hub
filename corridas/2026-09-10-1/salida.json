@@ -1,0 +1,236 @@
+{
+  "fecha_lote": "2026-09-10",
+  "procesados": 25,
+  "resultados": [
+    {
+      "id": "AF-244d0037",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "activo Verde, mantenimiento de cuenta",
+      "requiere_decision": false,
+      "mensaje": "Olá! Passando para acompanhar a operação. Como está a performance do tráfego de influencer/streamer em PT nas últimas semanas? Se quiser, revisamos juntos os criativos e os links que estão convertendo melhor, e vejo o que consigo destravar do nosso lado para escalar. Qualquer ajuste ou dúvida sobre a operação, me avise por aqui.",
+      "nota": "Comentario vacío: mensaje redactado solo con estado, GEO y tipo de tráfico; ID recibido con prefijo AF-, se conserva tal cual."
+    },
+    {
+      "id": "AF-2dce1abb",
+      "corresponde": true,
+      "prioridad": "alta",
+      "motivo": "en_alta Verde, cierre de onboarding",
+      "requiere_decision": false,
+      "mensaje": "¡Hola! Sigo el alta para dejarla operativa. ¿Quedó algo pendiente de tu lado para terminar la integración (accesos, links de tracking, datos de la cuenta)? Si me confirmás qué tipo de tráfico vas a enviar primero, preparo todo para que puedas arrancar sin trabas. Cualquier duda, la vemos por acá.",
+      "nota": "tipo_trafico faltante, se procesa con '—' y se pide en el mensaje."
+    },
+    {
+      "id": "AF-2f60d4f7",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "activo Verde, mantenimiento de cuenta",
+      "requiere_decision": false,
+      "mensaje": "Olá! Acompanhando a operação de FB em PT. Como estão os volumes e a qualidade dos registros nas últimas semanas? Se houver algo travando a escala (criativos, landing, tracking), me diga que eu vejo internamente. Também posso passar quais verticais estão performando melhor para o seu tipo de tráfego.",
+      "nota": "Comentario vacío: seguimiento genérico según estado, GEO y tipo de tráfico."
+    },
+    {
+      "id": "AF-3bce4120",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "activo Verde, mantenimiento de cuenta",
+      "requiere_decision": false,
+      "mensaje": "¡Hola! Paso a hacer seguimiento de la operación. ¿Cómo viene el rendimiento en las últimas semanas? Para poder acompañarte mejor, me sirve confirmar qué tipo de tráfico estás enviando hoy y a qué GEOs le estás dando prioridad. Si hay algo que esté frenando la escala, decime y lo reviso de mi lado.",
+      "nota": "tipo_trafico llega como '?' y GEO 'Tier 1' fuera de las categorías previstas: se procesa igual y se pide confirmación."
+    },
+    {
+      "id": "AF-3dedea60",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "activo Verde, mantenimiento de cuenta",
+      "requiere_decision": false,
+      "mensaje": "¡Hola! Sigo la operación de FB ads y PPC. ¿Cómo vienen los volúmenes en MX y CL en las últimas semanas? Si querés, revisamos qué campañas están convirtiendo mejor y veo qué puedo destrabar internamente para acompañar la escala. Cualquier tema de tracking o creatividades, lo vemos por acá.",
+      "nota": "GEO combinado (Tier 1 / LATAM / MX / CL) fuera del listado previsto; se procesa igual."
+    },
+    {
+      "id": "AF-3f715570",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "activo Verde, mantenimiento de cuenta",
+      "requiere_decision": false,
+      "mensaje": "¡Hola! Paso a hacer seguimiento de la cuenta. ¿Cómo viene el tráfico SEO en las últimas semanas? Si hay páginas o keywords que quieras potenciar, puedo pasarte qué está convirtiendo mejor de nuestro lado para que priorices. Si algo está frenando el crecimiento, contame y lo reviso internamente.",
+      "nota": "Comentario vacío: seguimiento genérico según estado, GEO y tipo de tráfico."
+    },
+    {
+      "id": "AF-5bc88242",
+      "corresponde": true,
+      "prioridad": "alta",
+      "motivo": "en_alta Verde, cierre de onboarding",
+      "requiere_decision": false,
+      "mensaje": "¡Hola! Sigo el alta para dejarla lista. ¿Falta algo de tu lado para cerrar la integración (accesos, links de tracking, datos de la cuenta)? También me sirve confirmar a qué GEOs vas a apuntar con el tráfico de FB para preparar todo acorde. Cualquier duda, la resolvemos por acá.",
+      "nota": "GEO llega como '?': se procesa igual y se solicita confirmación en el mensaje."
+    },
+    {
+      "id": "AF-66014140",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "activo Verde, mantenimiento de cuenta",
+      "requiere_decision": false,
+      "mensaje": "¡Hola! Paso a hacer seguimiento de la operación de media buying. ¿Cómo vienen los volúmenes en Europa y MX en las últimas semanas? Si querés, vemos qué campañas están rindiendo mejor y reviso de mi lado qué puedo destrabar para acompañar la escala. Cualquier tema operativo, lo charlamos por acá.",
+      "nota": "GEO combinado (Europa / MX) fuera del listado previsto; se procesa igual."
+    },
+    {
+      "id": "AF-688885a8",
+      "corresponde": true,
+      "prioridad": "alta",
+      "motivo": "en_alta Verde, cierre de onboarding",
+      "requiere_decision": false,
+      "mensaje": "¡Hola! Sigo el alta para dejarla operativa. ¿Quedó algo pendiente para cerrar la integración y habilitar a tus sub-afiliados (accesos, links de tracking, datos de la cuenta)? Si me confirmás con qué GEOs querés arrancar, preparo todo para que puedan empezar a enviar tráfico sin trabas.",
+      "nota": "Perfil master affiliate con GEO combinado (Tier 1 / LATAM); se procesa igual."
+    },
+    {
+      "id": "AF-7416bdad",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "activo Verde, mantenimiento de cuenta",
+      "requiere_decision": false,
+      "mensaje": "¡Hola! Paso a hacer seguimiento de la operación. ¿Cómo viene el tráfico in-app en las últimas semanas? Si hay fuentes o formatos que quieras probar, contame y lo reviso de mi lado. También me sirve saber si estás mirando otros GEOs además de AU, para ver cómo acompañarte.",
+      "nota": "GEO 'AU' fuera del listado previsto y foco no LATAM; se procesa igual y se deja constancia."
+    },
+    {
+      "id": "AF-76c91e17",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "activo Verde, mantenimiento de cuenta",
+      "requiere_decision": false,
+      "mensaje": "¡Hola! Sigo la operación de los sitios de SEO. ¿Cómo viene el rendimiento en las últimas semanas? Si querés, te paso qué está convirtiendo mejor para que lo priorices en los sitios, y reviso de mi lado si hay algo que podamos mejorar para sostener el crecimiento. Cualquier tema de tracking, lo vemos por acá.",
+      "nota": "Comentario vacío: seguimiento genérico según estado, GEO y tipo de tráfico."
+    },
+    {
+      "id": "AF-7a56ca9e",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "activo Verde, mantenimiento de cuenta",
+      "requiere_decision": false,
+      "mensaje": "Olá! Passando para acompanhar a operação de FB em PT. Como estão os volumes e a qualidade do tráfego nas últimas semanas? Se algo estiver travando a escala (criativos, landing, tracking), me avise que eu verifico internamente. Fico à disposição por aqui.",
+      "nota": "Comentario vacío: seguimiento genérico según estado, GEO y tipo de tráfico."
+    },
+    {
+      "id": "AF-a421cf29",
+      "corresponde": true,
+      "prioridad": "alta",
+      "motivo": "en_alta Verde, cierre de onboarding",
+      "requiere_decision": false,
+      "mensaje": "¡Hola! Sigo el alta para dejarla lista. ¿Falta algo de tu lado para cerrar la integración (accesos, links de tracking, datos de la cuenta)? Si me confirmás con qué influencers de MX vas a arrancar y en qué fechas, preparo todo para que el lanzamiento salga limpio. Cualquier duda, por acá.",
+      "nota": "Comentario vacío: seguimiento de onboarding según estado, GEO y tipo de tráfico."
+    },
+    {
+      "id": "AF-a80c0975",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "activo Verde, mantenimiento de cuenta",
+      "requiere_decision": false,
+      "mensaje": "Olá! Acompanhando a operação de FB em PT. Como está a performance nas últimas semanas? Se quiser, revisamos quais campanhas estão convertendo melhor e eu vejo internamente o que consigo destravar para ajudar a escalar. Qualquer questão operacional, falamos por aqui.",
+      "nota": "Comentario vacío: seguimiento genérico según estado, GEO y tipo de tráfico."
+    },
+    {
+      "id": "AF-ba972b9c",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "activo Verde, faltan GEO y tipo de tráfico",
+      "requiere_decision": true,
+      "mensaje": "¡Hola! Paso a hacer seguimiento de la operación. Para poder acompañarte mejor, ¿me confirmás qué tipo de tráfico estás enviando hoy y a qué GEOs le estás dando prioridad? Con eso reviso el rendimiento de mi lado y vemos si hay algo para ajustar o potenciar.",
+      "nota": "GEO y tipo_trafico faltantes ('—'): se procesa con genérico, pero conviene que el AM confirme el perfil antes de enviar."
+    },
+    {
+      "id": "AF-c5217532",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "activo Verde, mantenimiento de cuenta",
+      "requiere_decision": false,
+      "mensaje": "¡Hola! Sigo la operación de UAC y FB. ¿Cómo vienen los volúmenes y la calidad de los registros en las últimas semanas? Me sirve saber a qué GEOs le estás dando prioridad para revisar el rendimiento de mi lado. Si algo está frenando la escala, contame y lo vemos.",
+      "nota": "GEO faltante ('—'): se procesa igual y se solicita en el mensaje."
+    },
+    {
+      "id": "AF-c912bf13",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "activo Verde, mantenimiento de cuenta",
+      "requiere_decision": false,
+      "mensaje": "Olá! Passando para acompanhar a operação de media buy em PT. Como estão os volumes nas últimas semanas? Se quiser, vemos quais campanhas estão performando melhor e eu verifico internamente o que consigo destravar para acompanhar a escala. Qualquer dúvida, estou por aqui.",
+      "nota": "Comentario vacío: seguimiento genérico según estado, GEO y tipo de tráfico."
+    },
+    {
+      "id": "AF-c94d8f6e",
+      "corresponde": true,
+      "prioridad": "alta",
+      "motivo": "en_alta Verde, cierre de onboarding",
+      "requiere_decision": false,
+      "mensaje": "¡Hola! Sigo el alta para dejarla operativa. ¿Quedó algo pendiente de tu lado para cerrar la integración (accesos, links de tracking, datos de la cuenta)? Si me contás qué páginas de MX vas a usar primero, reviso que todo el tracking quede fino antes de arrancar.",
+      "nota": "Comentario vacío: seguimiento de onboarding según estado, GEO y tipo de tráfico."
+    },
+    {
+      "id": "AF-d42c6a4e",
+      "corresponde": true,
+      "prioridad": "alta",
+      "motivo": "en_alta Verde, cierre de onboarding",
+      "requiere_decision": false,
+      "mensaje": "Olá! Estou acompanhando o cadastro para deixá-lo operacional. Falta algo do seu lado para fechar a integração (acessos, links de tracking, dados da conta)? Se me confirmar com quais influencers vai começar e em que datas, preparo tudo para o lançamento sair sem atritos.",
+      "nota": "Comentario vacío: seguimiento de onboarding según estado, GEO y tipo de tráfico."
+    },
+    {
+      "id": "AF-e2a33494",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "activo Verde, mantenimiento de cuenta",
+      "requiere_decision": false,
+      "mensaje": "¡Hola! Paso a hacer seguimiento de la operación de SEO. ¿Cómo viene el rendimiento, sobre todo en MX, en las últimas semanas? Si querés, te paso qué está convirtiendo mejor para que lo priorices en los contenidos, y reviso de mi lado si hay algo para mejorar. Cualquier tema, por acá.",
+      "nota": "GEO combinado (WW / MX fuerte); se procesa igual."
+    },
+    {
+      "id": "AF-ee4b0830",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "activo Verde, mantenimiento de cuenta",
+      "requiere_decision": false,
+      "mensaje": "¡Hola! Sigo la operación de la red. ¿Cómo vienen los volúmenes de Europa y LATAM en las últimas semanas? Si querés, revisamos qué fuentes de tus afiliados están rindiendo mejor y veo de mi lado qué puedo destrabar para acompañar la escala. Cualquier tema operativo, lo charlamos por acá.",
+      "nota": "GEO combinado (Europa / LATAM); se procesa igual."
+    },
+    {
+      "id": "AF-00915bcd",
+      "corresponde": true,
+      "prioridad": "baja",
+      "motivo": "prospecto Amarillo, reactivación suave",
+      "requiere_decision": false,
+      "mensaje": "¡Hola! Retomo el contacto por la propuesta de colaboración con tráfico SEO. Si sigue habiendo interés, me gustaría entender qué GEOs trabajás y qué volumen manejás, para ver si tiene sentido avanzar y armar una prueba. Si preferís que lo veamos más adelante, decime y coordino en otro momento.",
+      "nota": "GEO faltante ('—'): se procesa igual y se consulta en el mensaje."
+    },
+    {
+      "id": "AF-00aa6f87",
+      "corresponde": true,
+      "prioridad": "baja",
+      "motivo": "prospecto Amarillo, reactivación suave",
+      "requiere_decision": false,
+      "mensaje": "Olá! Retomando o contato sobre uma possível colaboração. Vi que o foco é e-sports (CS2, LoL) em PT, e temos boa cobertura nessa vertical. Se ainda houver interesse, me diga o volume e o formato que costuma trabalhar e vemos se faz sentido avançar com um teste. Se preferir retomar mais adiante, sem problema.",
+      "nota": "Comentario vacío: seguimiento genérico según estado, GEO y tipo de tráfico."
+    },
+    {
+      "id": "AF-01a69ec6",
+      "corresponde": true,
+      "prioridad": "baja",
+      "motivo": "sin_respuesta, último toque por email",
+      "requiere_decision": false,
+      "mensaje": "Hola, retomo el contacto por la propuesta de colaboración con tu medio de fútbol en Europa y LATAM. Si te interesa explorarlo, podemos agendar una charla breve para ver formatos y cómo medir resultados. Si no es el momento, respondeme con una línea y no vuelvo a insistir por este canal.",
+      "nota": "Sin respuesta previa: se propone un último toque de bajo impacto para no quemar el contacto."
+    },
+    {
+      "id": "AF-01cc41ec",
+      "corresponde": true,
+      "prioridad": "baja",
+      "motivo": "prospecto Amarillo, reactivación suave",
+      "requiere_decision": false,
+      "mensaje": "¡Hola! Retomo el contacto por la propuesta de colaboración para LATAM y MX. Para ver si tiene sentido avanzar, ¿me contás qué tipo de tráfico manejás y qué volumen aproximado? Con eso te digo cómo podríamos armar una prueba. Si no es el momento, avisame y lo retomo más adelante.",
+      "nota": "tipo_trafico faltante ('—'): se procesa igual y se consulta en el mensaje."
+    }
+  ],
+  "resumen": {
+    "corresponden": 25,
+    "requieren_decision": 1,
+    "por_prioridad": {}
+  }
+}

@@ -25,7 +25,14 @@ SYSTEM_PROMPT = RAIZ / "prompts" / "system_prompt.md"
 # El modelo es una constante de configuración, no una decisión enterrada en el
 # código. La comparación contra alternativas está en ANALISIS_ECONOMICO.md.
 MODELO = "claude-opus-5"
-MAX_TOKENS = 8000
+# El razonamiento adaptativo de Opus 5 consume del mismo max_tokens que la
+# respuesta. Con 8000 la salida se truncaba a mitad de un string y Pydantic
+# rechazaba el JSON. 16000 deja margen para ambos.
+MAX_TOKENS = 16000
+
+# La tarea es estructurada y de criterio acotado: no necesita esfuerzo alto.
+# Bajarlo reduce los tokens de razonamiento y el costo por corrida.
+ESFUERZO = "medium"
 
 # Tarifas USD por millón de tokens. Se declaran acá para que el cálculo de
 # costo sea recalculable a mano desde el registro de la corrida.
@@ -36,7 +43,7 @@ TARIFAS = {
 }
 
 class Resultado(BaseModel):
-    id: str = Field(description="Seudónimo del prospecto, formato PR-xxxxxxxx")
+    id: str = Field(description="Seudónimo del prospecto, formato AF-xxxxxxxx")
     corresponde: bool = Field(description="si le toca seguimiento hoy")
     prioridad: Literal["alta", "media", "baja", "ninguna"]
     motivo: str = Field(description="clave del criterio aplicado, pocas palabras")
@@ -84,7 +91,7 @@ def main() -> int:
     if not lote.get("prospectos"):
         sys.exit("✗ El lote no tiene prospectos.")
 
-    client = anthropic.Anthropic()
+    client = anthropic.Anthropic(timeout=300.0)
     inicio = datetime.now()
 
     try:
@@ -94,6 +101,7 @@ def main() -> int:
             system=cargar_system_prompt(),
             messages=[{"role": "user", "content": json.dumps(lote, ensure_ascii=False)}],
             output_format=SalidaSeguimiento,
+            output_config={"effort": ESFUERZO},
         )
     except anthropic.RateLimitError as e:
         sys.exit(f"✗ Límite de tasa alcanzado: {e}")
@@ -115,6 +123,7 @@ def main() -> int:
         "fecha": inicio.isoformat(timespec="seconds"),
         "modelo": MODELO,
         "max_tokens": MAX_TOKENS,
+        "esfuerzo": ESFUERZO,
         "tokens_entrada": uso.input_tokens,
         "tokens_salida": uso.output_tokens,
         "tarifa_usd_por_millon": tarifa,

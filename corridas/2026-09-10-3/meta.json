@@ -1,0 +1,17 @@
+{
+  "fecha": "2026-09-10T11:11:59",
+  "modelo": "claude-opus-5",
+  "max_tokens": 16000,
+  "esfuerzo": "medium",
+  "tokens_entrada": 6433,
+  "tokens_salida": 5790,
+  "tarifa_usd_por_millon": {
+    "entrada": 5.0,
+    "salida": 25.0
+  },
+  "costo_usd": 0.176915,
+  "duracion_seg": 70.9,
+  "prospectos_en_lote": 25,
+  "enviados": 0,
+  "nota": "Ningún mensaje fue enviado. El envío requiere aprobación humana."
+}

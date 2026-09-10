@@ -1,0 +1,255 @@
+{
+  "fecha_lote": "2026-09-10",
+  "prospectos": [
+    {
+      "id": "AF-244d0037",
+      "canal": "Telegram",
+      "geo": "PT",
+      "tipo_trafico": "Influencer/Streamer",
+      "estado": "activo",
+      "posibilidad_cierre": "Verde",
+      "campana": "Semana 1 (TG - establecidos)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-2dce1abb",
+      "canal": "Telegram",
+      "geo": "WW",
+      "tipo_trafico": "—",
+      "estado": "en_alta",
+      "posibilidad_cierre": "Verde",
+      "campana": "Semana 2 (TG - nov 11-12)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-2f60d4f7",
+      "canal": "Telegram",
+      "geo": "PT",
+      "tipo_trafico": "FB",
+      "estado": "activo",
+      "posibilidad_cierre": "Verde",
+      "campana": "Semana 1 (TG - establecidos)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-3bce4120",
+      "canal": "Telegram",
+      "geo": "Tier 1",
+      "tipo_trafico": "?",
+      "estado": "activo",
+      "posibilidad_cierre": "Verde",
+      "campana": "Semana 1 (TG - establecidos)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-3dedea60",
+      "canal": "Telegram",
+      "geo": "Tier 1 / LATAM / MX / CL",
+      "tipo_trafico": "FB ads, PPC",
+      "estado": "activo",
+      "posibilidad_cierre": "Verde",
+      "campana": "Semana 1 (TG - establecidos)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-3f715570",
+      "canal": "Telegram",
+      "geo": "WW",
+      "tipo_trafico": "SEO",
+      "estado": "activo",
+      "posibilidad_cierre": "Verde",
+      "campana": "Semana 1 (TG - establecidos)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-5bc88242",
+      "canal": "Telegram",
+      "geo": "?",
+      "tipo_trafico": "FB",
+      "estado": "en_alta",
+      "posibilidad_cierre": "Verde",
+      "campana": "Semana 2 (TG - nov 11-12)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-66014140",
+      "canal": "Telegram",
+      "geo": "Europa / MX",
+      "tipo_trafico": "Media buying",
+      "estado": "activo",
+      "posibilidad_cierre": "Verde",
+      "campana": "Semana 1 (TG - establecidos)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-688885a8",
+      "canal": "Telegram",
+      "geo": "Tier 1 / LATAM",
+      "tipo_trafico": "Master affiliate",
+      "estado": "en_alta",
+      "posibilidad_cierre": "Verde",
+      "campana": "Semana 2 (TG - nov 11-12)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-7416bdad",
+      "canal": "Telegram",
+      "geo": "AU",
+      "tipo_trafico": "CPA inapp",
+      "estado": "activo",
+      "posibilidad_cierre": "Verde",
+      "campana": "Semana 1 (TG - establecidos)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-76c91e17",
+      "canal": "Telegram",
+      "geo": "WW",
+      "tipo_trafico": "SEO sites",
+      "estado": "activo",
+      "posibilidad_cierre": "Verde",
+      "campana": "Semana 1 (TG - establecidos)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-7a56ca9e",
+      "canal": "Telegram",
+      "geo": "PT",
+      "tipo_trafico": "FB",
+      "estado": "activo",
+      "posibilidad_cierre": "Verde",
+      "campana": "Semana 1 (TG - establecidos)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-a421cf29",
+      "canal": "Telegram",
+      "geo": "MX",
+      "tipo_trafico": "MX influencers",
+      "estado": "en_alta",
+      "posibilidad_cierre": "Verde",
+      "campana": "Semana 2 (TG - nov 11-12)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-a80c0975",
+      "canal": "Telegram",
+      "geo": "PT",
+      "tipo_trafico": "FB",
+      "estado": "activo",
+      "posibilidad_cierre": "Verde",
+      "campana": "Semana 1 (TG - establecidos)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-ba972b9c",
+      "canal": "Telegram",
+      "geo": "—",
+      "tipo_trafico": "—",
+      "estado": "activo",
+      "posibilidad_cierre": "Verde",
+      "campana": "Semana 1 (TG - establecidos)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-c5217532",
+      "canal": "Telegram",
+      "geo": "—",
+      "tipo_trafico": "UAC, FB",
+      "estado": "activo",
+      "posibilidad_cierre": "Verde",
+      "campana": "Semana 1 (TG - establecidos)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-c912bf13",
+      "canal": "Telegram",
+      "geo": "PT",
+      "tipo_trafico": "Media buy",
+      "estado": "activo",
+      "posibilidad_cierre": "Verde",
+      "campana": "Semana 1 (TG - establecidos)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-c94d8f6e",
+      "canal": "Telegram",
+      "geo": "MX",
+      "tipo_trafico": "SEO",
+      "estado": "en_alta",
+      "posibilidad_cierre": "Verde",
+      "campana": "Semana 2 (TG - nov 11-12)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-d42c6a4e",
+      "canal": "Telegram",
+      "geo": "PT",
+      "tipo_trafico": "Influencers",
+      "estado": "en_alta",
+      "posibilidad_cierre": "Verde",
+      "campana": "Semana 2 (TG - nov 11-12)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-e2a33494",
+      "canal": "Telegram",
+      "geo": "WW / MX fuerte",
+      "tipo_trafico": "SEO",
+      "estado": "activo",
+      "posibilidad_cierre": "Verde",
+      "campana": "Semana 1 (TG - establecidos)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-ee4b0830",
+      "canal": "Telegram",
+      "geo": "Europa / LATAM",
+      "tipo_trafico": "Affiliate network",
+      "estado": "activo",
+      "posibilidad_cierre": "Verde",
+      "campana": "Semana 1 (TG - establecidos)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-00915bcd",
+      "canal": "Telegram",
+      "geo": "—",
+      "tipo_trafico": "SEO",
+      "estado": "prospecto",
+      "posibilidad_cierre": "Amarillo",
+      "campana": "Semana 2 (TG - nov 11-12)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-00aa6f87",
+      "canal": "Telegram",
+      "geo": "PT",
+      "tipo_trafico": "E-sport CS2/LoL/Virtuspro",
+      "estado": "prospecto",
+      "posibilidad_cierre": "Amarillo",
+      "campana": "Semana 2 (TG - nov 11-12)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-01a69ec6",
+      "canal": "Email",
+      "geo": "Europa / LATAM",
+      "tipo_trafico": "Media fútbol",
+      "estado": "sin_respuesta",
+      "posibilidad_cierre": "Amarillo",
+      "campana": "Semana 2 (Jul 13-19)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-01cc41ec",
+      "canal": "Telegram",
+      "geo": "LATAM / MX",
+      "tipo_trafico": "—",
+      "estado": "prospecto",
+      "posibilidad_cierre": "Amarillo",
+      "campana": "Semana 2 (TG - nov 11-12)",
+      "comentario": ""
+    }
+  ]
+}

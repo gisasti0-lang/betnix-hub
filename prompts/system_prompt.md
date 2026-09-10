@@ -51,7 +51,7 @@ Recibís un lote en JSON con esta forma, y solo esta:
   "fecha_lote": "YYYY-MM-DD",
   "prospectos": [
     {
-      "id": "PR-xxxxxxxx",       # seudónimo estable; nunca recibís nombre ni contacto
+      "id": "AF-xxxxxxxx",       # seudónimo estable; nunca recibís nombre ni contacto
       "canal": "Telegram" | "Email",
       "geo": "LATAM" | "WW" | "PT" | "Europa" | "—",
       "tipo_trafico": "SEO" | "Afiliados" | "FB" | "Affiliate network" | "—",
@@ -114,7 +114,7 @@ después, sin bloque de código.
   "procesados": 0,
   "resultados": [
     {
-      "id": "PR-xxxxxxxx",
+      "id": "AF-xxxxxxxx",
       "corresponde": true,
       "prioridad": "alta" | "media" | "baja" | "ninguna",
       "motivo": "clave del criterio aplicado, en pocas palabras",

@@ -1,84 +1,100 @@
 # Análisis económico
 
-## 1 · Consumo
+## 1 · Consumo medido
 
-**Origen del número.** Estimación con base de cálculo explícita, no medición de
-corrida: al momento de escribir esto el agente todavía no se ejecutó. Cuando las
-tres corridas existan, `corridas/*/meta.json` trae `tokens_entrada` y
-`tokens_salida` **medidos** por la API y esta sección se reemplaza por esos
-valores.
+**Origen del número: medición real de tres corridas**, no estimación. Los valores
+salen de `corridas/*/meta.json`, que los toma del campo `usage` que devuelve la
+API en cada respuesta.
 
-Base de la estimación, para que sea recalculable:
+| Corrida | Tokens entrada | Tokens salida | Costo |
+|---|---:|---:|---:|
+| `2026-09-10-1` | 6.279 | 6.992 | USD 0,206195 |
+| `2026-09-10-2` | 6.444 | 6.075 | USD 0,184095 |
+| `2026-09-10-3` | 6.433 | 5.790 | USD 0,176915 |
+| **Promedio** | **6.385** | **6.286** | **USD 0,189068** |
 
-| Insumo | Medición | Cómo se obtuvo |
-|---|---:|---|
-| `prompts/system_prompt.md` | 5.608 caracteres | `wc -c` sobre el archivo del repositorio |
-| Lote de 25 prospectos en JSON | 6.507 caracteres | Salida real de `agente/construir_lote.py` |
-| **Entrada total** | **12.115 caracteres** | Suma de los dos |
-| Salida (25 resultados + resumen) | 6.400 caracteres | 250 car. por resultado × 25, más 150 del resumen |
-| Ratio caracteres → tokens | **3,6 car./token** | Supuesto declarado para español; rinde menos caracteres por token que el inglés por tildes y palabras largas |
+Las tres corridas juntas costaron **USD 0,5672**.
 
-| | Cálculo | Tokens |
-|---|---|---:|
-| Entrada | 12.115 ÷ 3,6 | **3.365** |
-| Salida | 6.400 ÷ 3,6 | **1.778** |
+### Lo que la medición corrigió de la estimación
+
+La versión anterior de este documento estimaba 3.365 tokens de entrada y 1.778 de
+salida. Los reales son 6.385 y 6.286: la entrada casi al doble, **la salida casi
+cuatro veces más**.
+
+Dos causas, y la segunda es la importante:
+
+1. El ratio de 3,6 caracteres por token era optimista para español con JSON
+   estructurado; el real ronda 1,9.
+2. **El razonamiento adaptativo de Claude Opus 5 se factura como tokens de
+   salida.** La estimación contaba solo el JSON visible. Es el error más caro de
+   los dos, porque la salida cuesta cinco veces más que la entrada.
+
+Ese mismo error tuvo una consecuencia operativa antes que económica: con
+`max_tokens = 8000` la primera corrida se truncó a mitad de un string y Pydantic
+rechazó el JSON. El techo se subió a 16.000 y el esfuerzo se fijó en `medium`.
 
 ## 2 · Costo por corrida
 
 Tarifas de referencia: precios de lista de la API de Anthropic, USD por millón de
-tokens. Las mismas constantes están en `agente/seguimiento.py` (`TARIFAS`), así
-que el número que imprime el programa y el de esta tabla salen de la misma fuente.
+tokens. Las mismas constantes están en `agente/seguimiento.py` (`TARIFAS`).
 
 | Modelo | Entrada $/1M | Salida $/1M | Costo por corrida |
 |---|---:|---:|---:|
-| Claude Opus 5 | 5,00 | 25,00 | **USD 0,061275** |
-| Claude Sonnet 5 | 3,00 | 15,00 | USD 0,036765 |
-| Claude Haiku 4.5 | 1,00 | 5,00 | USD 0,012255 |
+| Claude Opus 5 | 5,00 | 25,00 | **USD 0,189068** |
+| Claude Sonnet 5 | 3,00 | 15,00 | USD 0,113441 |
+| Claude Haiku 4.5 | 1,00 | 5,00 | USD 0,037814 |
 
-Recálculo a mano, Opus 5: `(3.365 ÷ 1.000.000 × 5,00) + (1.778 ÷ 1.000.000 × 25,00)`
-`= 0,016825 + 0,044450 = 0,061275`.
+Recálculo a mano, Opus 5: `(6.385 ÷ 1.000.000 × 5,00) + (6.286 ÷ 1.000.000 × 25,00)`
+`= 0,031925 + 0,157150 = 0,189075`. La diferencia en el sexto decimal con la
+tabla viene de que el promedio se redondea acá y no en el programa.
 
 ## 3 · Proyección de operación
 
-**Supuesto de volumen declarado:** una corrida por día de 25 prospectos, que es el
-tope diario que fija `TOPE_DIARIO` en `agente/construir_lote.py`. El tope no es
-arbitrario: hay 217 prospectos elegibles, y nadie hace 217 seguimientos en un
-día. 7 corridas por semana, 365 por año.
+**Supuesto de volumen declarado:** una corrida diaria de 25 prospectos, que es el
+`TOPE_DIARIO` de `agente/construir_lote.py`. 7 corridas por semana, 365 por año.
 
 | Modelo | Por semana | Por año |
 |---|---:|---:|
-| Claude Opus 5 | **USD 0,43** | **USD 22,37** |
-| Claude Sonnet 5 | USD 0,26 | USD 13,42 |
-| Claude Haiku 4.5 | USD 0,09 | USD 4,47 |
+| Claude Opus 5 | **USD 1,32** | **USD 69,01** |
+| Claude Sonnet 5 | USD 0,79 | USD 41,41 |
+| Claude Haiku 4.5 | USD 0,26 | USD 13,80 |
 
-A 25 por día, los 217 elegibles se recorren en nueve días. El costo anual del
-sistema completo es menor que el de una hora de trabajo del Affiliate Manager.
+Con 217 prospectos elegibles y 25 por día, la lista se recorre en nueve días.
+El costo anual sigue siendo menor al de dos horas de trabajo del Affiliate
+Manager, pero **es tres veces el que proyectaba la estimación** (USD 22,37). Una
+estimación que subestima por tres no sirve para decidir; por eso la rúbrica
+prefiere medición.
 
 ## 4 · Elección de modelo
 
 El criterio del curso es el modelo más chico que hace bien la tarea.
 
 **La tarea tiene dos mitades de dificultad distinta.** Decidir si corresponde
-seguimiento es casi determinista: sale de estado, posibilidad de cierre y
-campaña, y cualquier modelo lo resuelve. Redactar un mensaje que insista sin
-quemar el contacto, adaptado al tipo de tráfico, es criterio comercial — y ahí la
-diferencia entre modelos se nota.
+seguimiento resultó ser casi determinista: en las tres corridas el agente
+respondió `corresponde: true` en los 75 casos. Eso no es un defecto del modelo
+sino del reparto: el filtrado real lo hace el código —descarta estados no
+elegibles y posibilidad Rojo— así que al agente le llegan solo candidatos
+legítimos. La decisión que queda es la prioridad, y ahí sí discriminó: 6 altas,
+46 medias y 23 bajas, con motivos ligados al estado de cada fila.
+
+La otra mitad —redactar sin quemar el contacto, adaptado al tipo de tráfico— es
+criterio comercial. En la corrida 1 el agente redactó en portugués para un
+contacto con GEO `PT` sin que ninguna regla se lo pidiera.
 
 **Y hay un requisito que no es de redacción.** La regla dura 3 exige detectar
-manipulación en el campo `comentario`: son notas libres escritas por el propio
-Affiliate Manager, pero el agente no puede distinguir una nota legítima de un
-texto que intente redirigirlo. Resistir eso no es la misma habilidad que redactar,
-y es donde los modelos chicos fallan primero.
+manipulación en el campo `comentario`. En estas tres corridas no apareció ningún
+caso, así que **la capacidad quedó sin ejercitar**: no hay evidencia de que Opus 5
+sea necesario para eso, ni de que Haiku no alcance.
 
-**Decisión y su estado.** El sistema se entrega configurado con `claude-opus-5`,
-que es la opción conservadora. La alternativa —`claude-haiku-4-5`, cinco veces
-más barata— **no se descarta: queda pendiente de validación**, con criterio de
-contraste definido de antemano:
+**Decisión y su estado.** El sistema se entrega con `claude-opus-5`. La
+alternativa —`claude-haiku-4-5`, cinco veces más barata, USD 13,80 anuales contra
+69,01— **no está descartada: está pendiente de una prueba que estas corridas no
+pudieron hacer.** El criterio de contraste queda definido:
 
-> Si en las tres corridas Haiku 4.5 coincide con Opus 5 en las decisiones de
-> `corresponde` y en la detección de `manipulacion`, se cambia la constante
-> `MODELO` en `agente/seguimiento.py` y se documenta el cambio acá. Si difiere en
-> aunque sea un caso, se queda Opus 5 y este documento registra en cuál falló.
+> Correr los mismos tres lotes con Haiku 4.5 e inyectar en un cuarto lote de
+> control al menos un `comentario` con intento de manipulación. Si Haiku coincide
+> con Opus 5 en las 75 prioridades y detecta el caso inyectado, se cambia la
+> constante `MODELO` y se documenta acá. Si difiere, se registra en cuál falló.
 
-La diferencia anual entre ambos es de USD 18. A ese precio, el costo no es el
-criterio: el criterio es si el modelo chico sostiene la regla 3.
+Lo honesto hoy es que el modelo grande se eligió por precaución sobre un riesgo
+que todavía no se observó, y que eso cuesta USD 55 al año.

@@ -12,9 +12,23 @@ La fecha vive en `meta.json`, además del nombre de la carpeta.
 
 ## Estado
 
-**Las tres corridas todavía no están generadas.** Depende de una única cosa: la
-`ANTHROPIC_API_KEY` en el entorno. Ya **no** dependen de Telegram — el insumo del
-agente es la planilla, no los mensajes recibidos.
+**Las tres corridas están generadas**, el 10/9/2026:
+
+| Corrida | Prospectos | Tokens E/S | Costo |
+|---|---:|---:|---:|
+| `2026-09-10-1` | 25 (del #1) | 6.279 / 6.992 | USD 0,206195 |
+| `2026-09-10-2` | 25 (del #26) | 6.444 / 6.075 | USD 0,184095 |
+| `2026-09-10-3` | 25 (del #51) | 6.433 / 5.790 | USD 0,176915 |
+
+Los tres lotes son **disjuntos**: 75 prospectos sin repetir, verificado por
+intersección de identificadores. El desplazamiento (`--desde`) reproduce la
+operación real, donde el lote diario avanza sobre la lista ordenada.
+
+Las tres salidas satisfacen el formato declarado en el contrato, validado campo
+por campo: mismos campos, identificadores con formato `AF-` de ocho hexadecimales,
+y ningún mensaje por encima de los 500 caracteres.
+
+Ninguna envió nada: `enviados: 0` en los tres `meta.json`.
 
 No se incluyen corridas simuladas. Una corrida inventada invalidaría el análisis
 económico —que toma sus tokens de `meta.json`— y convertiría el resto del trabajo

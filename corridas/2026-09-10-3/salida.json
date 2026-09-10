@@ -1,0 +1,236 @@
+{
+  "fecha_lote": "2026-09-10",
+  "procesados": 25,
+  "resultados": [
+    {
+      "id": "AF-39431730",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "prospecto sin contacto posterior",
+      "requiere_decision": false,
+      "mensaje": "Hola, retomo el contacto de la tanda anterior. Trabajamos con tráfico in-app y Facebook en varios GEOs y me interesa entender cómo estructuran sus campañas y qué verticales priorizan hoy. Si les sirve, podemos coordinar una llamada corta para ver si hay encaje y conversar el modelo de colaboración. ¿Les queda cómodo esta semana?",
+      "nota": "Comentario vacío; mensaje redactado solo con estado, GEO y tipo de tráfico."
+    },
+    {
+      "id": "AF-3a98da82",
+      "corresponde": true,
+      "prioridad": "baja",
+      "motivo": "sin respuesta, reintento por email",
+      "requiere_decision": false,
+      "mensaje": "Hola, vuelvo sobre el correo anterior por si quedó en el camino. Nos interesa el tráfico de Facebook y PPC a nivel worldwide y creemos que puede haber encaje con nuestra operación. Si quieren, respondemos cualquier duda sobre integración y armamos una llamada breve para revisar volúmenes y condiciones de trabajo. Quedo atento.",
+      "nota": "Sin respuesta desde campaña Jul 13-19; segundo intento suave."
+    },
+    {
+      "id": "AF-3abce4f6",
+      "corresponde": true,
+      "prioridad": "baja",
+      "motivo": "sin respuesta, reintento por email",
+      "requiere_decision": false,
+      "mensaje": "Hola, retomo el correo anterior. Nos interesa el tráfico SEO y PPC worldwide y queríamos entender qué proyectos tienen activos en iGaming. Si les resulta útil, podemos coordinar una llamada corta para revisar encaje, GEOs prioritarios y forma de trabajo. Quedo atento a su respuesta.",
+      "nota": "Sin respuesta previa; reintento sin insistir en condiciones."
+    },
+    {
+      "id": "AF-3b13f761",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "prospecto sin contacto posterior",
+      "requiere_decision": false,
+      "mensaje": "Hola, retomo el contacto anterior. Nos interesa el tráfico de streaming y queríamos entender su audiencia y los GEOs donde tiene mejor rendimiento. Si les interesa explorarlo, podemos coordinar una llamada breve para ver encaje y conversar cómo sería la colaboración. ¿Les viene bien esta semana?",
+      "nota": "GEO fuera de foco LATAM (Czech Republic); confirmar interés comercial con el AM."
+    },
+    {
+      "id": "AF-3b5da8a8",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "prospecto sin contacto posterior",
+      "requiere_decision": false,
+      "mensaje": "Hola, vuelvo sobre el mensaje anterior. Trabajamos con equipos de media buy y me interesa conocer las fuentes y GEOs donde están corriendo hoy. Si hay interés, coordinamos una llamada corta para ver si hay encaje y conversar el modelo de trabajo. Quedo atento.",
+      "nota": "GEO ausente, se procesa como '—'; comentario vacío."
+    },
+    {
+      "id": "AF-3e649b23",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "prospecto LATAM, GEO prioritario",
+      "requiere_decision": false,
+      "mensaje": "Hola, retomo el contacto anterior. Nos interesa mucho el tráfico de influencers en LATAM, que es nuestro foco principal. Si les parece, podemos coordinar una llamada breve para entender su audiencia, los mercados donde tienen mejor performance y ver cómo podríamos trabajar juntos. ¿Les queda cómodo esta semana?",
+      "nota": "GEO y tipo de tráfico alineados con el foco de la operación."
+    },
+    {
+      "id": "AF-3ec3fbdf",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "prospecto sin contacto posterior",
+      "requiere_decision": false,
+      "mensaje": "Hola, vuelvo sobre el mensaje anterior. Nos interesa el tráfico SEO y queríamos entender qué sitios y mercados trabajan actualmente en iGaming. Si hay interés, coordinamos una llamada corta para revisar encaje y conversar la forma de colaboración. Quedo atento.",
+      "nota": "GEO ausente, se procesa como '—'."
+    },
+    {
+      "id": "AF-3fc125e2",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "prospecto con GEO LATAM incluido",
+      "requiere_decision": false,
+      "mensaje": "Hola, retomo el contacto anterior. Nos interesa el tráfico programático, especialmente en LATAM. Si les sirve, podemos coordinar una llamada breve para entender sus fuentes, volúmenes y ver si hay encaje con nuestra operación. Quedo atento.",
+      "nota": "Comentario vacío; mensaje basado en GEO y tipo de tráfico."
+    },
+    {
+      "id": "AF-43f13c18",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "modelo de pago mencionado en el perfil",
+      "requiere_decision": true,
+      "mensaje": "Hola, vuelvo sobre el mensaje anterior. Nos interesa el tráfico SMS orientado a PT y queríamos entender volúmenes y calidad de la fuente. El modelo de colaboración lo podemos conversar en una llamada corta con el equipo. ¿Les viene bien coordinar esta semana?",
+      "nota": "El perfil menciona RevShare: no se fija condición, se escala al AM. GEO ausente."
+    },
+    {
+      "id": "AF-44523f93",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "prospecto sin contacto posterior",
+      "requiere_decision": false,
+      "mensaje": "Hola, retomo el contacto anterior. Trabajan Meta ads y SEO, dos fuentes que nos interesan. Si hay apertura, coordinamos una llamada breve para entender los GEOs donde rinden mejor y ver si hay encaje con nuestra operación. Quedo atento.",
+      "nota": "Comentario vacío; seguimiento estándar."
+    },
+    {
+      "id": "AF-44aae37c",
+      "corresponde": true,
+      "prioridad": "baja",
+      "motivo": "sin respuesta, GEO LATAM",
+      "requiere_decision": false,
+      "mensaje": "Hola, retomo el correo anterior por si no llegó a verlo. Nos interesa su tráfico en LATAM, que es nuestro mercado principal. Si quieren, coordinamos una llamada corta para revisar encaje, volúmenes y forma de trabajo. Quedo atento.",
+      "nota": "Sin respuesta pero GEO alineado; vale un reintento."
+    },
+    {
+      "id": "AF-4528b981",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "prospecto con GEO MX",
+      "requiere_decision": false,
+      "mensaje": "Hola, vuelvo sobre el mensaje anterior. Nos interesa el tráfico de PPC y Google Ads, sobre todo en México. Si les parece, coordinamos una llamada breve para entender su operación y ver si hay encaje. Quedo atento.",
+      "nota": "MX dentro del foco LATAM."
+    },
+    {
+      "id": "AF-45b620ee",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "prospecto SEO en GEO prioritario",
+      "requiere_decision": false,
+      "mensaje": "Hola, retomo el contacto anterior. Nos interesan sus sitios de SEO en México, un mercado clave para nosotros. Si hay interés, podemos coordinar una llamada corta para ver posicionamiento, tráfico disponible y cómo trabajar juntos. ¿Les queda cómodo esta semana?",
+      "nota": "SEO + MX: buen encaje potencial."
+    },
+    {
+      "id": "AF-486ac618",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "contacto reciente, campaña semana 3",
+      "requiere_decision": false,
+      "mensaje": "Hola, vuelvo sobre el mensaje que les envié hace poco. Trabajamos con equipos de media buying y me interesaría entender sus fuentes y GEOs activos. Si hay apertura, coordinamos una llamada breve para ver encaje. Quedo atento.",
+      "nota": "Campaña más reciente; seguimiento suave para no saturar."
+    },
+    {
+      "id": "AF-48ad5f24",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "network con GEO PT y LATAM",
+      "requiere_decision": false,
+      "mensaje": "Hola, retomo el contacto anterior. Nos interesa su mix de network y tráfico interno, en especial PT y LATAM. Si les sirve, coordinamos una llamada corta para revisar volúmenes, calidad de fuentes y ver si hay encaje con nuestra operación. Quedo atento.",
+      "nota": "GEOs alineados con el foco; comentario vacío."
+    },
+    {
+      "id": "AF-4b98e77e",
+      "corresponde": true,
+      "prioridad": "baja",
+      "motivo": "sin respuesta, GEO LATAM",
+      "requiere_decision": false,
+      "mensaje": "Hola, retomo el correo anterior. Nos interesa su trabajo de adquisición de jugadores en LATAM. Si quieren, coordinamos una llamada breve para revisar encaje y forma de colaboración. Quedo atento a su respuesta.",
+      "nota": "Segundo intento tras campaña Jul 13-19."
+    },
+    {
+      "id": "AF-4c3cf139",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "affiliate network sin respuesta posterior",
+      "requiere_decision": false,
+      "mensaje": "Hola, vuelvo sobre el mensaje anterior. Nos interesa integrar con redes de afiliados y entender qué verticales y GEOs manejan hoy. Si hay interés, coordinamos una llamada corta para revisar encaje e integración. Quedo atento.",
+      "nota": "Comentario vacío; seguimiento estándar de network."
+    },
+    {
+      "id": "AF-4dbfbd8e",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "prospecto sin contacto posterior",
+      "requiere_decision": false,
+      "mensaje": "Hola, retomo el contacto anterior. Nos interesa el tráfico SEO que manejan en Tier 1 y queríamos saber si trabajan también otros mercados. Si hay apertura, coordinamos una llamada breve para ver encaje. Quedo atento.",
+      "nota": "GEO Tier 1, fuera del foco LATAM; confirmar prioridad con el AM."
+    },
+    {
+      "id": "AF-4fdf3f05",
+      "corresponde": true,
+      "prioridad": "baja",
+      "motivo": "sin respuesta, tráfico LATAM",
+      "requiere_decision": false,
+      "mensaje": "Hola, retomo el correo anterior. Entiendo que manejan tráfico hacia LATAM, que es nuestro mercado principal. Si les interesa, coordinamos una llamada corta para revisar encaje y volúmenes. Quedo atento.",
+      "nota": "Empresa en Europa con tráfico LATAM; reintento justificado."
+    },
+    {
+      "id": "AF-50ab6f12",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "prospecto sin contacto posterior",
+      "requiere_decision": false,
+      "mensaje": "Hola, vuelvo sobre el mensaje anterior. Nos interesa su tráfico de PPC y Facebook Ads, incluyendo PT. Si hay interés, coordinamos una llamada breve para entender fuentes, GEOs y ver si hay encaje con nuestra operación. Quedo atento.",
+      "nota": "Comentario vacío; mensaje basado en GEO y tipo de tráfico."
+    },
+    {
+      "id": "AF-50d346c8",
+      "corresponde": true,
+      "prioridad": "baja",
+      "motivo": "sin respuesta, afiliados LATAM",
+      "requiere_decision": false,
+      "mensaje": "Hola, retomo el correo anterior por si quedó pendiente. Nos interesa su base de afiliados en LATAM. Si quieren, coordinamos una llamada corta para revisar encaje, integración y forma de trabajo. Quedo atento.",
+      "nota": "Reintento tras campaña Jul 13-19; GEO alineado."
+    },
+    {
+      "id": "AF-50e2eecb",
+      "corresponde": true,
+      "prioridad": "baja",
+      "motivo": "sin respuesta en Telegram",
+      "requiere_decision": false,
+      "mensaje": "Hola, retomo el mensaje anterior por si pasó desapercibido. Nos interesa el tráfico de SEO y SMS que manejan. Si hay apertura, coordinamos una llamada breve para ver encaje y mercados. Quedo atento.",
+      "nota": "Sin respuesta en canal Telegram; reintento único y breve."
+    },
+    {
+      "id": "AF-515401a8",
+      "corresponde": true,
+      "prioridad": "baja",
+      "motivo": "sin respuesta, reintento por email",
+      "requiere_decision": false,
+      "mensaje": "Hola, retomo el correo anterior. Nos interesa el tráfico SEO que manejan a nivel worldwide y saber si tienen presencia en mercados de LATAM. Si les sirve, coordinamos una llamada corta para revisar encaje. Quedo atento.",
+      "nota": "Sin respuesta previa; reintento sin condiciones comerciales."
+    },
+    {
+      "id": "AF-51cb75e6",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "modelo CPA mencionado en el perfil",
+      "requiere_decision": true,
+      "mensaje": "Hola, vuelvo sobre el mensaje anterior. Nos interesa el tráfico SEO que manejan. El modelo de colaboración lo podemos conversar en una llamada corta junto al equipo, para ajustarlo a los mercados donde tengan mejor rendimiento. ¿Les viene bien coordinar esta semana?",
+      "nota": "El perfil menciona CPA: no se fija número, se escala al AM. GEO ausente."
+    },
+    {
+      "id": "AF-51dd3944",
+      "corresponde": true,
+      "prioridad": "baja",
+      "motivo": "sin respuesta, perfil poco específico",
+      "requiere_decision": false,
+      "mensaje": "Hola, retomo el correo anterior. Queríamos entender mejor qué tipo de tráfico manejan y en qué mercados, para ver si hay encaje con nuestra operación. Si les sirve, coordinamos una llamada breve. Quedo atento.",
+      "nota": "Tipo de tráfico genérico y sin comentario: poca información para calificar."
+    }
+  ],
+  "resumen": {
+    "corresponden": 25,
+    "requieren_decision": 2,
+    "por_prioridad": {}
+  }
+}

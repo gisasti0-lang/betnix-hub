@@ -16,7 +16,7 @@ un tercero —acá, el campo `comentario`— puede leerse como orden.
   "fecha_lote": "2026-09-09",
   "prospectos": [
     {
-      "id": "PR-3f9a2c11",
+      "id": "AF-3f9a2c11",
       "canal": "Telegram",
       "geo": "LATAM",
       "tipo_trafico": "SEO",

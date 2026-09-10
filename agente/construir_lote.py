@@ -55,7 +55,7 @@ def limpio(v) -> str:
     return " ".join(str(v or "").split()).strip()
 
 
-def construir(limite: int | None) -> dict:
+def construir(limite: int | None, desde: int) -> dict:
     if not EXCEL.is_file():
         sys.exit(f"✗ No se encuentra la planilla: {EXCEL}")
 
@@ -96,13 +96,14 @@ def construir(limite: int | None) -> dict:
         p["id"],                       # desempate estable
     ))
     total_elegibles = len(prospectos)
-    prospectos = prospectos[:(limite or TOPE_DIARIO)]
+    tope = limite or TOPE_DIARIO
+    prospectos = prospectos[desde:desde + tope]
 
     print(f"Filas con datos:       {len(filas) - 1}")
     print(f"Sin contacto usable:   {sin_contacto}")
     print(f"Fuera de criterio:     {descartados}")
     print(f"Elegibles:             {total_elegibles}")
-    print(f"En el lote (tope):     {len(prospectos)}")
+    print(f"En el lote:            {len(prospectos)}  (desde el #{desde + 1})")
 
     return {"fecha_lote": datetime.now().strftime("%Y-%m-%d"),
             "prospectos": prospectos}
@@ -113,9 +114,11 @@ def main() -> int:
     ap.add_argument("--salida", required=True)
     ap.add_argument("--limite", type=int,
                     help=f"tamaño del lote; por defecto {TOPE_DIARIO}")
+    ap.add_argument("--desde", type=int, default=0,
+                    help="desplazamiento en la lista ordenada; el lote diario avanza")
     args = ap.parse_args()
 
-    lote = construir(args.limite)
+    lote = construir(args.limite, args.desde)
     if not lote["prospectos"]:
         sys.exit("✗ Lote vacío: ninguna fila cumple el criterio de selección.")
 

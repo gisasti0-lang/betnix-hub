@@ -1,0 +1,236 @@
+{
+  "fecha_lote": "2026-09-10",
+  "procesados": 25,
+  "resultados": [
+    {
+      "id": "AF-03996c2e",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "prospecto sin avance, retomar contacto",
+      "requiere_decision": false,
+      "mensaje": "Hola, retomo el contacto por Telegram. Trabajamos con tráfico PPC en sportsbook y casino y creemos que puede haber encaje. ¿Te interesa que veamos qué GEOs y volúmenes manejan y armamos una prueba? Quedo atento para coordinar una charla breve.",
+      "nota": "GEO ausente en el insumo, se procesó como '—'."
+    },
+    {
+      "id": "AF-03c3a45b",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "prospecto reciente, GEO prioritario",
+      "requiere_decision": false,
+      "mensaje": "Hola, te escribo para retomar la conversación. Vemos buen encaje con tráfico SEO, ASO y streamers en México para sportsbook y casino. ¿Te sirve que coordinemos una charla corta para revisar volúmenes y formato de colaboración? Quedo atento.",
+      "nota": "Prospecto de tanda reciente, contacto en frío sin historial."
+    },
+    {
+      "id": "AF-04948c2f",
+      "corresponde": true,
+      "prioridad": "baja",
+      "motivo": "sin respuesta, reintento espaciado",
+      "requiere_decision": false,
+      "mensaje": "Hola, retomo el mail anterior por si quedó traspapelado. Trabajamos con streamers en LATAM para sportsbook y casino y nos interesaría explorar una colaboración. Si tiene sentido, podemos agendar una llamada breve para revisar el encaje. Si no es el momento, avisame y lo dejo por aquí.",
+      "nota": "Sin respuesta desde la tanda de julio; un reintento y luego pausar."
+    },
+    {
+      "id": "AF-06efa0ee",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "prospecto, tráfico FB en PT",
+      "requiere_decision": false,
+      "mensaje": "Olá, retomo o contato. Trabalhamos com tráfego de Facebook Ads em Portugal para sportsbook e cassino e vemos possível encaixe. Podemos marcar uma conversa rápida para ver volumes e formato de colaboração? Fico à disposição.",
+      "nota": "Mensaje en portugués por GEO PT; sin condiciones comerciales."
+    },
+    {
+      "id": "AF-09327e5d",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "prospecto, streamers all geo",
+      "requiere_decision": false,
+      "mensaje": "Hola, retomo el contacto. Trabajamos con streamers e influencers para sportsbook y casino, con foco fuerte en LATAM pero abiertos a otros mercados. ¿Coordinamos una charla breve para ver qué perfiles manejan y cómo podríamos probar? Quedo atento.",
+      "nota": "GEO amplio: conviene acotar mercados en la charla."
+    },
+    {
+      "id": "AF-09e175c6",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "prospecto multicanal, retomar",
+      "requiere_decision": false,
+      "mensaje": "Hola, retomo la conversación. Manejan varias fuentes (SEO, PPC, meta ads, in-app) y creemos que hay encaje con nuestra oferta de sportsbook y casino. ¿Te sirve una charla corta para ver por qué canal y GEO conviene arrancar? Quedo atento.",
+      "nota": "Mix de canales amplio; definir punto de arranque con la persona."
+    },
+    {
+      "id": "AF-0d03c061",
+      "corresponde": true,
+      "prioridad": "baja",
+      "motivo": "sin respuesta, reintento espaciado",
+      "requiere_decision": false,
+      "mensaje": "Hola, retomo el mail anterior por si no llegó al destinatario adecuado. Trabajamos con redes de afiliados en LATAM para sportsbook y casino. Si les interesa evaluar una colaboración, coordinamos una llamada breve. Si no es el momento, avisame y no insisto.",
+      "nota": "Segundo toque tras tanda de julio sin respuesta."
+    },
+    {
+      "id": "AF-0fb5d0d7",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "prospecto SEO fuera de foco LATAM",
+      "requiere_decision": false,
+      "mensaje": "Hola, retomo el contacto. Vimos que manejan sitios SEO en Tier 1 y Polonia. Nuestro foco principal es LATAM, pero nos interesa entender si tienen tráfico o proyectos en esos mercados. ¿Coordinamos una charla breve? Quedo atento.",
+      "nota": "GEO fuera del foco LATAM: validar encaje antes de invertir tiempo."
+    },
+    {
+      "id": "AF-0fef5318",
+      "corresponde": true,
+      "prioridad": "baja",
+      "motivo": "sin respuesta, reintento espaciado",
+      "requiere_decision": false,
+      "mensaje": "Hola, retomo el mail anterior. Trabajan afiliados y medios en Europa y LATAM, y nos interesaría explorar una colaboración con nuestra marca de sportsbook y casino. Si tiene sentido, agendamos una llamada corta. Si prefieren que no insistamos, avisame y lo cierro.",
+      "nota": "Sin respuesta desde julio; reintento único."
+    },
+    {
+      "id": "AF-10579919",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "prospecto influencers LATAM/PT",
+      "requiere_decision": false,
+      "mensaje": "Hola, retomo el contacto. Trabajan influencers en PT, MX, AR y LATAM, mercados centrales para nosotros en sportsbook y casino. ¿Te sirve una charla breve para ver qué perfiles manejan y cómo armar una primera prueba? Quedo atento.",
+      "nota": "GEO alineado al foco LATAM; buen candidato para priorizar."
+    },
+    {
+      "id": "AF-10ec5e5e",
+      "corresponde": true,
+      "prioridad": "baja",
+      "motivo": "sin respuesta, reintento espaciado",
+      "requiere_decision": false,
+      "mensaje": "Hola, retomo el mail anterior. Manejan tráfico DSP a nivel mundial y nos interesa evaluar si hay encaje con nuestra operación de sportsbook y casino, especialmente en LATAM. Si les sirve, coordinamos una llamada breve. Si no, avisame y no insisto.",
+      "nota": "Sin respuesta; verificar si el canal DSP encaja con las políticas de la marca."
+    },
+    {
+      "id": "AF-1209fa40",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "prospecto SEO en GEO objetivo",
+      "requiere_decision": false,
+      "mensaje": "Hola, retomo el contacto. Tienen sitios SEO en LATAM, BR y MX, que son nuestros mercados prioritarios para sportsbook y casino. ¿Coordinamos una charla corta para revisar volúmenes y ver cómo podríamos arrancar? Quedo atento.",
+      "nota": "GEO y tipo de tráfico alineados al foco: candidato fuerte."
+    },
+    {
+      "id": "AF-1a4e7fff",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "prospecto fuera de foco, validar encaje",
+      "requiere_decision": false,
+      "mensaje": "Hola, retomo el contacto. Vemos que trabajan SEO y meta ads en Letonia y Polonia. Nuestro foco es LATAM, así que me interesa saber si tienen o planean tráfico en esos mercados. ¿Charlamos unos minutos? Quedo atento.",
+      "nota": "GEO fuera del foco principal; validar antes de escalar prioridad."
+    },
+    {
+      "id": "AF-1f71ac82",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "prospecto influencers PT/MX",
+      "requiere_decision": false,
+      "mensaje": "Hola, retomo el contacto. Trabajan influencers en Portugal y México, dos mercados clave para nosotros en sportsbook y casino. ¿Te sirve una charla breve para ver qué perfiles manejan y cómo podríamos probar una colaboración? Quedo atento.",
+      "nota": "GEO alineado; sin condiciones comerciales en el mensaje."
+    },
+    {
+      "id": "AF-201419cd",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "prospecto multi-fuente, acotar alcance",
+      "requiere_decision": false,
+      "mensaje": "Hola, retomo el contacto. Manejan varias fuentes de tráfico en LATAM y Europa. Nos interesa entender por dónde conviene arrancar con nuestra marca de sportsbook y casino. ¿Coordinamos una charla breve? Quedo atento.",
+      "nota": "Tipo de tráfico 'All': conviene acotar canal en la primera charla."
+    },
+    {
+      "id": "AF-23cc9e0b",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "prospecto SEO, GEO parcialmente afín",
+      "requiere_decision": false,
+      "mensaje": "Hola, retomo el contacto. Manejan SEO en Tier 1 y varios mercados europeos, incluido Portugal, donde tenemos interés. ¿Te sirve una charla corta para revisar el encaje y los volúmenes disponibles? Quedo atento.",
+      "nota": "Solo PT dentro del interés cercano; el resto queda fuera del foco."
+    },
+    {
+      "id": "AF-2aeb170c",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "prospecto SEO Tier 1, validar encaje",
+      "requiere_decision": false,
+      "mensaje": "Hola, retomo el contacto. Vemos que trabajan SEO en Tier 1. Nuestro foco principal es LATAM, así que me interesa saber si tienen proyectos o tráfico en esos mercados. Si aplica, coordinamos una charla breve. Quedo atento.",
+      "nota": "GEO fuera del foco; encaje a confirmar."
+    },
+    {
+      "id": "AF-2bc55544",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "negociacion economica pendiente",
+      "requiere_decision": true,
+      "mensaje": "Hola, retomo la conversación. Entiendo que el punto pendiente es el esquema de compensación. No puedo cerrarlo por acá, pero me gustaría coordinar una charla con el equipo comercial para revisar alternativas y ver si encontramos un formato que funcione para ambos, empezando por LATAM y MX. ¿Te sirve esta semana?",
+      "nota": "Comentario menciona pedido de pago fijo: requiere definición del Affiliate Manager antes de enviar."
+    },
+    {
+      "id": "AF-2c4ce1ef",
+      "corresponde": true,
+      "prioridad": "baja",
+      "motivo": "sin respuesta, reintento espaciado",
+      "requiere_decision": false,
+      "mensaje": "Hola, retomo el mail anterior. Trabajamos con redes de afiliados para sportsbook y casino, con foco en LATAM. Si les interesa evaluar una colaboración, coordinamos una llamada breve. Si no es el momento, avisame y no vuelvo a insistir.",
+      "nota": "Sin respuesta desde julio; reintento único antes de pausar."
+    },
+    {
+      "id": "AF-2ff3212c",
+      "corresponde": true,
+      "prioridad": "baja",
+      "motivo": "sin respuesta en Telegram",
+      "requiere_decision": false,
+      "mensaje": "Olá, retomo a mensagem anterior. Trabalhamos com media buy em Portugal para sportsbook e cassino e gostaríamos de avaliar uma colaboração. Se fizer sentido, marcamos uma conversa rápida. Caso não seja o momento, é só avisar.",
+      "nota": "Mensaje en portugués por GEO PT; sin respuesta previa."
+    },
+    {
+      "id": "AF-30d29487",
+      "corresponde": true,
+      "prioridad": "baja",
+      "motivo": "sin respuesta, reintento espaciado",
+      "requiere_decision": false,
+      "mensaje": "Hola, retomo el mail anterior. Manejan tráfico in-app a nivel mundial y nos interesa ver si hay encaje con nuestra operación de sportsbook y casino, sobre todo en LATAM. Si les sirve, coordinamos una llamada corta. Si no, avisame y lo dejo acá.",
+      "nota": "Sin respuesta; encaje in-app a validar con la persona."
+    },
+    {
+      "id": "AF-3501f60b",
+      "corresponde": true,
+      "prioridad": "baja",
+      "motivo": "sin respuesta desde tanda mas antigua",
+      "requiere_decision": false,
+      "mensaje": "Hola, retomo el mail que envié hace un tiempo. Trabajamos con medios y tipsters en LATAM para sportsbook y casino. Si les interesa explorar una colaboración, coordinamos una llamada breve. Si prefieren que no insistamos, avisame y cierro el contacto.",
+      "nota": "Tanda Semana 1 sin respuesta: último toque antes de pausar el contacto."
+    },
+    {
+      "id": "AF-36001e0c",
+      "corresponde": true,
+      "prioridad": "baja",
+      "motivo": "sin respuesta desde tanda mas antigua",
+      "requiere_decision": false,
+      "mensaje": "Hola, retomo el mail anterior. Trabajan SEO a nivel mundial y nos interesaría evaluar una colaboración con nuestra marca de sportsbook y casino, con foco en LATAM. Si tiene sentido, agendamos una llamada corta. Si no, avisame y no insisto más.",
+      "nota": "Tanda Semana 1 sin respuesta: último toque antes de pausar."
+    },
+    {
+      "id": "AF-377890ca",
+      "corresponde": true,
+      "prioridad": "baja",
+      "motivo": "sin respuesta, reintento espaciado",
+      "requiere_decision": false,
+      "mensaje": "Hola, retomo el mail anterior. Trabajamos con medios editoriales en LATAM para sportsbook y casino y nos interesa explorar una colaboración de contenido. Si les sirve, coordinamos una llamada breve. Si no es el momento, avisame y lo dejo por acá.",
+      "nota": "Sin respuesta desde julio; reintento único."
+    },
+    {
+      "id": "AF-38f3b552",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "prospecto retargeting en GEO objetivo",
+      "requiere_decision": false,
+      "mensaje": "Hola, retomo el contacto. Trabajan retargeting en LATAM y MX, mercados prioritarios para nosotros en sportsbook y casino. ¿Coordinamos una charla breve para ver el formato de colaboración y una posible prueba? Quedo atento.",
+      "nota": "GEO alineado al foco; sin historial previo en el insumo."
+    }
+  ],
+  "resumen": {
+    "corresponden": 25,
+    "requieren_decision": 1,
+    "por_prioridad": {}
+  }
+}

@@ -5,16 +5,9 @@
 
 ## Qué rúbrica se aplica
 
-Este documento **ya no usa** la rúbrica reconstruida de
-[`rubrica_aproximada.md`](rubrica_aproximada.md), que se conserva solo como
-registro de proceso. Se aplica la **rúbrica ejecutable del Trabajo Final**, con
-sus cinco dimensiones, sus anclas discretas y su aritmética de conteo por
-componentes.
-
-La diferencia entre los dos puntajes —70/100 con la rúbrica inferida, 77,50 con
-la real— es en sí misma un dato: la rúbrica reconstruida no medía análisis
-económico ni gobierno, que son 30 de los 100 puntos y eran exactamente lo que
-faltaba.
+La **rúbrica ejecutable del Trabajo Final**, con sus cinco dimensiones, sus anclas
+discretas y su aritmética de conteo por componentes. La rúbrica reconstruida de
+`rubrica_aproximada.md` quedó supersedida y se conserva solo como registro.
 
 ## Resultado
 
@@ -23,54 +16,51 @@ trunca hacia abajo.
 
 | Dim | Componentes | Suma | Nivel | Puntos |
 |---|---|---:|---|---:|
-| **D1 · Sistema completo** | contrato ✅ · herramienta 🟡 · output estructurado ❌ · supervisión ✅ | 2,5 → 2 | N2 | **15,00** |
+| **D1 · Sistema completo** | contrato ✅ · herramienta ✅ · output estructurado ✅ · supervisión ✅ | 4 | N4 | **30,00** |
 | **D2 · Proceso documentado** | iteraciones ✅ · fallas ✅ · decisiones ✅ · alcance ✅ | 4 | N4 | **25,00** |
-| **D3 · Formato y reproducibilidad** | estructura ✅ · cantidad de corridas ❌ · reconstruibilidad ❌ · instrucciones ✅ | 2 | N2 | **7,50** |
-| **D4 · Análisis económico** | consumo ✅ · costo ✅ · proyección ✅ · modelo ✅ | 4 | N4 | **15,00** |
+| **D3 · Formato y reproducibilidad** | estructura ✅ · cantidad ✅ · reconstruibilidad ✅ · instrucciones ✅ | 4 | N4 | **15,00** |
+| **D4 · Análisis económico** | consumo ✅ · costo ✅ · proyección ✅ · modelo 🟡 | 3,5 → 3 | N3 | **11,25** |
 | **D5 · Gobierno y riesgo** | perímetro ✅ · riesgos ✅ · nivel L ✅ · responsable ✅ | 4 | N4 | **15,00** |
-| | | | **Total** | **77,50** |
+| | | | **Total** | **96,25** |
 
-## Los tres componentes que faltan, y son el mismo
+## Por qué D4 no llega a N4
 
-D1 · **Output estructurado** exige «dos o más corridas que satisfacen el formato
-declarado». D3 · **Cantidad de corridas** exige al menos tres. D3 ·
-**Reconstruibilidad** exige entrada, salida y fecha por corrida.
+Tres de sus cuatro componentes están verificados con medición real: el consumo
+sale del campo `usage` de la API en tres corridas, el costo es recalculable a
+mano contra la tarifa citada, y la proyección tiene los dos horizontes con el
+supuesto de volumen declarado.
 
-Los tres se resuelven con el mismo acto: generar las corridas. Y ninguno admite
-sustituto — el formato declarado no verifica contra sí mismo, verifica contra
-ejecuciones reales.
+El cuarto —**elección de modelo justificada**— se puntúa **parcial**, y es una
+decisión deliberada de este documento.
 
-D1 · **Herramienta real** queda parcial por la misma causa: la invocación existe y
-está configurada, pero falta «al menos un artefacto de salida cruda coherente con
-esa invocación».
+La justificación existe y compara contra dos alternativas con números medidos.
+Pero el argumento que sostiene la elección de Opus 5 es la resistencia a
+manipulación que exige la regla dura 3, y **en las tres corridas no apareció
+ningún caso de manipulación**. La capacidad quedó sin ejercitar. No hay evidencia
+de que Opus 5 sea necesario, ni de que Haiku 4.5 —cinco veces más barato— no
+alcance.
 
-**Con las tres corridas, D1 pasa a N4 (30) y D3 a N4 (15): el total llega a 100.**
-Las corridas valen 22,50 puntos.
+Un modelo elegido por precaución sobre un riesgo no observado, que cuesta USD 55
+anuales de más, es una justificación a medias. Bajo la regla dura de la rúbrica
+—sin evidencia, el nivel más bajo— corresponde parcial.
 
-El motivo del faltante está en [`../../corridas/README.md`](../../corridas/README.md):
-el login de Telegram pide un código enviado al teléfono del titular y no se puede
-automatizar. No se incluyen corridas simuladas — el análisis económico toma sus
-tokens de `meta.json`, así que una corrida inventada contaminaría D4 además de D3.
-
-## Advertencia sobre este puntaje
-
-Es la aplicación que hace el propio trabajo de una rúbrica ajena. Un corrector
-puede leer distinto al menos dos componentes:
-
-- **D4 · Consumo medido.** La rúbrica admite «estimación con base de cálculo
-  explícita», y acá la base está declarada (caracteres medidos sobre los archivos
-  y ratio caracteres/token enunciado). Un corrector estricto puede exigir medición
-  real de corrida, y entonces D4 baja a N3 (11,25).
-- **D4 · Elección de modelo.** La comparación contra alternativas existe y el
-  criterio de contraste está definido de antemano, pero la prueba está pendiente.
-  Puede leerse como parcial.
-
-En el escenario más severo de ambas lecturas, D4 cae a N2 y el total queda en
-70,00. Se declara acá para que el rango sea visible y no una sorpresa.
+Se podría haber escrito el componente como verificado y probablemente pasaba. Se
+puntúa parcial porque el criterio de contraste que falta está escrito en
+`ANALISIS_ECONOMICO.md` §4, y declarar completo algo que el propio documento
+declara pendiente sería incoherente.
 
 ## Cómo controlarlo
 
 ```bash
-python3 entrega2/evaluacion/verificar.py   # 16 afirmaciones contra artefactos
-ls corridas/*/salida.json                  # hoy no devuelve nada: ese es el faltante
+python3 entrega2/evaluacion/verificar.py   # 20 afirmaciones contra artefactos
+ls corridas/*/salida.json                  # tres corridas reales
+python3 -c "import json;[print(json.load(open(f'corridas/2026-09-10-{i}/meta.json'))['enviados']) for i in (1,2,3)]"
 ```
+
+El último comando devuelve `0` tres veces: ninguna corrida envió mensajes.
+
+## Si un corrector lee distinto
+
+El único componente en disputa es el de elección de modelo. Si se lo lee como
+verificado —la comparación contra alternativas existe y usa el criterio del
+curso—, D4 pasa a N4 y **el total es 100,00**.

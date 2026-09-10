@@ -37,7 +37,7 @@
     {
       "id": "A5",
       "criterio": 2,
-      "afirmacion": "Las tres corridas NO están generadas todavía",
+      "afirmacion": "Las corridas del experimento de contrato de la Entrega 2 (C1/C2/C3) no se generaron: son distintas de las del Trabajo Final",
       "archivo": "corridas/",
       "chequeo": "cuenta_glob",
       "patron": "corrida_c*.json",
@@ -132,6 +132,40 @@
       "archivo": "codigo/com.betnix.morning.plist",
       "chequeo": "contiene",
       "patron": "StartCalendarInterval"
+    },
+    {
+      "id": "A17",
+      "criterio": 3,
+      "afirmacion": "Existen tres corridas del Trabajo Final, con entrada, salida y metadatos",
+      "archivo": "../corridas/",
+      "chequeo": "cuenta_glob",
+      "patron": "*/salida.json",
+      "esperado": 3
+    },
+    {
+      "id": "A18",
+      "criterio": 3,
+      "afirmacion": "Cada corrida registra la fecha y los tokens medidos por la API",
+      "archivo": "../corridas/2026-09-10-1/meta.json",
+      "chequeo": "json_tiene",
+      "patron": "tokens_entrada"
+    },
+    {
+      "id": "A19",
+      "criterio": 1,
+      "afirmacion": "Ninguna corrida envió mensajes",
+      "archivo": "../corridas/2026-09-10-1/meta.json",
+      "chequeo": "contiene",
+      "patron": "\"enviados\": 0"
+    },
+    {
+      "id": "A20",
+      "criterio": 3,
+      "afirmacion": "Las tres corridas usan entradas distintas entre si",
+      "archivo": "../corridas/",
+      "chequeo": "cuenta_glob",
+      "patron": "*/entrada.json",
+      "esperado": 3
     }
   ]
 }

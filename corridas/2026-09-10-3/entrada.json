@@ -1,0 +1,255 @@
+{
+  "fecha_lote": "2026-09-10",
+  "prospectos": [
+    {
+      "id": "AF-39431730",
+      "canal": "Telegram",
+      "geo": "Europa / LATAM / Asia / TR / AU",
+      "tipo_trafico": "In-app, FB",
+      "estado": "prospecto",
+      "posibilidad_cierre": "Amarillo",
+      "campana": "Semana 2 (TG - nov 11-12)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-3a98da82",
+      "canal": "Email",
+      "geo": "WW",
+      "tipo_trafico": "Facebook/PPC",
+      "estado": "sin_respuesta",
+      "posibilidad_cierre": "Amarillo",
+      "campana": "Semana 2 (Jul 13-19)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-3abce4f6",
+      "canal": "Email",
+      "geo": "WW",
+      "tipo_trafico": "SEO/PPC",
+      "estado": "sin_respuesta",
+      "posibilidad_cierre": "Amarillo",
+      "campana": "Semana 2 (Jul 13-19)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-3b13f761",
+      "canal": "Telegram",
+      "geo": "Czech Republic",
+      "tipo_trafico": "Streamer",
+      "estado": "prospecto",
+      "posibilidad_cierre": "Amarillo",
+      "campana": "Semana 2 (TG - nov 11-12)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-3b5da8a8",
+      "canal": "Telegram",
+      "geo": "—",
+      "tipo_trafico": "Media buy",
+      "estado": "prospecto",
+      "posibilidad_cierre": "Amarillo",
+      "campana": "Semana 2 (TG - nov 11-12)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-3e649b23",
+      "canal": "Telegram",
+      "geo": "LATAM",
+      "tipo_trafico": "Influencer traffic",
+      "estado": "prospecto",
+      "posibilidad_cierre": "Amarillo",
+      "campana": "Semana 2 (TG - nov 11-12)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-3ec3fbdf",
+      "canal": "Telegram",
+      "geo": "—",
+      "tipo_trafico": "SEO",
+      "estado": "prospecto",
+      "posibilidad_cierre": "Amarillo",
+      "campana": "Semana 2 (TG - nov 11-12)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-3fc125e2",
+      "canal": "Telegram",
+      "geo": "LATAM / Europa",
+      "tipo_trafico": "Programmatic media",
+      "estado": "prospecto",
+      "posibilidad_cierre": "Amarillo",
+      "campana": "Semana 2 (TG - nov 11-12)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-43f13c18",
+      "canal": "Telegram",
+      "geo": "—",
+      "tipo_trafico": "SMS PT RevShare",
+      "estado": "prospecto",
+      "posibilidad_cierre": "Amarillo",
+      "campana": "Semana 2 (TG - nov 11-12)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-44523f93",
+      "canal": "Telegram",
+      "geo": "WW",
+      "tipo_trafico": "Meta ads, SEO",
+      "estado": "prospecto",
+      "posibilidad_cierre": "Amarillo",
+      "campana": "Semana 2 (TG - nov 11-12)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-44aae37c",
+      "canal": "Email",
+      "geo": "LATAM",
+      "tipo_trafico": "Traffic & media",
+      "estado": "sin_respuesta",
+      "posibilidad_cierre": "Amarillo",
+      "campana": "Semana 2 (Jul 13-19)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-4528b981",
+      "canal": "Telegram",
+      "geo": "Tier 1 / MX",
+      "tipo_trafico": "PPC, Google ads",
+      "estado": "prospecto",
+      "posibilidad_cierre": "Amarillo",
+      "campana": "Semana 2 (TG - nov 11-12)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-45b620ee",
+      "canal": "Telegram",
+      "geo": "MX",
+      "tipo_trafico": "SEO sites",
+      "estado": "prospecto",
+      "posibilidad_cierre": "Amarillo",
+      "campana": "Semana 2 (TG - nov 11-12)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-486ac618",
+      "canal": "Telegram",
+      "geo": "WW",
+      "tipo_trafico": "Media buying",
+      "estado": "prospecto",
+      "posibilidad_cierre": "Amarillo",
+      "campana": "Semana 3 (TG - recientes)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-48ad5f24",
+      "canal": "Telegram",
+      "geo": "PT / LATAM / Tier 1-2",
+      "tipo_trafico": "Network + internal",
+      "estado": "prospecto",
+      "posibilidad_cierre": "Amarillo",
+      "campana": "Semana 2 (TG - nov 11-12)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-4b98e77e",
+      "canal": "Email",
+      "geo": "LATAM",
+      "tipo_trafico": "Player acquisition",
+      "estado": "sin_respuesta",
+      "posibilidad_cierre": "Amarillo",
+      "campana": "Semana 2 (Jul 13-19)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-4c3cf139",
+      "canal": "Telegram",
+      "geo": "WW",
+      "tipo_trafico": "Aff network",
+      "estado": "prospecto",
+      "posibilidad_cierre": "Amarillo",
+      "campana": "Semana 2 (TG - nov 11-12)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-4dbfbd8e",
+      "canal": "Telegram",
+      "geo": "Tier 1",
+      "tipo_trafico": "SEO traffic",
+      "estado": "prospecto",
+      "posibilidad_cierre": "Amarillo",
+      "campana": "Semana 2 (TG - nov 11-12)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-4fdf3f05",
+      "canal": "Email",
+      "geo": "Europa",
+      "tipo_trafico": "Traffic LATAM",
+      "estado": "sin_respuesta",
+      "posibilidad_cierre": "Amarillo",
+      "campana": "Semana 2 (Jul 13-19)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-50ab6f12",
+      "canal": "Telegram",
+      "geo": "FB ww / PPC T1 / PT",
+      "tipo_trafico": "PPC, FB ads",
+      "estado": "prospecto",
+      "posibilidad_cierre": "Amarillo",
+      "campana": "Semana 2 (TG - nov 11-12)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-50d346c8",
+      "canal": "Email",
+      "geo": "LATAM",
+      "tipo_trafico": "Afiliados",
+      "estado": "sin_respuesta",
+      "posibilidad_cierre": "Amarillo",
+      "campana": "Semana 2 (Jul 13-19)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-50e2eecb",
+      "canal": "Telegram",
+      "geo": "Tier 1",
+      "tipo_trafico": "SEO, SMS",
+      "estado": "sin_respuesta",
+      "posibilidad_cierre": "Amarillo",
+      "campana": "Semana 2 (TG - nov 11-12)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-515401a8",
+      "canal": "Email",
+      "geo": "WW",
+      "tipo_trafico": "SEO",
+      "estado": "sin_respuesta",
+      "posibilidad_cierre": "Amarillo",
+      "campana": "Semana 2 (Jul 13-19)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-51cb75e6",
+      "canal": "Telegram",
+      "geo": "—",
+      "tipo_trafico": "SEO CPA",
+      "estado": "prospecto",
+      "posibilidad_cierre": "Amarillo",
+      "campana": "Semana 2 (TG - nov 11-12)",
+      "comentario": ""
+    },
+    {
+      "id": "AF-51dd3944",
+      "canal": "Email",
+      "geo": "WW",
+      "tipo_trafico": "Traffic",
+      "estado": "sin_respuesta",
+      "posibilidad_cierre": "Amarillo",
+      "campana": "Semana 2 (Jul 13-19)",
+      "comentario": ""
+    }
+  ]
+}

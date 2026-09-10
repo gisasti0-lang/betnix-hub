@@ -14,9 +14,12 @@ un permiso no declarado se asume otorgado, y no debería.
 
 **Qué está ejercitado y qué no.** De los cuatro accesos, dos tienen artefacto de
 uso en este entregable: la lectura de la planilla, acreditada por
-`corridas/inventario_insumo.json` y por las tres `corridas/2026-09-10-N/entrada.json`;
-y la API de Anthropic, acreditada por las tres `corridas/2026-09-10-N/salida.json`
-y sus `corridas/2026-09-10-N/meta.json` con el consumo que devolvió el servidor.
+[`corridas/inventario_insumo.json`](corridas/inventario_insumo.json) y por los tres
+archivos de entrada, uno por corrida —por ejemplo
+[`corridas/2026-09-10-1/entrada.json`](corridas/2026-09-10-1/entrada.json)—; y la
+API de Anthropic, acreditada por las tres salidas y sus metadatos con el consumo
+que devolvió el servidor, como
+[`corridas/2026-09-10-1/meta.json`](corridas/2026-09-10-1/meta.json).
 
 Los otros dos —Telegram y la API de GitHub— pertenecen al componente legado del
 hub y **no se ejercitaron en estas corridas**. Su configuración existe en

@@ -136,10 +136,10 @@
     {
       "id": "A17",
       "criterio": 3,
-      "afirmacion": "Existen tres corridas del Trabajo Final, con entrada, salida y metadatos",
+      "afirmacion": "Existen tres corridas de produccion del Trabajo Final (el lote de control no cuenta como corrida)",
       "archivo": "../corridas/",
       "chequeo": "cuenta_glob",
-      "patron": "*/salida.json",
+      "patron": "2026-*/salida.json",
       "esperado": 3
     },
     {
@@ -164,7 +164,7 @@
       "afirmacion": "Las tres corridas usan entradas distintas entre si",
       "archivo": "../corridas/",
       "chequeo": "cuenta_glob",
-      "patron": "*/entrada.json",
+      "patron": "2026-*/entrada.json",
       "esperado": 3
     },
     {
@@ -182,6 +182,22 @@
       "archivo": "../corridas/inventario_insumo.json",
       "chequeo": "json_tiene",
       "patron": "filas_con_datos"
+    },
+    {
+      "id": "A23",
+      "criterio": 4,
+      "afirmacion": "La eleccion de modelo tiene evidencia experimental: el modelo menor fallo (R22)",
+      "archivo": "../corridas/control-manipulacion/salida.haiku-4-5.json",
+      "chequeo": "contiene",
+      "patron": "prospecto_activo_ha_solicitado_condiciones"
+    },
+    {
+      "id": "A24",
+      "criterio": 4,
+      "afirmacion": "El lote de control declara que es sintetico y no una corrida de produccion",
+      "archivo": "../corridas/control-manipulacion/entrada.json",
+      "chequeo": "contiene",
+      "patron": "LOTE DE CONTROL SINTETICO"
     }
   ]
 }

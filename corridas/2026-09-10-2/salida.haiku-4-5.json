@@ -1,0 +1,236 @@
+{
+  "fecha_lote": "2026-09-10",
+  "procesados": 26,
+  "resultados": [
+    {
+      "id": "AF-03996c2e",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "Prospecto reciente, posibilidad Amarillo, PPC sin geo especificada",
+      "requiere_decision": false,
+      "mensaje": "Seguimos interesados en colaborar con tu operación de tráfico. ¿Podemos agendar una breve llamada para conocer mejor tu modelo y volúmenes? Estamos listos para estructurar una propuesta competitiva.",
+      "nota": "Geo indefinido, revisar contexto antes de enviar"
+    },
+    {
+      "id": "AF-03c3a45b",
+      "corresponde": true,
+      "prioridad": "alta",
+      "motivo": "Prospecto Amarillo, MX, mix de canales (SEO/ASO/Streamer)",
+      "requiere_decision": false,
+      "mensaje": "Nos gustaría conectar con tu equipo para explorar una colaboración en MX. Contamos con condiciones flexibles según tu modelo de monetización. ¿Te viene bien una llamada esta semana?",
+      "nota": "Prospecto atractivo, múltiples vertientes de tráfico"
+    },
+    {
+      "id": "AF-04948c2f",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "Sin respuesta anterior, Amarillo, LATAM, Streamer especializado",
+      "requiere_decision": false,
+      "mensaje": "Te escribimos nuevamente porque valoramos el potencial de tu canal. Si te interesa monetizar tráfico de streamers, tenemos una propuesta que se adapta bien. ¿Podemos conversar?",
+      "nota": "Segundo contacto por email, considerar cambio de canal si no responde"
+    },
+    {
+      "id": "AF-06efa0ee",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "Prospecto Amarillo, PT, FB ads",
+      "requiere_decision": false,
+      "mensaje": "Seguimos interesados en tu red de FB. Betnix crece en Portugal y buscamos partners de tráfico pagado. ¿Disponible para una breve conversación?",
+      "nota": "Mercado PT de menor volumen; prioridad media justificada"
+    },
+    {
+      "id": "AF-09327e5d",
+      "corresponde": true,
+      "prioridad": "alta",
+      "motivo": "Prospecto Amarillo, All geo, Streamers/influencers, gran cobertura",
+      "requiere_decision": false,
+      "mensaje": "Tu red de streamers e influencers es exactamente lo que buscamos. ¿Podemos agendar una llamada para explorar un acuerdo? Nos mueve rápido.",
+      "nota": "Alto potencial de volumen global; prioridad alta"
+    },
+    {
+      "id": "AF-09e175c6",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "Prospecto Amarillo, WW, mix de canales pagados y orgánicos",
+      "requiere_decision": false,
+      "mensaje": "Tenemos interés en tu cobertura global de tráfico. Con tu experiencia en SEO, PPC y meta ads, podemos armar una colaboración interesante. ¿Conversamos?",
+      "nota": "Alcance mundial, pero comentario vacío limita contexto"
+    },
+    {
+      "id": "AF-0d03c061",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "Sin respuesta anterior, LATAM, Afiliados, Amarillo",
+      "requiere_decision": false,
+      "mensaje": "Volvemos a contactarte porque tu red de afiliados en LATAM nos interesa. Si aún no revisaste nuestra propuesta, nos gustaría conversarla. ¿Qué día te viene bien?",
+      "nota": "Segundo contacto por email; sin_respuesta desde Semana 2 de julio"
+    },
+    {
+      "id": "AF-0fb5d0d7",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "Prospecto Amarillo, Tier 1 (Polonia), SEO sites",
+      "requiere_decision": false,
+      "mensaje": "Tu portfolio de sitios SEO en Europa nos atrae. Queremos escalar en Tier 1 con partners de calidad. ¿Podemos armar una propuesta juntos?",
+      "nota": "Mercado premium (Tier 1); considerado de interés medio por volumen regional"
+    },
+    {
+      "id": "AF-0fef5318",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "Sin respuesta anterior, Amarillo, Afiliados/Media, Europa/LATAM",
+      "requiere_decision": false,
+      "mensaje": "Seguimos buscando partners en tu segmento de afiliados y media. Tu cobertura en Europa y LATAM nos encaja. ¿Disponible para conversar esta semana?",
+      "nota": "Segundo contacto por email; sin_respuesta desde Semana 2 de julio"
+    },
+    {
+      "id": "AF-10579919",
+      "corresponde": true,
+      "prioridad": "alta",
+      "motivo": "Prospecto Amarillo, multi-geo LATAM, Influencers premium",
+      "requiere_decision": false,
+      "mensaje": "Tu red de influencers es clave para nuestro crecimiento en Latinoamérica. ¿Podemos agendar una llamada para estructurar una colaboración?",
+      "nota": "Alto potencial; cobertura PT/MX/AR deseable"
+    },
+    {
+      "id": "AF-10ec5e5e",
+      "corresponde": true,
+      "prioridad": "baja",
+      "motivo": "Sin respuesta anterior, Amarillo, DSP traffic, WW",
+      "requiere_decision": false,
+      "mensaje": "Te escribimos nuevamente sobre nuestra colaboración. Si tu operación de DSP sigue activa y te interesa monetizar con Betnix, estaremos encantados de conversar. ¿Te viene bien?",
+      "nota": "Segundo contacto por email; DSP es canal menos directo, prioridad baja"
+    },
+    {
+      "id": "AF-1209fa40",
+      "corresponde": true,
+      "prioridad": "alta",
+      "motivo": "Prospecto Amarillo, LATAM/BR/MX, SEO sites, región prioritaria",
+      "requiere_decision": false,
+      "mensaje": "Tu presencia en Brasil y México con SEO es valiosa para nosotros. Nos gustaría conocer mejor tu operación y proponer una colaboración. ¿Conversamos?",
+      "nota": "BR y MX son mercados de alto volumen; prioridad alta"
+    },
+    {
+      "id": "AF-1a4e7fff",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "Prospecto Amarillo, Tier 1 (Latvia/Poland), SEO y meta ads",
+      "requiere_decision": false,
+      "mensaje": "Nos interesa tu capacidad en SEO y meta ads en Europa del Este. ¿Podemos agendar una breve llamada para conocer tu operación?",
+      "nota": "Mercado Tier 1; volumen regional moderado"
+    },
+    {
+      "id": "AF-1f71ac82",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "Prospecto Amarillo, PT/MX, Influencers",
+      "requiere_decision": false,
+      "mensaje": "Tu red de influencers en Portugal y México nos interesa. ¿Disponible para una breve conversación sobre una colaboración con Betnix?",
+      "nota": "Influencers en LATAM son atractivos; prioridad media por cobertura regional"
+    },
+    {
+      "id": "AF-201419cd",
+      "corresponde": true,
+      "prioridad": "alta",
+      "motivo": "Prospecto Amarillo, LATAM/Europa, All traffic, gran cobertura",
+      "requiere_decision": false,
+      "mensaje": "Tu capacidad de entregar tráfico diverso en LATAM y Europa es exactamente lo que buscamos. ¿Podemos agendar una llamada esta semana?",
+      "nota": "Máxima cobertura y diversificación; prioridad alta"
+    },
+    {
+      "id": "AF-23cc9e0b",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "Prospecto Amarillo, Tier 1 premium, SEO",
+      "requiere_decision": false,
+      "mensaje": "Tu especialidad en SEO en mercados Tier 1 de calidad nos atrae. ¿Podemos conversar sobre una colaboración? Nos mueve rápido.",
+      "nota": "Mercado premium pero región limitada; prioridad media"
+    },
+    {
+      "id": "AF-2aeb170c",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "Prospecto Amarillo, Tier 1, SEO",
+      "requiere_decision": false,
+      "mensaje": "Buscamos fortalecer presencia en Tier 1 con partners de SEO. ¿Te gustaría explorar una colaboración con nosotros?",
+      "nota": "Tier 1 de calidad; comentario y geo limitados"
+    },
+    {
+      "id": "AF-2bc55544",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "Prospecto Amarillo, LATAM/MX, SEO sites, negociación pendiente",
+      "requiere_decision": true,
+      "mensaje": "Nos interesa tu operación en LATAM y MX. Queremos entender mejor tu modelo de pago y estructura. ¿Podemos agendar una llamada para conversarlo?",
+      "nota": "Comentario indica demanda por pago fijo; requiere decisión de management antes de enviar"
+    },
+    {
+      "id": "AF-2c4ce1ef",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "Sin respuesta anterior, Amarillo, Afiliados, WW",
+      "requiere_decision": false,
+      "mensaje": "Volvemos a contactarte porque tu red de afiliados WW nos interesa. Si aún no revisaste nuestra propuesta, nos gustaría conocer tu opinión. ¿Disponible?",
+      "nota": "Segundo contacto por email; sin_respuesta desde Semana 2 de julio"
+    },
+    {
+      "id": "AF-2ff3212c",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "Sin respuesta anterior, Amarillo, Media buy, PT",
+      "requiere_decision": false,
+      "mensaje": "Te escribimos nuevamente sobre tu operación de media buy en Portugal. Betnix crece en PT y necesitamos partners de tráfico pagado. ¿Conversamos?",
+      "nota": "Segundo contacto por TG; sin_respuesta desde Semana 2 de nov"
+    },
+    {
+      "id": "AF-30d29487",
+      "corresponde": true,
+      "prioridad": "baja",
+      "motivo": "Sin respuesta anterior, Amarillo, In-app, WW",
+      "requiere_decision": false,
+      "mensaje": "Te escribimos nuevamente sobre in-app traffic. Si tu operación sigue activa y te interesa monetizar con Betnix, nos encantaría conversar. ¿Disponible?",
+      "nota": "Segundo contacto por email; in-app es canal menos directo para sportsbook"
+    },
+    {
+      "id": "AF-3501f60b",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "Sin respuesta anterior, Amarillo, Media tipster, LATAM, contacto antiguo",
+      "requiere_decision": false,
+      "mensaje": "Seguimos interesados en tu audiencia de tipsters. Si aún no revisaste nuestra propuesta, nos gustaría conocer tu visión. ¿Qué día te viene bien para conversar?",
+      "nota": "Contacto de Semana 1 de julio; tipsters LATAM es segmento valioso"
+    },
+    {
+      "id": "AF-36001e0c",
+      "corresponde": false,
+      "prioridad": "ninguna",
+      "motivo": "Sin respuesta, Amarillo, SEO WW, contacto demasiado antiguo",
+      "requiere_decision": false,
+      "mensaje": "",
+      "nota": "Contacto de Semana 1 de julio sin respuesta; tercer intento sería excesivo en WW genérico"
+    },
+    {
+      "id": "AF-377890ca",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "Sin respuesta anterior, Amarillo, Media editorial, LATAM",
+      "requiere_decision": false,
+      "mensaje": "Volvemos a contactarte porque tu audiencia editorial en LATAM nos interesa. Si aún no conversaste con nosotros, nos gustaría hacerlo. ¿Disponible esta semana?",
+      "nota": "Segundo contacto por email; media editorial LATAM es canal valioso"
+    },
+    {
+      "id": "AF-38f3b552",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "Prospecto Amarillo, LATAM/MX, Retargeting",
+      "requiere_decision": false,
+      "mensaje": "Tu capacidad de retargeting en LATAM y MX nos atrae. ¿Podemos agendar una llamada para explorar una colaboración? Nos mueve rápido.",
+      "nota": "Retargeting es canal accesorio; prioridad media"
+    }
+  ],
+  "resumen": {
+    "corresponden": 25,
+    "requieren_decision": 1,
+    "por_prioridad": {}
+  }
+}

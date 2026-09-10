@@ -79,7 +79,9 @@ def cargar_system_prompt() -> str:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--entrada", required=True, help="JSON del lote de mensajes")
+    ap.add_argument("--entrada", required=True, help="JSON del lote de prospectos")
+    ap.add_argument("--modelo", default=MODELO,
+                    help=f"para comparar alternativas; por defecto {MODELO}")
     ap.add_argument("--salida", help="dónde escribir; por defecto junto a la entrada")
     args = ap.parse_args()
 
@@ -91,17 +93,25 @@ def main() -> int:
     if not lote.get("prospectos"):
         sys.exit("✗ El lote no tiene prospectos.")
 
+    modelo = args.modelo
+    if modelo not in TARIFAS:
+        sys.exit(f"✗ Modelo sin tarifa declarada: {modelo}")
+
     client = anthropic.Anthropic(timeout=300.0)
     inicio = datetime.now()
 
+    # `effort` es de la familia 4.6+. Haiku 4.5 lo rechaza, así que el
+    # parámetro se incluye solo donde el modelo lo admite.
+    extra = {"output_config": {"effort": ESFUERZO}} if modelo.startswith("claude-opus") else {}
+
     try:
         respuesta = client.messages.parse(
-            model=MODELO,
+            model=modelo,
             max_tokens=MAX_TOKENS,
             system=cargar_system_prompt(),
             messages=[{"role": "user", "content": json.dumps(lote, ensure_ascii=False)}],
             output_format=SalidaSeguimiento,
-            output_config={"effort": ESFUERZO},
+            **extra,
         )
     except anthropic.RateLimitError as e:
         sys.exit(f"✗ Límite de tasa alcanzado: {e}")
@@ -112,18 +122,20 @@ def main() -> int:
 
     salida: SalidaSeguimiento = respuesta.parsed_output
     uso = respuesta.usage
-    tarifa = TARIFAS[MODELO]
+    tarifa = TARIFAS[modelo]
     costo = (uso.input_tokens / 1e6 * tarifa["entrada"]
              + uso.output_tokens / 1e6 * tarifa["salida"])
 
-    destino = Path(args.salida) if args.salida else ruta_entrada.parent / "salida.json"
+    sufijo = "" if modelo == MODELO else f".{modelo.replace('claude-','')}"
+    destino = (Path(args.salida) if args.salida
+               else ruta_entrada.parent / f"salida{sufijo}.json")
     destino.write_text(json.dumps(salida.model_dump(), ensure_ascii=False, indent=2))
 
     meta = {
         "fecha": inicio.isoformat(timespec="seconds"),
-        "modelo": MODELO,
+        "modelo": modelo,
         "max_tokens": MAX_TOKENS,
-        "esfuerzo": ESFUERZO,
+        "esfuerzo": ESFUERZO if extra else "(no aplica)",
         "tokens_entrada": uso.input_tokens,
         "tokens_salida": uso.output_tokens,
         "tarifa_usd_por_millon": tarifa,
@@ -133,7 +145,7 @@ def main() -> int:
         "enviados": 0,
         "nota": "Ningún mensaje fue enviado. El envío requiere aprobación humana.",
     }
-    (destino.parent / "meta.json").write_text(
+    (destino.parent / f"meta{sufijo}.json").write_text(
         json.dumps(meta, ensure_ascii=False, indent=2))
 
     print(f"\n  Procesados:          {salida.procesados}")

@@ -1,0 +1,17 @@
+{
+  "fecha": "2026-09-10T11:45:45",
+  "modelo": "claude-haiku-4-5",
+  "max_tokens": 16000,
+  "esfuerzo": "(no aplica)",
+  "tokens_entrada": 4874,
+  "tokens_salida": 2499,
+  "tarifa_usd_por_millon": {
+    "entrada": 1.0,
+    "salida": 5.0
+  },
+  "costo_usd": 0.017369,
+  "duracion_seg": 39.4,
+  "prospectos_en_lote": 25,
+  "enviados": 0,
+  "nota": "Ningún mensaje fue enviado. El envío requiere aprobación humana."
+}

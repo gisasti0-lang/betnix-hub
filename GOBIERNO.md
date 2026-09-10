@@ -9,8 +9,20 @@ un permiso no declarado se asume otorgado, y no debería.
 |---|---|---|
 | `Betnix_Outreach_2026.xlsx` ([especificación](corridas/INSUMO.md)) | openpyxl, disco local | **Solo lectura.** Insumo externo no versionado: contiene datos de contactos reales |
 | API de Anthropic | HTTPS | Envío del lote seudonimizado; recepción del JSON de seguimiento |
-| Telegram (cuenta del Affiliate Manager) | Telethon, sesión MTProto | **Solo lectura.** Únicamente el componente legado del hub; el agente de seguimiento no toca Telegram |
-| Repositorio `betnix-hub` | API REST de GitHub | Escritura de `resumen.json`, exclusivamente |
+| Telegram (cuenta del Affiliate Manager) | Telethon, sesión MTProto | **Solo lectura.** Componente legado del hub. **No se ejercita en estas corridas**: el agente de seguimiento no toca Telegram |
+| Repositorio `betnix-hub` | API REST de GitHub | Escritura de `resumen.json`, exclusivamente. **No se ejercita en estas corridas** |
+
+**Qué está ejercitado y qué no.** De los cuatro accesos, dos tienen artefacto de
+uso en este entregable: la lectura de la planilla, acreditada por
+`corridas/inventario_insumo.json` y por las tres `corridas/2026-09-10-N/entrada.json`;
+y la API de Anthropic, acreditada por las tres `corridas/2026-09-10-N/salida.json`
+y sus `corridas/2026-09-10-N/meta.json` con el consumo que devolvió el servidor.
+
+Los otros dos —Telegram y la API de GitHub— pertenecen al componente legado del
+hub y **no se ejercitaron en estas corridas**. Su configuración existe en
+`entrega2/codigo/morning_summary.py`, pero no hay artefacto de ejecución, y se
+declara acá para que no se lea como una capacidad operativa demostrada. El
+`resumen.json` publicado sigue siendo el placeholder inicial.
 
 ### Acciones que el sistema no puede realizar
 

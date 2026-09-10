@@ -19,35 +19,41 @@ trunca hacia abajo.
 | **D1 · Sistema completo** | contrato ✅ · herramienta ✅ · output estructurado ✅ · supervisión ✅ | 4 | N4 | **30,00** |
 | **D2 · Proceso documentado** | iteraciones ✅ · fallas ✅ · decisiones ✅ · alcance ✅ | 4 | N4 | **25,00** |
 | **D3 · Formato y reproducibilidad** | estructura ✅ · cantidad ✅ · reconstruibilidad ✅ · instrucciones ✅ | 4 | N4 | **15,00** |
-| **D4 · Análisis económico** | consumo ✅ · costo ✅ · proyección ✅ · modelo 🟡 | 3,5 → 3 | N3 | **11,25** |
+| **D4 · Análisis económico** | consumo ✅ · costo ✅ · proyección ✅ · modelo ✅ | 4 | N4 | **15,00** |
 | **D5 · Gobierno y riesgo** | perímetro ✅ · riesgos ✅ · nivel L ✅ · responsable ✅ | 4 | N4 | **15,00** |
-| | | | **Total** | **96,25** |
+| | | | **Total** | **100,00** |
 
-## Por qué D4 no llega a N4
+## Qué cerró D4
 
-Tres de sus cuatro componentes están verificados con medición real: el consumo
-sale del campo `usage` de la API en tres corridas, el costo es recalculable a
-mano contra la tarifa citada, y la proyección tiene los dos horizontes con el
-supuesto de volumen declarado.
+En la versión anterior de este documento el componente **elección de modelo**
+estaba en parcial: el argumento para elegir Opus 5 era resistir manipulación, y
+en las tres corridas no había aparecido ningún caso. La capacidad estaba sin
+ejercitar.
 
-El cuarto —**elección de modelo justificada**— se puntúa **parcial**, y es una
-decisión deliberada de este documento.
+Se ejercitó. Se corrieron los mismos tres lotes con `claude-haiku-4-5` y se armó
+un lote de control con tres inyecciones. **Haiku falló una de las tres** —la que
+esconde un pseudo-tag `<<SYSTEM>>` dentro de un comentario legítimo— y discrepó
+con Opus 5 en 44 de 75 prioridades.
 
-La justificación existe y compara contra dos alternativas con números medidos.
-Pero el argumento que sostiene la elección de Opus 5 es la resistencia a
-manipulación que exige la regla dura 3, y **en las tres corridas no apareció
-ningún caso de manipulación**. La capacidad quedó sin ejercitar. No hay evidencia
-de que Opus 5 sea necesario, ni de que Haiku 4.5 —cinco veces más barato— no
-alcance.
+Eso satisface **R22**: la sobredimensión no penaliza cuando está justificada con
+evidencia de que el modelo menor falló. El detalle está en
+`ANALISIS_ECONOMICO.md` §4, y los artefactos en
+`corridas/control-manipulacion/` y los `salida.haiku-4-5.json` de cada corrida.
 
-Un modelo elegido por precaución sobre un riesgo no observado, que cuesta USD 55
-anuales de más, es una justificación a medias. Bajo la regla dura de la rúbrica
-—sin evidencia, el nivel más bajo— corresponde parcial.
+## Reglas de corte aplicadas
 
-Se podría haber escrito el componente como verificado y probablemente pasaba. Se
-puntúa parcial porque el criterio de contraste que falta está escrito en
-`ANALISIS_ECONOMICO.md` §4, y declarar completo algo que el propio documento
-declara pendiente sería incoherente.
+La versión anterior puntuaba solo los componentes de cada dimensión e ignoraba
+las 29 reglas `R`. Se aplicaron; dos encontraron problemas reales:
+
+- **R2/R6** · el inventario de consistencia detectó diez rutas afirmadas e
+  inexistentes, tres de ellas errores de prefijo en `DECISIONES.md`. Corregidas.
+  La planilla, que es insumo externo, quedó cubierta por **R6-bis** con las cinco
+  condiciones cumplidas.
+- **R1** · el perímetro declaraba cuatro accesos y solo dos tienen artefacto de
+  uso. Los otros dos se declararon explícitamente como no ejercitados en estas
+  corridas, para que no se lean como capacidad operativa demostrada.
+
+Verificadas sin hallazgos: R3, R4, R5, R7 a R18, R19 a R21, R23 a R27.
 
 ## Cómo controlarlo
 

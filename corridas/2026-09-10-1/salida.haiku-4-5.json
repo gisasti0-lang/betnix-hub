@@ -1,0 +1,236 @@
+{
+  "fecha_lote": "2026-09-10",
+  "procesados": 25,
+  "resultados": [
+    {
+      "id": "AF-244d0037",
+      "corresponde": true,
+      "prioridad": "alta",
+      "motivo": "activo, verde, establecido",
+      "requiere_decision": false,
+      "mensaje": "¿Cómo va el tráfico? Estamos listos para escalar cuando quieras. ¿Hay algo que necesites de nuestro lado?",
+      "nota": "Influencer/Streamer PT, campaña Semana 1, sin comentario"
+    },
+    {
+      "id": "AF-2dce1abb",
+      "corresponde": true,
+      "prioridad": "alta",
+      "motivo": "en_alta, verde, reciente",
+      "requiere_decision": false,
+      "mensaje": "Seguimos adelante con el setup. ¿Hubo novedad en tu lado? Avísame si necesitás ajustar algo.",
+      "nota": "En alta WW, tipo tráfico no especificado, campaña Semana 2"
+    },
+    {
+      "id": "AF-2f60d4f7",
+      "corresponde": true,
+      "prioridad": "alta",
+      "motivo": "activo, verde, establecido",
+      "requiere_decision": false,
+      "mensaje": "¿Cómo va el tráfico? Estamos listos para escalar. Avísame si hay algo que tengamos que charlar.",
+      "nota": "FB ads PT, campaña Semana 1, sin comentario"
+    },
+    {
+      "id": "AF-3bce4120",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "activo, verde, tipo incierto",
+      "requiere_decision": false,
+      "mensaje": "Retomamos para saber cómo va todo. Cualquier cosa que necesites, avísame.",
+      "nota": "Tier 1, tipo tráfico es '?', campaña Semana 1, falta claridad"
+    },
+    {
+      "id": "AF-3dedea60",
+      "corresponde": true,
+      "prioridad": "alta",
+      "motivo": "activo, verde, fb+ppc",
+      "requiere_decision": false,
+      "mensaje": "¿Novedades? Estamos listos para escalar el volumen. Cualquier ajuste o consulta, avísame.",
+      "nota": "FB ads y PPC, Tier 1/LATAM/MX/CL, campaña Semana 1"
+    },
+    {
+      "id": "AF-3f715570",
+      "corresponde": true,
+      "prioridad": "alta",
+      "motivo": "activo, verde, seo",
+      "requiere_decision": false,
+      "mensaje": "¿Cómo está el tráfico SEO? Listos para crecer juntos. ¿Hay algo que necesites?",
+      "nota": "SEO WW, campaña Semana 1, sin comentario"
+    },
+    {
+      "id": "AF-5bc88242",
+      "corresponde": true,
+      "prioridad": "alta",
+      "motivo": "en_alta, verde, reciente",
+      "requiere_decision": false,
+      "mensaje": "¿Avance en la integración? Estamos preparados para lanzar cuando digas.",
+      "nota": "En alta FB ads, geo desconocido, campaña Semana 2"
+    },
+    {
+      "id": "AF-66014140",
+      "corresponde": true,
+      "prioridad": "alta",
+      "motivo": "activo, verde, media buying",
+      "requiere_decision": false,
+      "mensaje": "¿Cómo va? Listos para activar campañas. ¿Hay algo que convenga charlar?",
+      "nota": "Media buying Europa/MX, campaña Semana 1"
+    },
+    {
+      "id": "AF-688885a8",
+      "corresponde": true,
+      "prioridad": "alta",
+      "motivo": "en_alta, verde, master",
+      "requiere_decision": false,
+      "mensaje": "¿Novedades con la integración? Estamos acá para lo que necesites. Avísame cuando tengas update.",
+      "nota": "Master affiliate Tier 1/LATAM, en alta, campaña Semana 2"
+    },
+    {
+      "id": "AF-7416bdad",
+      "corresponde": false,
+      "prioridad": "baja",
+      "motivo": "geo_fuera_foco",
+      "requiere_decision": false,
+      "mensaje": "",
+      "nota": "CPA inapp AU, geo fuera del target LATAM/WW principales, activo pero baja prioridad hoy"
+    },
+    {
+      "id": "AF-76c91e17",
+      "corresponde": true,
+      "prioridad": "alta",
+      "motivo": "activo, verde, seo",
+      "requiere_decision": false,
+      "mensaje": "¿Qué tal el tráfico SEO? Estamos listos para crecer. ¿Algo que necesites?",
+      "nota": "SEO sites WW, campaña Semana 1"
+    },
+    {
+      "id": "AF-7a56ca9e",
+      "corresponde": true,
+      "prioridad": "alta",
+      "motivo": "activo, verde, fb",
+      "requiere_decision": false,
+      "mensaje": "¿Novedades? Listos para escalar. Cualquier cosa, avísame.",
+      "nota": "FB ads PT, campaña Semana 1"
+    },
+    {
+      "id": "AF-a421cf29",
+      "corresponde": true,
+      "prioridad": "alta",
+      "motivo": "en_alta, verde, influencers",
+      "requiere_decision": false,
+      "mensaje": "¿Cómo va? Estamos preparados para activar. ¿Hay update?",
+      "nota": "Influencers MX, en alta, campaña Semana 2"
+    },
+    {
+      "id": "AF-a80c0975",
+      "corresponde": true,
+      "prioridad": "alta",
+      "motivo": "activo, verde, fb",
+      "requiere_decision": false,
+      "mensaje": "¿Novedades? Listos para escalar. Cualquier cosa, avísame.",
+      "nota": "FB ads PT, campaña Semana 1"
+    },
+    {
+      "id": "AF-ba972b9c",
+      "corresponde": false,
+      "prioridad": "ninguna",
+      "motivo": "falta_geo_trafico",
+      "requiere_decision": true,
+      "mensaje": "",
+      "nota": "Geo y tipo tráfico desconocidos, activo verde pero no hay contexto para seguimiento"
+    },
+    {
+      "id": "AF-c5217532",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "activo, verde, geo_falta",
+      "requiere_decision": false,
+      "mensaje": "¿Cómo está el rendimiento? Estamos listos para escalar. Avísame si hay novedades.",
+      "nota": "UAC/FB ads, geo desconocido, campaña Semana 1"
+    },
+    {
+      "id": "AF-c912bf13",
+      "corresponde": true,
+      "prioridad": "alta",
+      "motivo": "activo, verde, media buy",
+      "requiere_decision": false,
+      "mensaje": "¿Qué tal? Listos para activar. ¿Hay algo que necesites?",
+      "nota": "Media buy PT, campaña Semana 1"
+    },
+    {
+      "id": "AF-c94d8f6e",
+      "corresponde": true,
+      "prioridad": "alta",
+      "motivo": "en_alta, verde, seo",
+      "requiere_decision": false,
+      "mensaje": "¿Avances? Estamos preparados para lanzar. Cualquier duda, avísame.",
+      "nota": "SEO MX, en alta, campaña Semana 2"
+    },
+    {
+      "id": "AF-d42c6a4e",
+      "corresponde": true,
+      "prioridad": "alta",
+      "motivo": "en_alta, verde, influencers",
+      "requiere_decision": false,
+      "mensaje": "¿Novedades? Estamos listos para activar. ¿Hay update?",
+      "nota": "Influencers PT, en alta, campaña Semana 2"
+    },
+    {
+      "id": "AF-e2a33494",
+      "corresponde": true,
+      "prioridad": "alta",
+      "motivo": "activo, verde, seo",
+      "requiere_decision": false,
+      "mensaje": "¿Cómo va el tráfico? Listos para crecer. ¿Hay algo que necesites?",
+      "nota": "SEO WW/MX fuerte, campaña Semana 1"
+    },
+    {
+      "id": "AF-ee4b0830",
+      "corresponde": true,
+      "prioridad": "alta",
+      "motivo": "activo, verde, affiliate_network",
+      "requiere_decision": false,
+      "mensaje": "¿Novedades? Estamos preparados para escalar. Cualquier cosa, avísame.",
+      "nota": "Affiliate network Europa/LATAM, campaña Semana 1"
+    },
+    {
+      "id": "AF-00915bcd",
+      "corresponde": false,
+      "prioridad": "media",
+      "motivo": "prospecto_amarillo",
+      "requiere_decision": false,
+      "mensaje": "",
+      "nota": "Prospecto amarillo SEO, no corresponde seguimiento hoy, monitorear para próximas tandas"
+    },
+    {
+      "id": "AF-00aa6f87",
+      "corresponde": false,
+      "prioridad": "media",
+      "motivo": "prospecto_amarillo",
+      "requiere_decision": false,
+      "mensaje": "",
+      "nota": "Prospecto amarillo E-sport, no corresponde seguimiento hoy"
+    },
+    {
+      "id": "AF-01a69ec6",
+      "corresponde": false,
+      "prioridad": "baja",
+      "motivo": "sin_respuesta_antiguos",
+      "requiere_decision": false,
+      "mensaje": "",
+      "nota": "Sin respuesta desde Jul 13-19, Media fútbol Email, amarillo, riesgo de quemar contacto"
+    },
+    {
+      "id": "AF-01cc41ec",
+      "corresponde": false,
+      "prioridad": "media",
+      "motivo": "prospecto_amarillo",
+      "requiere_decision": false,
+      "mensaje": "",
+      "nota": "Prospecto amarillo LATAM/MX, no corresponde seguimiento hoy"
+    }
+  ],
+  "resumen": {
+    "corresponden": 16,
+    "requieren_decision": 1,
+    "por_prioridad": {}
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "fecha_lote": "2026-09-10",
+  "procesados": 25,
+  "resultados": [
+    {
+      "id": "AF-39431730",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "prospecto_activo_con_cierre_amarillo",
+      "requiere_decision": false,
+      "mensaje": "Hola. Seguimos interesados en explorar oportunidades con tu equipo. ¿Hay novedades o disponibilidad para conversar sobre cómo podemos trabajar juntos?",
+      "nota": "Geo y canal amplios (TG, multi-región). Tipo de tráfico mixto (in-app, FB). Inicial de contacto reciente (nov 11-12)."
+    },
+    {
+      "id": "AF-3a98da82",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "sin_respuesta_primera_semana",
+      "requiere_decision": false,
+      "mensaje": "Seguimiento a nuestra propuesta anterior. Nos gustaría conocer tu interés en monetizar tráfico con RevShare o CPA. ¿Podemos agendar un breve llamado?",
+      "nota": "Email, WW, FB/PPC. Primera contactación hace ~2 meses (jul 13-19). Sin respuesta inicial."
+    },
+    {
+      "id": "AF-3abce4f6",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "sin_respuesta_primera_semana",
+      "requiere_decision": false,
+      "mensaje": "Retomamos contacto sobre oportunidades de tráfico SEO/PPC. ¿Te interesa explorar una posible colaboración con nosotros?",
+      "nota": "Email, WW, SEO/PPC. Campaña jul 13-19. Sin respuesta detectada."
+    },
+    {
+      "id": "AF-3b13f761",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "prospecto_activo_geo_latam_eur",
+      "requiere_decision": false,
+      "mensaje": "Nos interesa tu tráfico de streamers. ¿Disponible para conversar sobre opciones de monetización que funcionen para tu comunidad?",
+      "nota": "TG, Czech Republic (Tier 1). Prospecto reciente. Nicho específico (streamers)."
+    },
+    {
+      "id": "AF-3b5da8a8",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "prospecto_media_buy",
+      "requiere_decision": false,
+      "mensaje": "Te contactamos nuevamente para explorar una posible alianza en media buying. ¿Tenés disponibilidad para una conversación breve?",
+      "nota": "TG, geo no especificado (—). Media buy. Campaña reciente."
+    },
+    {
+      "id": "AF-3e649b23",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "prospecto_latam_influencer",
+      "requiere_decision": false,
+      "mensaje": "Nos interesa trabajar con tráfico de influencers hacia LATAM. ¿Podemos agendar una llamada para ver si hay alineación?",
+      "nota": "TG, LATAM, influencer traffic. Prospecto reciente, zona objetivo."
+    },
+    {
+      "id": "AF-3ec3fbdf",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "prospecto_seo",
+      "requiere_decision": false,
+      "mensaje": "Retomamos contacto sobre monetizar tráfico SEO. ¿Tenés interés en conocer nuestras opciones de RevShare o CPA?",
+      "nota": "TG, geo —, SEO. Campaña reciente (sem 2)."
+    },
+    {
+      "id": "AF-3fc125e2",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "prospecto_programmatic_latam_eur",
+      "requiere_decision": false,
+      "mensaje": "Te escribimos nuevamente sobre oportunidades en media programática. ¿Podemos conversar sobre una posible colaboración?",
+      "nota": "TG, LATAM/Europa, programmatic media. Prospecto activo."
+    },
+    {
+      "id": "AF-43f13c18",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "prospecto_sms_pt_revshare",
+      "requiere_decision": false,
+      "mensaje": "Seguimiento sobre tráfico SMS hacia PT. ¿Te gustaría explorar opciones de RevShare o CPA adaptadas a tu modelo?",
+      "nota": "TG, geo —, SMS PT RevShare específico. Nicho definido."
+    },
+    {
+      "id": "AF-44523f93",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "prospecto_meta_seo",
+      "requiere_decision": false,
+      "mensaje": "Retomamos nuestra propuesta de colaboración en Meta ads y SEO. ¿Disponible para una breve conversación sobre cómo podemos alinearnos?",
+      "nota": "TG, WW, Meta ads + SEO. Campana reciente."
+    },
+    {
+      "id": "AF-44aae37c",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "sin_respuesta_latam",
+      "requiere_decision": false,
+      "mensaje": "Seguimiento a nuestra propuesta de monetizar tráfico en LATAM. ¿Hay interés en explorar opciones juntos?",
+      "nota": "Email, LATAM, traffic & media. Sin respuesta desde jul 13-19."
+    },
+    {
+      "id": "AF-4528b981",
+      "corresponde": true,
+      "prioridad": "alta",
+      "motivo": "prospecto_tier1_mx_ppc",
+      "requiere_decision": false,
+      "mensaje": "Nos interesa tu tráfico PPC/Google Ads en MX y Tier 1. ¿Podemos agendar una llamada para explorar una alianza?",
+      "nota": "TG, Tier 1/MX, PPC/Google Ads. Geo y vertical atractivos."
+    },
+    {
+      "id": "AF-45b620ee",
+      "corresponde": true,
+      "prioridad": "alta",
+      "motivo": "prospecto_seo_mx",
+      "requiere_decision": false,
+      "mensaje": "Te contactamos sobre oportunidades en tráfico SEO desde MX. ¿Disponible para conversar sobre opciones de monetización?",
+      "nota": "TG, MX, SEO sites. Geo objetivo (LATAM), vertical clara."
+    },
+    {
+      "id": "AF-486ac618",
+      "corresponde": true,
+      "prioridad": "baja",
+      "motivo": "prospecto_reciente_sin_contexto",
+      "requiere_decision": false,
+      "mensaje": "Retomamos contacto sobre oportunidades en media buying. ¿Te gustaría conocer nuestros modelos de RevShare o CPA?",
+      "nota": "TG, WW, media buying. Campaña sem 3 (reciente). Sin comentario adicional."
+    },
+    {
+      "id": "AF-48ad5f24",
+      "corresponde": true,
+      "prioridad": "alta",
+      "motivo": "prospecto_network_pt_latam_tier",
+      "requiere_decision": false,
+      "mensaje": "Nos interesa tu tráfico de red + interno desde PT, LATAM y Tier 1-2. ¿Disponible para una conversación sobre cómo colaborar?",
+      "nota": "TG, PT/LATAM/Tier 1-2, network + internal. Multi-geo, vertical atractiva."
+    },
+    {
+      "id": "AF-4b98e77e",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "sin_respuesta_latam_pa",
+      "requiere_decision": false,
+      "mensaje": "Seguimiento sobre player acquisition en LATAM. ¿Interesado en explorar opciones de monetización con nosotros?",
+      "nota": "Email, LATAM, player acquisition. Sin respuesta desde jul 13-19."
+    },
+    {
+      "id": "AF-4c3cf139",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "prospecto_aff_network",
+      "requiere_decision": false,
+      "mensaje": "Retomamos propuesta sobre affiliate network. ¿Podemos agendar una llamada breve para explorar opciones?",
+      "nota": "TG, WW, aff network. Prospecto reciente."
+    },
+    {
+      "id": "AF-4dbfbd8e",
+      "corresponde": true,
+      "prioridad": "alta",
+      "motivo": "prospecto_seo_tier1",
+      "requiere_decision": false,
+      "mensaje": "Te escribimos sobre tráfico SEO desde Tier 1. ¿Hay disponibilidad para conversar sobre una posible colaboración?",
+      "nota": "TG, Tier 1, SEO traffic. Geo y vertical de alto valor."
+    },
+    {
+      "id": "AF-4fdf3f05",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "sin_respuesta_europa_latam",
+      "requiere_decision": false,
+      "mensaje": "Seguimiento sobre tráfico LATAM desde Europa. ¿Te gustaría conocer nuestras opciones de RevShare o CPA?",
+      "nota": "Email, Europa, traffic LATAM. Sin respuesta desde jul 13-19."
+    },
+    {
+      "id": "AF-50ab6f12",
+      "corresponde": true,
+      "prioridad": "alta",
+      "motivo": "prospecto_ppc_multi_tier",
+      "requiere_decision": false,
+      "mensaje": "Nos interesa tu tráfico FB/PPC desde Tier 1 y PT. ¿Disponible para una breve conversación sobre cómo trabajar juntos?",
+      "nota": "TG, FB WW/PPC T1/PT, PPC/FB ads. Multi-geo, altos valores."
+    },
+    {
+      "id": "AF-50d346c8",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "sin_respuesta_latam_afiliados",
+      "requiere_decision": false,
+      "mensaje": "Retomamos contacto sobre afiliados en LATAM. ¿Hay interés en explorar una alianza de monetización?",
+      "nota": "Email, LATAM, afiliados. Sin respuesta desde jul 13-19."
+    },
+    {
+      "id": "AF-50e2eecb",
+      "corresponde": true,
+      "prioridad": "alta",
+      "motivo": "sin_respuesta_tier1_seo_sms",
+      "requiere_decision": false,
+      "mensaje": "Seguimiento sobre SEO y SMS desde Tier 1. ¿Te gustaría conversar sobre opciones de colaboración?",
+      "nota": "TG, Tier 1, SEO/SMS. Sin respuesta pero geo + vertical de valor alto."
+    },
+    {
+      "id": "AF-515401a8",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "sin_respuesta_seo_ww",
+      "requiere_decision": false,
+      "mensaje": "Retomamos propuesta sobre tráfico SEO. ¿Disponible para una breve llamada sobre opciones de monetización?",
+      "nota": "Email, WW, SEO. Sin respuesta desde jul 13-19."
+    },
+    {
+      "id": "AF-51cb75e6",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "prospecto_seo_cpa",
+      "requiere_decision": false,
+      "mensaje": "Te escribimos nuevamente sobre tráfico SEO en modelo CPA. ¿Podemos agendar una conversación para explorar opciones?",
+      "nota": "TG, geo —, SEO CPA específico. Modelo claro definido."
+    },
+    {
+      "id": "AF-51dd3944",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "sin_respuesta_ww_traffic",
+      "requiere_decision": false,
+      "mensaje": "Seguimiento a nuestra propuesta de colaboración. ¿Interesado en monetizar tu tráfico con nosotros?",
+      "nota": "Email, WW, traffic genérico. Sin respuesta desde jul 13-19."
+    }
+  ],
+  "resumen": {
+    "corresponden": 25,
+    "requieren_decision": 0,
+    "por_prioridad": {}
+  }
+}

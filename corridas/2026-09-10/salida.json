@@ -1,0 +1,236 @@
+{
+  "fecha_lote": "2026-09-10",
+  "procesados": 25,
+  "resultados": [
+    {
+      "id": "AF-244d0037",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "activo verde, chequeo de cuenta",
+      "requiere_decision": false,
+      "mensaje": "Hola, ¿cómo va todo? Paso para ver cómo viene el rendimiento del tráfico de influencers/streaming en PT este mes. Si querés, revisamos juntos los números y vemos si hay algo para optimizar (creatividades, landings o segmentación). También puedo pasarte materiales nuevos si te sirven. ¿Te queda cómodo charlarlo esta semana por acá?",
+      "nota": "Comentario vacío: mensaje armado con estado, GEO y tipo de tráfico."
+    },
+    {
+      "id": "AF-2dce1abb",
+      "corresponde": true,
+      "prioridad": "alta",
+      "motivo": "en alta verde, destrabar onboarding",
+      "requiere_decision": false,
+      "mensaje": "Hola, ¿cómo estás? Te escribo para ver cómo viene el proceso de alta. Si falta algún dato o quedó pendiente algo técnico de nuestro lado, decime y lo empujamos hoy mismo para que puedan arrancar a enviar tráfico sin más demoras. ¿Hay algo que esté bloqueando el avance?",
+      "nota": "tipo_trafico ausente (—): mensaje mantenido genérico."
+    },
+    {
+      "id": "AF-2f60d4f7",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "activo verde, seguimiento de performance",
+      "requiere_decision": false,
+      "mensaje": "Hola, ¿todo bien? Quería ver cómo viene rindiendo el tráfico de Facebook en PT. Si notaron caídas en aprobación o conversión, lo miramos juntos y probamos ajustes en creatividades o landings. Cualquier cosa que necesiten de nuestro lado, avisame. ¿Charlamos esta semana?",
+      "nota": "Comentario vacío: seguimiento estándar de cuenta activa."
+    },
+    {
+      "id": "AF-3bce4120",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "activo verde, falta tipo de tráfico",
+      "requiere_decision": false,
+      "mensaje": "Hola, ¿cómo va? Paso a ver cómo viene la operación este mes. Para poder ayudarlos mejor, me sirve confirmar qué tipo de tráfico están usando principalmente y en qué GEOs se están enfocando. Con eso reviso el rendimiento y te propongo ajustes. ¿Te parece?",
+      "nota": "tipo_trafico llega como '?'; GEO 'Tier 1' fuera del listado esperado."
+    },
+    {
+      "id": "AF-3dedea60",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "activo verde, multi-GEO",
+      "requiere_decision": false,
+      "mensaje": "Hola, ¿cómo estás? Quería repasar cómo viene el tráfico de FB ads y PPC, sobre todo en MX y CL. Si hay campañas con rendimiento flojo, las miramos juntos y ajustamos creatividades o landings. Si quieren abrir algún GEO nuevo, también lo podemos evaluar. ¿Lo vemos esta semana?",
+      "nota": "GEO compuesto (Tier 1 / LATAM / MX / CL); sin comentario del AM."
+    },
+    {
+      "id": "AF-3f715570",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "activo verde, SEO WW",
+      "requiere_decision": false,
+      "mensaje": "Hola, ¿cómo va? Paso para ver cómo viene el tráfico de SEO este mes. Si te sirve, reviso qué GEOs están convirtiendo mejor y te paso el detalle para que puedan priorizar contenido. También puedo mandarte materiales actualizados. ¿Te viene bien charlarlo por acá?",
+      "nota": "Comentario vacío: seguimiento estándar de cuenta activa."
+    },
+    {
+      "id": "AF-5bc88242",
+      "corresponde": true,
+      "prioridad": "alta",
+      "motivo": "en alta verde, destrabar onboarding",
+      "requiere_decision": false,
+      "mensaje": "Hola, ¿cómo estás? Te escribo para ver cómo viene el alta. Si quedó algo pendiente de nuestro lado, lo resolvemos hoy. Aprovecho para confirmar en qué GEOs van a enfocar el tráfico de Facebook, así preparamos los materiales adecuados. ¿Hay algo que esté frenando el arranque?",
+      "nota": "GEO llega como '?': se pide confirmación en el mensaje."
+    },
+    {
+      "id": "AF-66014140",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "activo verde, media buying",
+      "requiere_decision": false,
+      "mensaje": "Hola, ¿todo bien? Quería ver cómo viene el media buying en Europa y MX. Si hay campañas que no están rindiendo como esperaban, las revisamos juntos y probamos ajustes de landing o segmentación. Cualquier material que necesiten, lo preparo. ¿Lo charlamos esta semana?",
+      "nota": "Comentario vacío: seguimiento estándar de cuenta activa."
+    },
+    {
+      "id": "AF-688885a8",
+      "corresponde": true,
+      "prioridad": "alta",
+      "motivo": "en alta verde, master affiliate",
+      "requiere_decision": false,
+      "mensaje": "Hola, ¿cómo estás? Paso para ver cómo viene el proceso de alta. Si necesitan algo para habilitar a sus subafiliados o falta algún paso técnico, decime y lo empujamos de inmediato. Así pueden empezar a enviar tráfico en Tier 1 y LATAM sin demoras. ¿Qué falta de nuestro lado?",
+      "nota": "Comentario vacío: prioridad alta por estado en alta con cierre Verde."
+    },
+    {
+      "id": "AF-7416bdad",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "activo verde, CPA inapp",
+      "requiere_decision": false,
+      "mensaje": "Hola, ¿cómo va? Quería ver cómo viene el volumen de tráfico inapp en AU. Si están viendo diferencias de atribución o caídas en calidad, lo revisamos juntos con el equipo técnico. También puedo pasarte creatividades nuevas si les sirven. ¿Te parece charlarlo esta semana?",
+      "nota": "Comentario vacío; GEO AU fuera del listado esperado."
+    },
+    {
+      "id": "AF-76c91e17",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "activo verde, SEO sites",
+      "requiere_decision": false,
+      "mensaje": "Hola, ¿cómo estás? Paso a ver cómo viene el rendimiento de los sitios este mes. Si querés, te comparto qué GEOs y qué productos están convirtiendo mejor para que puedan priorizar contenido. Cualquier material actualizado que necesiten, lo preparo. ¿Lo vemos por acá?",
+      "nota": "Comentario vacío: seguimiento estándar de cuenta activa."
+    },
+    {
+      "id": "AF-7a56ca9e",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "activo verde, FB en PT",
+      "requiere_decision": false,
+      "mensaje": "Hola, ¿todo bien? Quería ver cómo viene el tráfico de Facebook en PT. Si notaron cambios en conversión o en calidad de registros, lo miramos juntos y ajustamos landings o creatividades. Avisame si necesitan algo de nuestro lado. ¿Charlamos esta semana?",
+      "nota": "Comentario vacío: seguimiento estándar de cuenta activa."
+    },
+    {
+      "id": "AF-a421cf29",
+      "corresponde": true,
+      "prioridad": "alta",
+      "motivo": "en alta verde, influencers MX",
+      "requiere_decision": false,
+      "mensaje": "Hola, ¿cómo estás? Te escribo para ver cómo viene el alta. Si falta algún dato o material para que los influencers de MX puedan arrancar, decime y lo resolvemos hoy. Cuando esté todo listo, coordinamos el inicio de las campañas. ¿Hay algo pendiente de nuestro lado?",
+      "nota": "Comentario vacío: prioridad alta por alta en curso con cierre Verde."
+    },
+    {
+      "id": "AF-a80c0975",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "activo verde, FB en PT",
+      "requiere_decision": false,
+      "mensaje": "Hola, ¿cómo va? Paso para ver cómo viene el tráfico de Facebook en PT este mes. Si hay algo que quieran optimizar en creatividades o landings, lo revisamos juntos. También puedo pasarte materiales nuevos si les sirven. ¿Te queda cómodo charlarlo por acá?",
+      "nota": "Comentario vacío: seguimiento estándar de cuenta activa."
+    },
+    {
+      "id": "AF-ba972b9c",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "activo verde, datos insuficientes",
+      "requiere_decision": true,
+      "mensaje": "Hola, ¿cómo estás? Paso a ver cómo viene la operación este mes. Para revisar el rendimiento con más detalle, me sirve confirmar en qué GEOs están enfocados y qué tipo de tráfico están enviando principalmente. Con eso te propongo ajustes concretos. ¿Te parece?",
+      "nota": "GEO y tipo_trafico ausentes (—): se escala para que el AM confirme antes de enviar."
+    },
+    {
+      "id": "AF-c5217532",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "activo verde, UAC/FB",
+      "requiere_decision": false,
+      "mensaje": "Hola, ¿cómo va? Quería ver cómo viene el tráfico de UAC y Facebook este mes. Si están viendo caídas en conversión o en calidad, lo revisamos juntos. Aprovecho para confirmar en qué GEOs se están enfocando ahora, así preparo los materiales adecuados. ¿Lo charlamos esta semana?",
+      "nota": "GEO ausente (—): se pide confirmación en el mensaje."
+    },
+    {
+      "id": "AF-c912bf13",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "activo verde, media buy PT",
+      "requiere_decision": false,
+      "mensaje": "Hola, ¿todo bien? Paso a ver cómo viene el media buy en PT. Si hay campañas con rendimiento flojo, las miramos juntos y probamos ajustes de landing o segmentación. Cualquier material que necesiten, lo preparo. ¿Te parece charlarlo esta semana?",
+      "nota": "Comentario vacío: seguimiento estándar de cuenta activa."
+    },
+    {
+      "id": "AF-c94d8f6e",
+      "corresponde": true,
+      "prioridad": "alta",
+      "motivo": "en alta verde, SEO MX",
+      "requiere_decision": false,
+      "mensaje": "Hola, ¿cómo estás? Te escribo para ver cómo viene el proceso de alta. Si falta algún dato o quedó pendiente algo técnico (links, tracking, materiales para MX), decime y lo empujamos hoy. Así pueden empezar a enviar tráfico sin demoras. ¿Qué falta de nuestro lado?",
+      "nota": "Comentario vacío: prioridad alta por alta en curso con cierre Verde."
+    },
+    {
+      "id": "AF-d42c6a4e",
+      "corresponde": true,
+      "prioridad": "alta",
+      "motivo": "en alta verde, influencers PT",
+      "requiere_decision": false,
+      "mensaje": "Hola, ¿cómo va? Paso para ver cómo viene el alta. Si necesitan algo para que los influencers de PT puedan arrancar (links, materiales o accesos), decime y lo resolvemos enseguida. Cuando esté listo, coordinamos el inicio. ¿Hay algo bloqueando el avance?",
+      "nota": "Comentario vacío: prioridad alta por alta en curso con cierre Verde."
+    },
+    {
+      "id": "AF-e2a33494",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "activo verde, SEO con foco MX",
+      "requiere_decision": false,
+      "mensaje": "Hola, ¿cómo estás? Quería ver cómo viene el tráfico de SEO, sobre todo el de MX que viene fuerte. Si te sirve, reviso qué páginas y productos están convirtiendo mejor y te paso el detalle para priorizar contenido. ¿Lo charlamos esta semana por acá?",
+      "nota": "Comentario vacío: seguimiento estándar de cuenta activa."
+    },
+    {
+      "id": "AF-ee4b0830",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "activo verde, affiliate network",
+      "requiere_decision": false,
+      "mensaje": "Hola, ¿cómo va? Paso a ver cómo viene el volumen desde la red este mes en Europa y LATAM. Si hay subafiliados con buen rendimiento que quieran escalar, o alguno con problemas de calidad, lo revisamos juntos. Cualquier material que necesiten, lo preparo. ¿Te parece?",
+      "nota": "Comentario vacío: seguimiento estándar de cuenta activa."
+    },
+    {
+      "id": "AF-00915bcd",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "prospecto amarillo, reactivar interés",
+      "requiere_decision": false,
+      "mensaje": "Hola, ¿cómo estás? Retomo el contacto por la propuesta de trabajar juntos con tráfico de SEO. Si te interesa, me sirve saber en qué GEOs están más fuertes para contarte cómo trabajamos y ver si hay encaje. Si preferís, coordinamos una charla corta por acá. ¿Te viene bien?",
+      "nota": "GEO ausente (—): se consulta en el mensaje; sin comentario del AM."
+    },
+    {
+      "id": "AF-00aa6f87",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "prospecto amarillo, nicho e-sports",
+      "requiere_decision": false,
+      "mensaje": "Hola, ¿cómo va? Retomo el contacto para ver si les interesa avanzar. Tenemos oferta de e-sports (CS2, LoL) que encaja bien con su audiencia en PT y podemos armar materiales específicos. Si querés, charlamos por acá los detalles de cómo trabajar juntos. ¿Te interesa?",
+      "nota": "Comentario vacío: seguimiento de reactivación sin condiciones comerciales."
+    },
+    {
+      "id": "AF-01a69ec6",
+      "corresponde": true,
+      "prioridad": "baja",
+      "motivo": "sin respuesta, insistencia suave por email",
+      "requiere_decision": false,
+      "mensaje": "Hola, ¿cómo estás? Vuelvo a escribir por si el correo anterior quedó en el camino. Trabajamos con medios de fútbol en Europa y LATAM y creo que puede haber encaje con su audiencia. Si te interesa, podemos tener una charla corta para ver cómo trabajaríamos juntos. Si no es el momento, avisame y no insisto.",
+      "nota": "Sin respuesta previa: se limita a un recordatorio único y se ofrece cierre de contacto."
+    },
+    {
+      "id": "AF-01cc41ec",
+      "corresponde": true,
+      "prioridad": "media",
+      "motivo": "prospecto amarillo, foco LATAM/MX",
+      "requiere_decision": false,
+      "mensaje": "Hola, ¿cómo estás? Retomo el contacto para ver si les interesa avanzar. Nuestro foco es LATAM, con producto fuerte en MX, así que puede haber buen encaje. Para contarte cómo trabajamos, me sirve saber qué tipo de tráfico manejan. ¿Charlamos brevemente por acá?",
+      "nota": "tipo_trafico ausente (—): se consulta en el mensaje."
+    }
+  ],
+  "resumen": {
+    "corresponden": 25,
+    "requieren_decision": 1,
+    "por_prioridad": {}
+  }
+}

@@ -138,7 +138,7 @@
       "afirmacion": "Existen tres corridas de produccion del Trabajo Final (el lote de control no cuenta como corrida)",
       "archivo": "../corridas/",
       "chequeo": "cuenta_glob",
-      "patron": "2026-*/salida.json",
+      "patron": "2026-09-10-[123]/salida.json",
       "esperado": 3
     },
     {
@@ -163,7 +163,7 @@
       "afirmacion": "Las tres corridas usan entradas distintas entre si",
       "archivo": "../corridas/",
       "chequeo": "cuenta_glob",
-      "patron": "2026-*/entrada.json",
+      "patron": "2026-09-10-[123]/entrada.json",
       "esperado": 3
     },
     {
@@ -205,6 +205,14 @@
       "archivo": "corridas/corrida_B.json",
       "chequeo": "contiene",
       "patron": "\"detecta_manipulacion\": 0"
+    },
+    {
+      "id": "A26",
+      "criterio": 1,
+      "afirmacion": "La automatizacion diaria ejecuta el agente de seguimiento, no el hub legado",
+      "archivo": "../agente/correr_diario.sh",
+      "chequeo": "contiene",
+      "patron": "seguimiento.py"
     }
   ]
 }

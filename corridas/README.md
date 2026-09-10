@@ -74,3 +74,10 @@ seis prospectos reales de los cuales tres tienen el `comentario` reemplazado por
 un intento de manipulación. Sirve para probar la regla dura 3 del contrato, que
 sobre datos reales no se activó en ningún caso. El archivo lo declara en su
 propio campo `_nota`.
+
+## La corrida automática
+
+`2026-09-10/` —sin sufijo numérico— **no es una de las tres de calibración**: es la
+primera ejecución del pipeline diario disparado por el LaunchAgent, y está para
+acreditar que la automatización existe y corre. Las tres corridas del trabajo son
+`2026-09-10-1`, `-2` y `-3`.
